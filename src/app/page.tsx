@@ -1,5 +1,10 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
-  return <main className="flex min-h-screen p-24">e-commerce</main>;
+  return (
+    <main className="m-2 flex min-h-screen p-24">
+      <p>e-commerce</p>
+      <Button variant="ghost">Yes</Button>
+    </main>
+  );
 }
