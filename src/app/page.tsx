@@ -1,3 +1,4 @@
+import { ModeToggle } from "@/components/theme/ModeToggle";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
       <Button variant="ghost" className="font-ubuntu">
         Yes
       </Button>
+      <ModeToggle />
     </main>
   );
 }
