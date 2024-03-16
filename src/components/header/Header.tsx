@@ -14,6 +14,7 @@ import { ShoppingCartIcon, CircleUserIcon, Search } from "lucide-react";
 import Link from "next/link";
 // component
 import { ModeToggle } from "@/components/theme/ModeToggle";
+import SearchButton from "./search";
 
 const ItemsData = [
   {
@@ -42,7 +43,7 @@ const Header = () => {
   return (
     <div className="flex items-center justify-between p-5 font-ubuntu">
       <h1>Online Shop</h1>
-      <nav className="flex gap-9">
+      <nav className="hidden gap-9 lg:flex">
         {ItemsData.map((item) => (
           <Link
             key={item.name}
@@ -53,9 +54,10 @@ const Header = () => {
           </Link>
         ))}
       </nav>
-      <Search size={18} />
+
       <div className="flex items-center justify-between gap-5">
-        {/* <ModeToggle /> */}
+        <SearchButton />
+        <ModeToggle />
         <ShoppingCartIcon size={18} />
         <CircleUserIcon size={18} />
       </div>
