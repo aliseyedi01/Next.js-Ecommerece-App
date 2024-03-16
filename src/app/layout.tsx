@@ -6,6 +6,7 @@ import { ubuntu } from "@/lib/font";
 import { cn } from "@/lib/utils";
 // theme
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import Header from "@/components/header/Header";
 
 export const metadata: Metadata = {
   title: "E-commerce App",
@@ -26,6 +27,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
           {children}
         </ThemeProvider>
       </body>
