@@ -2,20 +2,16 @@
 import {
   HomeIcon,
   InfoCircledIcon,
-  RocketIcon,
   ChatBubbleIcon,
   LaptopIcon,
-  MagnifyingGlassIcon,
-  PersonIcon,
-  AvatarIcon,
 } from "@radix-ui/react-icons";
-import { ShoppingCartIcon, CircleUserIcon, Search } from "lucide-react";
 // next
 import Link from "next/link";
 // component
 import { ModeToggle } from "@/components/theme/ModeToggle";
 import SearchButton from "./search-button";
 import ProfileButton from "./profile-button";
+import { CartButton } from "./cart-button";
 
 const ItemsData = [
   {
@@ -59,7 +55,7 @@ const Header = () => {
       <div className="flex items-center justify-between gap-5">
         <SearchButton />
         <ModeToggle />
-        <ShoppingCartIcon size={18} />
+        <CartButton />
         <ProfileButton />
       </div>
     </div>

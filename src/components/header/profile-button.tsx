@@ -14,7 +14,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ShoppingCartIcon, CircleUserIcon, Search } from "lucide-react";
+import { CircleUserIcon } from "lucide-react";
 
 const ProfileButton = () => {
   return (
