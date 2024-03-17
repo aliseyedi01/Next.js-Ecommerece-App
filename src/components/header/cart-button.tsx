@@ -13,10 +13,11 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { ShoppingCartIcon } from "lucide-react";
+import { ShoppingCartIcon, Trash2 } from "lucide-react";
 import Image from "next/image";
 import QuantitySelector from "./quantity-selector";
 import { Separator } from "../ui/separator";
+import { CommandSeparator } from "../ui/command";
 
 const image1 =
   "https://img.freepik.com/free-vector/paper-bag-mockup-isolated-vector_53876-61350.jpg?w=740";
@@ -69,28 +70,34 @@ export function CartButton() {
         </SheetHeader>
         <div className="mt-4 flex flex-col gap-3">
           {products.map((product) => (
-            <div key={product.name} className="flex flex-row gap-2">
-              <Image
-                src={product.image}
-                alt="Product"
-                width={100}
-                height={100}
-                className="rounded-md"
-                placeholder="empty"
-              />
-              <div className="flex w-full flex-col justify-between  p-1">
-                <div className="flex justify-between">
-                  <p className="font-semibold text-red-600">{product.name}</p>
-                  <p className="font-medium text-blue-700">
-                    ${product.price.toFixed(2)}
-                  </p>
-                </div>
-                <div>
-                  <QuantitySelector
-                    quantity={product.quantity}
-                    onDecrement={() => removeFromCart(product)}
-                    onIncrement={() => addToCart(product)}
-                  />
+            <div key={product.name} className="flex flex-col">
+              <Separator />
+              <div className="mt-3 flex w-full flex-row gap-2">
+                <Image
+                  src={product.image}
+                  alt="Product"
+                  width={100}
+                  height={100}
+                  className="rounded-md"
+                  placeholder="empty"
+                />
+                <div className="flex w-full flex-col justify-between">
+                  <div className="flex justify-between">
+                    <p className="font-medium">{product.name}</p>
+                    <p className="font-medium text-blue-700">
+                      ${product.price.toFixed(2)}
+                    </p>
+                  </div>
+                  <div className="flex w-full flex-row items-center justify-between">
+                    <QuantitySelector
+                      quantity={product.quantity}
+                      onDecrement={() => removeFromCart(product)}
+                      onIncrement={() => addToCart(product)}
+                    />
+                    <Button variant="link" className="pb-0 pr-0 text-red-500">
+                      <Trash2 className="mr-1 h-4 w-4 " /> Remove
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -99,11 +106,11 @@ export function CartButton() {
         <SheetFooter>
           <div className="absolute bottom-0 left-0 flex  w-full flex-col p-3">
             <Button className="w-full">Checkout</Button>
-            <SheetClose asChild className="mt-3">
+            {/* <SheetClose asChild className="mt-3">
               <p className="mx-auto w-fit cursor-pointer text-blue-900 hover:text-blue-600">
                 Continue Shopping
               </p>
-            </SheetClose>
+            </SheetClose> */}
           </div>
         </SheetFooter>
       </SheetContent>
