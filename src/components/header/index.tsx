@@ -14,7 +14,8 @@ import { ShoppingCartIcon, CircleUserIcon, Search } from "lucide-react";
 import Link from "next/link";
 // component
 import { ModeToggle } from "@/components/theme/ModeToggle";
-import SearchButton from "./search";
+import SearchButton from "./search-button";
+import ProfileButton from "./profile-button";
 
 const ItemsData = [
   {
@@ -59,7 +60,7 @@ const Header = () => {
         <SearchButton />
         <ModeToggle />
         <ShoppingCartIcon size={18} />
-        <CircleUserIcon size={18} />
+        <ProfileButton />
       </div>
     </div>
   );
