@@ -6,7 +6,8 @@ import { ubuntu } from "@/lib/font";
 import { cn } from "@/lib/utils";
 // theme
 import { ThemeProvider } from "@/components/theme/theme-provider";
-import Header from "@/components/header/Header";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Online Shop",
@@ -29,6 +30,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
