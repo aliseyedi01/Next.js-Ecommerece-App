@@ -39,16 +39,16 @@ const LISTS = [
 const Footer = () => {
   return (
     <footer className="flex flex-col bg-accent font-ubuntu text-accent-foreground ">
-      <div className="flex w-full justify-around p-9">
+      <div className="flex w-full flex-col justify-around p-9 max-md:gap-3 md:flex-row">
         <div className="space-y-2">
           <h3 className="text-lg font-bold">Online Shop</h3>
-          <p className="w-96 text-wrap">
+          <p className="w-80 text-wrap md:w-96">
             Explore our carefully curated selection of high-quality products
             designed to enhance your lifestyle
           </p>
         </div>
 
-        <nav className="flex flex-wrap gap-4 md:gap-20">
+        <nav className="flex flex-wrap gap-7 max-md:justify-start md:gap-20">
           {LISTS.map((list) => (
             <div key={list.label} className="mb-4 md:mb-0">
               <h3 className="text-lg font-bold">{list.label}</h3>
