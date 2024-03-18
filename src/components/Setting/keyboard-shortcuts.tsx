@@ -29,23 +29,23 @@ const shortcuts = [
 ];
 
 export default function KeyboardShortcuts() {
-  const [isMobileView, setIsMobileView] = useState(false);
+  // const [isMobileView, setIsMobileView] = useState(false);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const handleResize = () => {
-        setIsMobileView(window.innerWidth < 768);
-      };
-      window.addEventListener("resize", handleResize);
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     const handleResize = () => {
+  //       setIsMobileView(window.innerWidth < 768);
+  //     };
+  //     window.addEventListener("resize", handleResize);
+  //     return () => {
+  //       window.removeEventListener("resize", handleResize);
+  //     };
+  //   }
+  // }, []);
 
   return (
     <Drawer>
-      <DrawerTrigger asChild>
+      <DrawerTrigger asChild className="hidden md:flex">
         <Button variant="ghost" size="icon">
           <Keyboard />
         </Button>
@@ -56,7 +56,7 @@ export default function KeyboardShortcuts() {
             List of Keyboard Shortcuts
           </DrawerTitle>
         </DrawerHeader>
-        {isMobileView ? (
+        {/* {isMobileView ? (
           <ul className="list-none space-y-3 p-4">
             {shortcuts.map((shortcut) => (
               <li
@@ -73,24 +73,24 @@ export default function KeyboardShortcuts() {
               </li>
             ))}
           </ul>
-        ) : (
-          <ul className="flex flex-wrap items-center justify-center gap-4 p-5 pl-4">
-            {shortcuts.map((shortcut) => (
-              <li
-                key={shortcut.name}
-                className="flex w-40 items-center justify-start gap-6 rounded-md border p-3 hover:bg-slate-100/40 dark:border-blue-100/50"
-              >
-                <div>{shortcut.icon}</div>
-                <div className="flex flex-col gap-2">
-                  <p className="text-lg">{shortcut.name}</p>
-                  <Badge variant="outline" className="bg-slate-100">
-                    {shortcut.shortcut}
-                  </Badge>
-                </div>
-              </li>
-            ))}
-          </ul>
-        )}
+        ) : ( */}
+        <ul className="flex flex-wrap items-center justify-center gap-4 p-5 pl-4">
+          {shortcuts.map((shortcut) => (
+            <li
+              key={shortcut.name}
+              className="flex w-40 items-center justify-start gap-6 rounded-md border p-3 hover:bg-slate-100/40 dark:border-blue-100/50"
+            >
+              <div>{shortcut.icon}</div>
+              <div className="flex flex-col gap-2">
+                <p className="text-lg">{shortcut.name}</p>
+                <Badge variant="outline" className="bg-slate-100">
+                  {shortcut.shortcut}
+                </Badge>
+              </div>
+            </li>
+          ))}
+        </ul>
+        {/* )} */}
       </DrawerContent>
     </Drawer>
   );
