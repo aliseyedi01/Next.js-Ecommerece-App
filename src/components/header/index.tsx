@@ -12,6 +12,7 @@ import { ModeToggle } from "@/components/theme/ModeToggle";
 import SearchButton from "./search-button";
 import ProfileButton from "./profile-button";
 import { CartButton } from "./cart-button";
+import KeyboardShortcuts from "../Setting/keyboard-shortcuts";
 
 const ItemsData = [
   {
@@ -52,8 +53,9 @@ const Header = () => {
         ))}
       </nav>
 
-      <div className="flex items-center justify-between gap-5">
+      <div className="flex items-center justify-between ">
         <SearchButton />
+        <KeyboardShortcuts />
         <ModeToggle />
         <CartButton />
         <ProfileButton />
