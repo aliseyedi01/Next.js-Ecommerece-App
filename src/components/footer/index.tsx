@@ -3,14 +3,6 @@ import React from "react";
 
 const LISTS = [
   {
-    label: "Shop",
-    items: [
-      { label: "All Collections", link: "/" },
-      { label: "Winter Edition", link: "/" },
-      { label: "Discount", link: "/" },
-    ],
-  },
-  {
     label: "Company",
     items: [
       { label: "About Us", link: "/" },
@@ -26,20 +18,12 @@ const LISTS = [
       { label: "Terms of Service", link: "/" },
     ],
   },
-  {
-    label: "Social",
-    items: [
-      { label: "Github", link: "https://github.com/aliseyedi01" },
-      { label: "LinkedIn", link: "https://www.linkedin.com/in/aliseyedi01/" },
-      { label: "Telegram", link: "https://t.me/aliseyedi01" },
-    ],
-  },
 ];
 
 const Footer = () => {
   return (
     <footer className="flex flex-col bg-accent font-ubuntu text-accent-foreground ">
-      <div className="flex w-full flex-col justify-around p-9 max-md:gap-3 md:flex-row">
+      <div className="flex w-full flex-col justify-around p-5 max-md:gap-3 md:flex-row md:p-9">
         <div className="space-y-2">
           <h3 className="text-lg font-bold">Online Shop</h3>
           <p className="w-80 text-wrap md:w-96">
@@ -48,7 +32,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <nav className="flex flex-wrap gap-7 max-md:justify-start md:gap-20">
+        <nav className="flex flex-wrap  gap-14 md:gap-20">
           {LISTS.map((list) => (
             <div key={list.label} className="mb-4 md:mb-0">
               <h3 className="text-lg font-bold">{list.label}</h3>
