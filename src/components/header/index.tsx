@@ -13,6 +13,7 @@ import SearchButton from "./search-button";
 import ProfileButton from "./profile-button";
 import { CartButton } from "./cart-button";
 import KeyboardShortcuts from "../Setting/keyboard-shortcuts";
+import { NavbarButton } from "./navbar-mobile";
 
 const ItemsData = [
   {
@@ -39,8 +40,9 @@ const ItemsData = [
 
 const Header = () => {
   return (
-    <div className="flex items-center justify-between p-5 font-ubuntu">
-      <div className="flex gap-16">
+    <div className=" flex items-center  justify-between p-2 font-ubuntu md:p-5">
+      <div className="flex items-center md:gap-16">
+        <NavbarButton />
         <h1>Online Shop</h1>
         <nav className="hidden gap-9 lg:flex ">
           {ItemsData.map((item) => (
