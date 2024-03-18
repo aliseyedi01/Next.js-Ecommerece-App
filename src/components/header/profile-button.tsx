@@ -20,7 +20,7 @@ const ProfileButton = () => {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="ghost" size="icon">
-            <CircleUserIcon className="size-4 md:size-5" />
+            <CircleUserIcon className="size-5" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="mr-4 w-44 md:mr-7 md:w-56">

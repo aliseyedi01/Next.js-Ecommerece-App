@@ -44,7 +44,6 @@ const products = [
 ];
 
 export function CartButton() {
-  // Assuming these functions update the cart state in your application
   function removeFromCart(product: any) {
     console.log("Removing product from cart:", product);
   }
@@ -57,11 +56,11 @@ export function CartButton() {
     <Sheet>
       <SheetTrigger asChild>
         <Button variant="ghost" size="icon">
-          <ShoppingCartIcon className="size-4 md:size-5" />
+          <ShoppingCartIcon className="size-5" />
         </Button>
       </SheetTrigger>
-      <SheetContent className="">
-        <SheetHeader>
+      <SheetContent>
+        <SheetHeader className="text-left">
           <SheetTitle>Shopping Cart</SheetTitle>
           <SheetDescription>
             Browse through your selected items, review your choices, and proceed
@@ -72,18 +71,18 @@ export function CartButton() {
           {products.map((product) => (
             <div key={product.name} className="flex flex-col">
               <Separator />
-              <div className="mt-3 flex w-full flex-row gap-2">
+              <div className="mt-3 flex w-full flex-row gap-3">
                 <Image
                   src={product.image}
                   alt="Product"
                   width={100}
                   height={100}
-                  className="rounded-md"
+                  className="size-14 rounded-md md:size-24"
                   placeholder="empty"
                 />
-                <div className="flex w-full flex-col justify-between">
+                <div className="flex w-full flex-col justify-between pr-3 text-sm md:text-base">
                   <div className="flex justify-between">
-                    <p className="font-medium">{product.name}</p>
+                    <p className="font-medium ">{product.name}</p>
                     <p className="font-medium text-blue-700">
                       ${product.price.toFixed(2)}
                     </p>
@@ -94,7 +93,7 @@ export function CartButton() {
                       onDecrement={() => removeFromCart(product)}
                       onIncrement={() => addToCart(product)}
                     />
-                    <Button variant="link" className="pb-0 pr-0 text-red-500">
+                    <Button variant="link" className=" pb-0 pr-0 text-red-500">
                       <Trash2 className="mr-1 h-4 w-4 " /> Remove
                     </Button>
                   </div>
