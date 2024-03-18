@@ -42,7 +42,6 @@ const ItemsData = [
 
 const Header = () => {
   const pathname = usePathname();
-  console.log("pathname", pathname);
 
   return (
     <div className=" flex items-center  justify-between p-2 font-ubuntu md:p-5">

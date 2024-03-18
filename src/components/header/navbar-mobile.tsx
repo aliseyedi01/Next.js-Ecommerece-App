@@ -13,11 +13,13 @@ import {
 } from "@/components/ui/sheet";
 import { PanelLeft, Trash2, Home, Store, PhoneCall, Info } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const ItemsData = [
   {
     name: "Home",
-    link: "/home",
+    link: "/",
     icon: <Home />,
   },
   {
@@ -38,6 +40,8 @@ const ItemsData = [
 ];
 
 export function NavbarButton() {
+  const pathname = usePathname();
+
   function removeFromCart(product: any) {
     console.log("Removing product from cart:", product);
   }
@@ -60,10 +64,17 @@ export function NavbarButton() {
         <ul className="mt-3 list-none space-y-3">
           {ItemsData.map((item, index) => (
             <li key={index} className="flex  gap-2">
-              <Link href={item.link || "#"} className="flex items-center gap-2">
-                {item.icon}
-                {item.name}
-              </Link>
+              <SheetClose asChild>
+                <Link
+                  href={item.link || "#"}
+                  className={`flex items-center gap-2 ${
+                    pathname === item.link ? "text-blue-600" : ""
+                  }`}
+                >
+                  {item.icon}
+                  {item.name}
+                </Link>
+              </SheetClose>
             </li>
           ))}
         </ul>
