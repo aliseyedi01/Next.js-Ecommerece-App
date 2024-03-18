@@ -43,7 +43,9 @@ const Header = () => {
     <div className=" flex items-center  justify-between p-2 font-ubuntu md:p-5">
       <div className="flex items-center md:gap-16">
         <NavbarButton />
-        <h1>Online Shop</h1>
+        <Link href="/">
+          <h1>Online Shop</h1>
+        </Link>
         <nav className="hidden gap-9 lg:flex ">
           {ItemsData.map((item) => (
             <Link
