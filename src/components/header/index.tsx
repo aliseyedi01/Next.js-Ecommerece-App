@@ -1,3 +1,5 @@
+"use client";
+
 // style
 import {
   HomeIcon,
@@ -7,8 +9,8 @@ import {
 } from "@radix-ui/react-icons";
 // next
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 // component
-import { ModeToggle } from "@/components/theme/ModeToggle";
 import SearchButton from "./search-button";
 import ProfileButton from "./profile-button";
 import { CartButton } from "./cart-button";
@@ -39,6 +41,9 @@ const ItemsData = [
 ];
 
 const Header = () => {
+  const pathname = usePathname();
+  console.log("pathname", pathname);
+
   return (
     <div className=" flex items-center  justify-between p-2 font-ubuntu md:p-5">
       <div className="flex items-center md:gap-16">
@@ -51,7 +56,9 @@ const Header = () => {
             <Link
               key={item.name}
               href={item.link}
-              className="uppercase hover:text-blue-600"
+              className={`uppercase hover:text-blue-600 ${
+                pathname === item.link ? "text-blue-600" : ""
+              }`}
             >
               {item.name}
             </Link>
