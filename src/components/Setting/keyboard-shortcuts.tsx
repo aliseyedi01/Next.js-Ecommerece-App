@@ -17,6 +17,7 @@ import {
   Palette,
 } from "lucide-react";
 import { Badge } from "../ui/badge";
+import { useEffect, useState } from "react";
 
 const shortcuts = [
   { icon: <UserRound />, name: "Profile", shortcut: "Ctr P" },
@@ -28,7 +29,20 @@ const shortcuts = [
 ];
 
 export default function KeyboardShortcuts() {
-  const isMobileView = () => window.innerWidth < 768;
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleResize = () => {
+        setIsMobileView(window.innerWidth < 768);
+      };
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
+
   return (
     <Drawer>
       <DrawerTrigger asChild>
@@ -42,7 +56,7 @@ export default function KeyboardShortcuts() {
             List of Keyboard Shortcuts
           </DrawerTitle>
         </DrawerHeader>
-        {isMobileView() ? (
+        {isMobileView ? (
           <ul className="list-none space-y-3 p-4">
             {shortcuts.map((shortcut) => (
               <li
