@@ -40,23 +40,24 @@ const ItemsData = [
 const Header = () => {
   return (
     <div className="flex items-center justify-between p-5 font-ubuntu">
-      <h1>Online Shop</h1>
-      <nav className="hidden gap-9 lg:flex">
-        {ItemsData.map((item) => (
-          <Link
-            key={item.name}
-            href={item.link}
-            className="hover:text-blue-600"
-          >
-            {item.name}
-          </Link>
-        ))}
-      </nav>
+      <div className="flex gap-16">
+        <h1>Online Shop</h1>
+        <nav className="hidden gap-9 lg:flex ">
+          {ItemsData.map((item) => (
+            <Link
+              key={item.name}
+              href={item.link}
+              className="hover:text-blue-600"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+      </div>
 
       <div className="flex items-center justify-between ">
         <SearchButton />
         <KeyboardShortcuts />
-        <ModeToggle />
         <CartButton />
         <ProfileButton />
       </div>

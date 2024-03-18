@@ -33,11 +33,11 @@ const SearchButton = ({ ...props }) => {
   }, []);
 
   return (
-    <>
+    <div className="md:mr-8">
       <Button
         variant="outline"
         className={cn(
-          "relative h-8 w-full justify-start rounded-[0.5rem] bg-background text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40 lg:w-64",
+          "relative h-8 w-full justify-start rounded-[0.5rem] bg-background text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40  lg:w-64",
         )}
         onClick={() => setOpen(true)}
         {...props}
@@ -72,7 +72,7 @@ const SearchButton = ({ ...props }) => {
           <CommandSeparator />
         </CommandList>
       </CommandDialog>
-    </>
+    </div>
   );
 };
 
