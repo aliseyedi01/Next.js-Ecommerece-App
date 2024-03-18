@@ -18,7 +18,7 @@ import { NavbarButton } from "./navbar-mobile";
 const ItemsData = [
   {
     name: "Home",
-    link: "/home",
+    link: "/",
     icon: <HomeIcon />,
   },
   {
@@ -49,7 +49,7 @@ const Header = () => {
             <Link
               key={item.name}
               href={item.link}
-              className="hover:text-blue-600"
+              className="uppercase hover:text-blue-600"
             >
               {item.name}
             </Link>
