@@ -54,6 +54,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background font-ubuntu text-foreground;
+    @apply relative bg-background font-ubuntu text-foreground;
   }
 }

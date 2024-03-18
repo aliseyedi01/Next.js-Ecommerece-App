@@ -16,6 +16,7 @@ import ProfileButton from "./profile-button";
 import { CartButton } from "./cart-button";
 import KeyboardShortcuts from "../Setting/keyboard-shortcuts";
 import { NavbarButton } from "./navbar-mobile";
+import { useScrollPercentage } from "@/hooks/UseScrollPercentage";
 
 const ItemsData = [
   {
@@ -43,8 +44,17 @@ const ItemsData = [
 const Header = () => {
   const pathname = usePathname();
 
+  const scrollPercentage = useScrollPercentage();
+  const shadowHeader = Number(scrollPercentage) < 80;
+
   return (
-    <div className=" flex items-center  justify-between p-2 font-ubuntu md:p-5">
+    <div
+      className={`sticky top-0 flex items-center  justify-between p-2 font-ubuntu shadow-white backdrop-blur-sm md:p-5  ${
+        shadowHeader
+          ? "shadow-[0_0_20px_5px_rgba(0,0,0,0.2)] dark:shadow-[0_0_15px_5px_rgba(80,92,212,0.6)]"
+          : ""
+      }`}
+    >
       <div className="flex items-center md:gap-16">
         <NavbarButton />
         <Link href="/">
