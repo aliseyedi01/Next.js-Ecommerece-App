@@ -11,7 +11,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { CircleUserIcon } from "lucide-react";
-import KeyboardShortcuts from "../Setting/keyboard-shortcuts";
 
 const ProfileButton = () => {
   const showKeyboardShortcuts = true;

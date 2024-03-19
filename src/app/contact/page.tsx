@@ -1,11 +1,6 @@
-import * as z from "zod";
-// hooks
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
 // next
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import ContactForm from "@/components/contact/contact-form";
 import SocialMedia from "@/components/contact/social-media";
 
@@ -19,8 +14,8 @@ const ImageSource =
 export default function About() {
   return (
     <section className="flex h-full items-start justify-center  md:h-screen ">
-      <div className="grid  h-full w-full grid-cols-1  p-3 max-md:gap-5 md:w-[80%] md:grid-cols-2">
-        <div className="flex flex-col items-center justify-center max-md:pt-14">
+      <div className="grid  h-full w-full grid-cols-1  p-3 max-md:gap-5 md:w-[85%] md:grid-cols-2">
+        <div className="flex flex-col items-center justify-start pt-14">
           <h2 className="text-3xl font-medium text-blue-600 md:text-left">
             Get In Touch
           </h2>

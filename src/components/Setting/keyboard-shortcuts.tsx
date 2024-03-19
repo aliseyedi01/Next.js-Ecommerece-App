@@ -17,7 +17,6 @@ import {
   Palette,
 } from "lucide-react";
 import { Badge } from "../ui/badge";
-import { useEffect, useState } from "react";
 
 const shortcuts = [
   { icon: <UserRound />, name: "Profile", shortcut: "Ctr P" },
