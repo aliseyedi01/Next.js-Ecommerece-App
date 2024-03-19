@@ -1,8 +1,8 @@
 // next
 import type { Metadata } from "next";
 import Image from "next/image";
-import ContactForm from "@/components/contact/contact-form";
-import SocialMedia from "@/components/contact/social-media";
+import ContactForm from "@/components/contact/ContactForm";
+import SocialMedia from "@/components/contact/SocialMedia";
 
 export const metadata: Metadata = {
   title: "Contact | Online Shop",

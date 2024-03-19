@@ -11,11 +11,11 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 // component
-import SearchButton from "./search-button";
-import ProfileButton from "./profile-button";
-import { CartButton } from "./cart-button";
-import KeyboardShortcuts from "../Setting/keyboard-shortcuts";
-import { NavbarButton } from "./navbar-mobile";
+import SearchButton from "./SearchButton";
+import ProfileButton from "./ProfileButton";
+import { CartButton } from "./CartButton";
+import KeyboardShortcuts from "../Setting/KeyboardShortcuts";
+import { NavbarButton } from "./NavbarMobile";
 import { useScrollPercentage } from "@/hooks/UseScrollPercentage";
 
 const ItemsData = [

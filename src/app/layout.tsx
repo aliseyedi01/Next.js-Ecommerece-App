@@ -5,9 +5,9 @@ import "./globals.css";
 import { ubuntu } from "@/lib/font";
 import { cn } from "@/lib/utils";
 // theme
-import { ThemeProvider } from "@/components/theme/theme-provider";
+import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
-import Footer from "@/components/footer";
+import Footer from "@/components/footer/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import Header from "@/components/header/Header";
 

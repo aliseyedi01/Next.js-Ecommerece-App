@@ -1,9 +1,11 @@
-import HomePage from "@/components/home/home-page";
+import HomePage from "@/components/home/HomePage";
 
-export default function Home() {
+const Home = () => {
   return (
     <main className="flex flex-col">
       <HomePage />
     </main>
   );
-}
+};
+
+export default Home;

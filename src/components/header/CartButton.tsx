@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/sheet";
 import { ShoppingCartIcon, Trash2 } from "lucide-react";
 import Image from "next/image";
-import QuantitySelector from "./quantity-selector";
+import QuantitySelector from "./QuantitySelector";
 import { Separator } from "../ui/separator";
 import { CommandSeparator } from "../ui/command";
 

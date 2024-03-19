@@ -35,7 +35,7 @@ const BannerData = [
   },
 ];
 
-export default function BannerCarousel() {
+const BannerCarousel = () => {
   return (
     <Swiper
       loop={true}
@@ -45,7 +45,7 @@ export default function BannerCarousel() {
         dynamicBullets: true,
       }}
       autoplay={{
-        delay: 6500,
+        delay: 3000,
         disableOnInteraction: false,
       }}
       modules={[Autoplay, Pagination, EffectFade]}
@@ -63,7 +63,7 @@ export default function BannerCarousel() {
             alt={`slide-${index}`}
             className=" h-full w-full object-cover hover:opacity-10 md:object-center "
           />
-          <div className="absolute inset-0 flex h-full w-full flex-col items-start justify-end gap-5 pb-16 pl-6 font-bold text-white md:pb-40 md:pl-40">
+          <div className="absolute inset-0 flex h-full w-full flex-col items-start justify-end gap-5 pb-24 pl-6 font-bold text-white md:pb-40 md:pl-40">
             <p className="text-start text-4xl md:text-7xl">{image.text}</p>
             <Link href="/products">
               <Button className="flex items-center gap-2 md:h-16 md:w-72 md:text-2xl ">
@@ -76,4 +76,6 @@ export default function BannerCarousel() {
       ))}
     </Swiper>
   );
-}
+};
+
+export default BannerCarousel;
