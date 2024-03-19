@@ -2,45 +2,45 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/zoom";
-import "swiper/css/effect-flip";
+import "swiper/css/effect-fade";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { EffectFlip, Pagination, Navigation, Autoplay } from "swiper/modules";
+import { EffectFade, Pagination, Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
 
 // Array containing the image URL repeated 5 times
-const images = Array(5).fill(
-  "https://img.freepik.com/free-vector/business-team-brainstorm-idea-lightbulb-from-jigsaw-working-team-collaboration-enterprise-cooperation-colleagues-mutual-assistance-concept-pinkish-coral-bluevector-isolated-illustration_335657-1651.jpg?t=st=1710851923~exp=1710855523~hmac=3f53ff27e9cffd1d8d6b761106161836308f1aa84761d962a6e8d0feab719da1&w=996",
-);
+const images = [
+  "https://png.pngtree.com/background/20230521/original/pngtree-d-rendered-image-of-a-blue-pedestal-with-a-green-tree-picture-image_2684064.jpg",
+  "https://png.pngtree.com/background/20230521/original/pngtree-blue-tree-on-a-circular-pedestal-picture-image_2684099.jpg",
+  "https://png.pngtree.com/background/20230527/original/pngtree-3d-rendering-of-a-blue-tree-on-a-pedestal-picture-image_2754246.jpg",
+];
 
 export default function BannerCarousel() {
   return (
     <Swiper
-      spaceBetween={50}
-      slidesPerView={1}
+      slidesPerView="auto"
       loop={true}
-      onSlideChange={() => console.log("slide change")}
-      pagination={{ dynamicBullets: true }}
-      autoplay={{
-        delay: 5000,
-        pauseOnMouseEnter: true,
+      effect="fade"
+      pagination={{
+        clickable: true,
+        dynamicBullets: true,
       }}
-      modules={[EffectFlip, Pagination, Navigation, Autoplay]}
-      onSwiper={(swiper) => console.log(swiper)}
+      autoplay={{
+        delay: 3000,
+      }}
+      modules={[EffectFade, Pagination, Autoplay]}
+      className="h-full w-full"
     >
       {images.map((image, index) => (
-        <SwiperSlide
-          key={index}
-          className="flex items-center justify-center bg-background"
-        >
+        <SwiperSlide key={index} className=" ">
           <Image
             src={image}
             width="700"
             height="400"
             loading="eager"
+            quality={100}
+            unoptimized={true}
             alt={`slide-${index}`}
-            className="h-full w-full object-scale-down"
+            className="h-full w-full object-cover md:object-center "
           />
         </SwiperSlide>
       ))}
