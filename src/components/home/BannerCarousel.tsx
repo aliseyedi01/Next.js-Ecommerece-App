@@ -63,7 +63,7 @@ export default function BannerCarousel() {
             alt={`slide-${index}`}
             className=" h-full w-full object-cover hover:opacity-10 md:object-center "
           />
-          <div className="absolute inset-0 flex h-full w-full flex-col items-start justify-end gap-5 pb-12 pl-6 font-bold text-white md:pb-40 md:pl-40">
+          <div className="absolute inset-0 flex h-full w-full flex-col items-start justify-end gap-5 pb-16 pl-6 font-bold text-white md:pb-40 md:pl-40">
             <p className="text-start text-4xl md:text-7xl">{image.text}</p>
             <Link href="/products">
               <Button className="flex items-center gap-2 md:h-16 md:w-72 md:text-2xl ">
