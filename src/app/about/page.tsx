@@ -9,15 +9,15 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <section className="py-4">
-      <div className="container mx-auto flex flex-col items-center gap-8 md:flex-row">
+      <div className="container mx-auto flex h-full flex-col items-center gap-8 md:h-[85vh] md:flex-row">
         {/* Image Section */}
         <div className=" w-full md:w-1/2">
           <Image
-            src="https://img.freepik.com/free-vector/green-hand-drawn-brainstorming-with-doodle-art-design_53876-120515.jpg?t=st=1710782172~exp=1710785772~hmac=ed61d398a5df46758337eb4cf02b14ae1fcccc1c9cf00d044f89bc9bf799519c&w=740"
+            src="https://img.freepik.com/free-vector/business-team-brainstorm-idea-lightbulb-from-jigsaw-working-team-collaboration-enterprise-cooperation-colleagues-mutual-assistance-concept-pinkish-coral-bluevector-isolated-illustration_335657-1651.jpg?t=st=1710851923~exp=1710855523~hmac=3f53ff27e9cffd1d8d6b761106161836308f1aa84761d962a6e8d0feab719da1&w=996"
             alt="About Us Image"
             width={600}
             height={400}
-            className="rounded-lg object-cover shadow-md "
+            className="object-cover "
           />
         </div>
 
@@ -26,14 +26,14 @@ export default function About() {
           <h2 className="mb-4 text-center text-3xl font-medium md:text-left">
             About Online Shop
           </h2>
-          <p className="text-lg leading-relaxed">
+          <p className="text-justify text-lg leading-relaxed">
             Online Shop is your one-stop shop for curated, high-quality products
             that elevate your everyday life. We offer a seamless and enjoyable
             shopping experience across a wide range of categories. Exceptional
             value, trusted suppliers, and top-notch service are at the core of
             everything we do.
           </p>
-          <p className="text-lg leading-relaxed">
+          <p className="text-justify text-lg leading-relaxed">
             Explore our diverse offerings today and discover how Online Shop can
             enhance your lifestyle!
           </p>
