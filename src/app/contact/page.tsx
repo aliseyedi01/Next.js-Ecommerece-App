@@ -7,30 +7,37 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "@/components/contact/contact-form";
+import SocialMedia from "@/components/contact/social-media";
 
 export const metadata: Metadata = {
   title: "Contact | Online Shop",
 };
 
+const ImageSource =
+  "https://img.freepik.com/free-vector/social-networking-concept-illustration_114360-861.jpg?w=740";
+
 export default function About() {
   return (
-    <section className="">
-      <div className=" container flex items-center justify-center p-5">
-        <div className=" w-full space-y-3 md:w-1/2">
-          <h2 className=" mb-4 text-center text-3xl font-medium text-blue-600 md:text-left">
+    <section className="flex h-full items-start justify-center  md:h-screen ">
+      <div className="grid h-full w-full grid-cols-1  p-3 max-md:gap-5 md:w-[80%] md:grid-cols-2">
+        <div className="flex flex-col items-center justify-center space-y-3 ">
+          <h2 className="text-3xl font-medium text-blue-600 md:text-left">
             Get In Touch
           </h2>
-          <p className="text-blue-900">We are here for you! How can we help?</p>
+          <p className="text-blue-900 md:text-left">
+            We are here for you! How can we help?
+          </p>
           <ContactForm />
         </div>
-        <div className="w-full md:w-1/2">
+        <div className="flex  flex-col items-center justify-start gap-5">
           <Image
-            src="https://img.freepik.com/free-vector/flat-design-illustration-customer-support_23-2148887720.jpg?t=st=1710798075~exp=1710801675~hmac=6ebff3da57cdc2012e0f3c06ef20f6187c8419e59ee1b390790b659d051989ab&w=740"
+            src={ImageSource}
             alt="About Us Image"
-            width={600}
-            height={400}
+            width={500}
+            height={500}
             className="rounded-lg object-cover"
           />
+          <SocialMedia />
         </div>
       </div>
     </section>

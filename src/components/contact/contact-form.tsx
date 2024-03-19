@@ -4,10 +4,6 @@ import * as z from "zod";
 // hooks
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-// next
-import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 // components
 import {
   Form,
