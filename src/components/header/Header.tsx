@@ -49,9 +49,10 @@ const Header = () => {
 
   return (
     <div
-      className={`sticky top-0 flex items-center  justify-between p-2 font-ubuntu  text-blue-400  backdrop-blur-md md:p-5  ${
-        shadowHeader ? " dark:shadow-[0_0_15px_5px_rgba(80,92,212,0.6)]" : ""
-      }`}
+      className={`sticky top-0 flex items-center  justify-between p-2 font-ubuntu text-blue-400    backdrop-blur-md md:p-5 
+       ${shadowHeader ? " dark:shadow-[0_0_15px_5px_rgba(80,92,212,0.6)]" : ""}
+       ${pathname === "/" ? "mix-blend-color-dodge" : ""}
+       `}
     >
       <div className="flex items-center md:gap-16">
         <NavbarButton />
@@ -64,7 +65,9 @@ const Header = () => {
               key={item.name}
               href={item.link}
               className={`uppercase hover:text-blue-600 ${
-                pathname === item.link ? "text-blue-600" : ""
+                pathname === item.link
+                  ? "text-blue-600 underline  underline-offset-4"
+                  : ""
               }`}
             >
               {item.name}

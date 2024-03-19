@@ -37,7 +37,7 @@ const SearchButton = ({ ...props }) => {
       <Button
         variant="ghost"
         className={cn(
-          "flex h-9 w-full flex-row justify-between border bg-background text-sm font-normal text-muted-foreground shadow-none md:w-64 md:border ",
+          "flex h-9 w-full flex-row justify-between border bg-background text-sm font-normal text-muted-foreground !mix-blend-normal shadow-none md:w-64 md:border",
         )}
         onClick={() => setOpen(true)}
         {...props}

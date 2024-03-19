@@ -6,9 +6,10 @@ import { ubuntu } from "@/lib/font";
 import { cn } from "@/lib/utils";
 // theme
 import { ThemeProvider } from "@/components/theme/theme-provider";
-import Header from "@/components/header";
+
 import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
+import Header from "@/components/header/Header";
 
 export const metadata: Metadata = {
   title: "Online Shop",
