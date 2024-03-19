@@ -49,10 +49,8 @@ const Header = () => {
 
   return (
     <div
-      className={`sticky top-0 flex items-center  justify-between p-2 font-ubuntu shadow-white backdrop-blur-sm md:p-5  ${
-        shadowHeader
-          ? "shadow-[0_0_20px_5px_rgba(0,0,0,0.2)] dark:shadow-[0_0_15px_5px_rgba(80,92,212,0.6)]"
-          : ""
+      className={`sticky top-0 flex items-center  justify-between p-2 font-ubuntu  backdrop-blur-md md:p-5  ${
+        shadowHeader ? " dark:shadow-[0_0_15px_5px_rgba(80,92,212,0.6)]" : ""
       }`}
     >
       <div className="flex items-center md:gap-16">

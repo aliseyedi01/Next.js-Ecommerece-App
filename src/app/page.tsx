@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
+import HomePage from "@/components/home/home-page";
 
 export default function Home() {
   return (
-    <main className="m-2 flex min-h-screen p-24">
-      <p className="font-ubuntu">Home Page</p>
+    <main className="flex flex-col">
+      <HomePage />
     </main>
   );
 }
