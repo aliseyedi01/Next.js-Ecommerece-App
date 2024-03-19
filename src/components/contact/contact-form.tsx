@@ -58,7 +58,7 @@ export default function ContactForm() {
     toast({
       title: "Success !",
       description: "your message has been sent successfully",
-      variant: "success",
+      variant: "default",
       className: "rtl:font-iranSans font text-lg font-kanit",
     });
   }
