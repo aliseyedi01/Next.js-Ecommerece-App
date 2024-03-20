@@ -45,7 +45,7 @@ const BannerCarousel = () => {
         dynamicBullets: true,
       }}
       autoplay={{
-        delay: 3000,
+        delay: 5000,
         disableOnInteraction: false,
       }}
       modules={[Autoplay, Pagination, EffectFade]}
@@ -66,9 +66,9 @@ const BannerCarousel = () => {
           <div className="absolute inset-0 flex h-full w-full flex-col items-start justify-end gap-5 pb-24 pl-6 font-bold text-white md:pb-40 md:pl-40">
             <p className="text-start text-4xl md:text-7xl">{image.text}</p>
             <Link href="/products">
-              <Button className="flex items-center gap-2 md:h-16 md:w-72 md:text-2xl ">
+              <Button className=" flex items-center gap-2 border-2 border-transparent  hover:border-yellow-500 md:h-16 md:w-72 md:text-2xl ">
                 Discover More
-                <ArrowRight className="h-6 w-6 text-yellow-400" />
+                <ArrowRight className="h-6 w-6  text-yellow-400 " />
               </Button>
             </Link>
           </div>
