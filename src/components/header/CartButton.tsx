@@ -55,7 +55,11 @@ export function CartButton() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="hover:bg-blue-300/45  hover:backdrop-blur-lg"
+        >
           <ShoppingCartIcon className="size-5" />
         </Button>
       </SheetTrigger>

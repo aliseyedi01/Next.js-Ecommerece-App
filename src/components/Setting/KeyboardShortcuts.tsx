@@ -45,7 +45,11 @@ export default function KeyboardShortcuts() {
   return (
     <Drawer>
       <DrawerTrigger asChild className="hidden md:flex">
-        <Button variant="ghost" size="icon">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="hover:bg-blue-300/45  hover:backdrop-blur-lg"
+        >
           <Keyboard />
         </Button>
       </DrawerTrigger>
