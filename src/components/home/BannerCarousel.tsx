@@ -14,24 +14,32 @@ import Link from "next/link";
 
 const BannerData = [
   {
-    src: "https://png.pngtree.com/background/20230521/original/pngtree-d-rendered-image-of-a-blue-pedestal-with-a-green-tree-picture-image_2684064.jpg",
-    text: "Electronics & Gadgets",
+    src: "images/banners/gadget.svg",
+    text: "Electronics Gadgets",
   },
   {
-    src: "https://png.pngtree.com/background/20230521/original/pngtree-blue-tree-on-a-circular-pedestal-picture-image_2684099.jpg",
-    text: "Fashion & Apparel",
+    src: "images/banners/fashion.svg",
+    text: "Fashion Apparel",
   },
   {
-    src: "https://png.pngtree.com/background/20230527/original/pngtree-3d-rendering-of-a-blue-tree-on-a-pedestal-picture-image_2754246.jpg",
-    text: "Home Decor & Furnishings",
+    src: "images/banners/furnishing.svg",
+    text: "HomeDecor Furnishings",
   },
   {
-    src: "https://png.pngtree.com/background/20230521/original/pngtree-d-rendered-image-of-a-blue-pedestal-with-a-green-tree-picture-image_2684064.jpg",
-    text: "Health & Wellness Essentials",
+    src: "images/banners/health.svg",
+    text: "Health Wellness",
   },
   {
-    src: "https://png.pngtree.com/background/20230521/original/pngtree-blue-tree-on-a-circular-pedestal-picture-image_2684099.jpg",
-    text: "Outdoor & Adventure Gear",
+    src: "images/banners/sports.svg",
+    text: "Sports Fitness",
+  },
+  {
+    src: "images/banners/food.svg",
+    text: "Food Groceries",
+  },
+  {
+    src: "images/banners/books.svg",
+    text: "Books Literature",
   },
 ];
 
@@ -40,38 +48,47 @@ const BannerCarousel = () => {
     <Swiper
       loop={true}
       effect="fade"
-      pagination={{
-        clickable: true,
-        dynamicBullets: true,
+      fadeEffect={{
+        crossFade: true,
       }}
+      // pagination={{
+      //   clickable: true,
+      //   dynamicBullets: true,
+      // }}
       autoplay={{
-        delay: 5000,
+        delay: 2000,
         disableOnInteraction: false,
       }}
-      modules={[Autoplay, Pagination, EffectFade]}
-      className="relative h-screen w-full"
+      modules={[Autoplay, EffectFade]}
+      // modules={[Autoplay, Pagination, EffectFade]}
+      className="h-screen w-full bg-blue-800"
     >
       {BannerData.map((image, index) => (
-        <SwiperSlide key={index} className="">
+        <SwiperSlide
+          key={index}
+          className="!flex flex-col-reverse items-center justify-center p-10 md:flex-row"
+        >
+          <div className="flex w-full flex-col items-center justify-center gap-5 font-bold text-white md:w-1/2">
+            <p className="w-40 text-center text-4xl md:w-80 md:text-start md:text-7xl">
+              {image.text}
+            </p>
+            <Link href="/products">
+              <Button className="flex items-center gap-2 border-2 border-transparent  hover:border-yellow-500 md:h-16 md:w-80 md:text-2xl">
+                Discover More
+                <ArrowRight className="h-6 w-6 text-yellow-400" />
+              </Button>
+            </Link>
+          </div>
           <Image
             src={image.src}
-            width="700"
-            height="400"
+            width="200"
+            height="200"
             loading="eager"
             quality={100}
             unoptimized={true}
             alt={`slide-${index}`}
-            className=" h-full w-full object-cover hover:opacity-10 md:object-center "
+            className="h-screen w-full object-contain md:w-1/2 "
           />
-          <div className="absolute inset-0 flex h-full w-full flex-col items-start justify-end gap-5 pb-24 pl-6 font-bold text-white md:pb-40 md:pl-40">
-            <p className="text-start text-4xl md:text-7xl">{image.text}</p>
-            <Link href="/products">
-              <Button className=" flex items-center gap-2 border-2 border-transparent  hover:border-yellow-500 md:h-16 md:w-72 md:text-2xl ">
-                Discover More
-                <ArrowRight className="h-6 w-6  text-yellow-400 " />
-              </Button>
-            </Link>
-          </div>
         </SwiperSlide>
       ))}
     </Swiper>
