@@ -8,9 +8,6 @@ export const metadata: Metadata = {
   title: "Contact | Online Shop",
 };
 
-const ImageSource =
-  "https://img.freepik.com/free-vector/customer-service-operators-with-headsets-computers-consulting-clients-24-7-call-center-handling-call-system-virtual-call-center-concept-illustration_335657-2329.jpg?t=st=1710852309~exp=1710855909~hmac=e1690b510ba8a6ce6a8dcbbccc92f93cef242ec72cba1bf17c86af09e8dd359f&w=996";
-
 export default function Contact() {
   return (
     <section className="flex h-full items-start justify-center  md:h-screen ">
@@ -24,12 +21,12 @@ export default function Contact() {
           </p>
           <ContactForm />
         </div>
-        <div className="flex flex-col items-center justify-start max-md:py-9">
+        <div className="flex flex-col items-center justify-start  gap-8 max-md:py-9">
           <Image
-            src={ImageSource}
+            src="/images/pages/contact.svg"
             alt="About Us Image"
-            width={700}
-            height={600}
+            width={500}
+            height={500}
             className="rounded-lg object-cover"
           />
           <SocialMedia />

@@ -13,7 +13,7 @@ export default function About() {
         {/* Image Section */}
         <div className=" w-full md:w-1/2">
           <Image
-            src="https://img.freepik.com/free-vector/business-team-brainstorm-idea-lightbulb-from-jigsaw-working-team-collaboration-enterprise-cooperation-colleagues-mutual-assistance-concept-pinkish-coral-bluevector-isolated-illustration_335657-1651.jpg?t=st=1710851923~exp=1710855523~hmac=3f53ff27e9cffd1d8d6b761106161836308f1aa84761d962a6e8d0feab719da1&w=996"
+            src="/images/pages/about.svg"
             alt="About Us Image"
             width={600}
             height={400}
@@ -22,7 +22,7 @@ export default function About() {
         </div>
 
         {/* Text Section */}
-        <div className="w-full space-y-4 md:w-1/2">
+        <div className="w-full space-y-4 max-md:pb-4 md:w-1/2">
           <h2 className="mb-4 text-center text-3xl font-medium md:text-left">
             About Online Shop
           </h2>

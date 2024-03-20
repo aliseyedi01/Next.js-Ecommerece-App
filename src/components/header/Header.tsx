@@ -35,7 +35,7 @@ const ItemsData = [
     icon: <InfoCircledIcon />,
   },
   {
-    name: "Contact Us",
+    name: "Contact",
     link: "/contact",
     icon: <ChatBubbleIcon />,
   },

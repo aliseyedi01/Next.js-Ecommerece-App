@@ -33,7 +33,7 @@ const ItemsData = [
     icon: <Info />,
   },
   {
-    name: "Contact Us",
+    name: "Contact",
     link: "/contact",
     icon: <PhoneCall />,
   },
