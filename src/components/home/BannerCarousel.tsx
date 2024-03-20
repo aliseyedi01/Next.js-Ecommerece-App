@@ -49,7 +49,7 @@ const BannerCarousel = () => {
         disableOnInteraction: false,
       }}
       modules={[Autoplay, Pagination, EffectFade]}
-      className="relative h-full w-full"
+      className="relative h-screen w-full"
     >
       {BannerData.map((image, index) => (
         <SwiperSlide key={index} className="">
