@@ -37,17 +37,17 @@ const SearchButton = ({ ...props }) => {
       <Button
         variant="ghost"
         className={cn(
-          "flex h-9 w-full flex-row justify-between border bg-background text-sm font-normal text-muted-foreground !mix-blend-normal shadow-none md:w-64 md:border",
+          "flex h-9 w-full flex-row justify-between border  text-sm font-normal text-muted-foreground  shadow-none backdrop-blur-sm md:w-64 md:border",
         )}
         onClick={() => setOpen(true)}
         {...props}
       >
         <div className="flex w-full">
-          <Search className="size-5 text-foreground" />
+          <Search className="size-5 " />
           <span className="ml-2 hidden lg:inline-flex">Search Products...</span>
           <span className="inline-flex pl-2 lg:hidden">Search...</span>
         </div>
-        <kbd className="hidden select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium sm:flex">
+        <kbd className="hidden select-none items-center gap-1 rounded border bg-muted  px-1.5 font-mono text-[10px] font-medium text-blue-600  sm:flex">
           <span className="text-xs">⌘</span>K
         </kbd>
       </Button>

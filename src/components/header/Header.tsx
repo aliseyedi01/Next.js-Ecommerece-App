@@ -49,8 +49,8 @@ const Header = () => {
 
   return (
     <div
-      className={`sticky top-0 z-50 flex  items-center justify-between p-2 font-ubuntu text-blue-400    backdrop-blur-md md:p-5 
-       ${shadowHeader ? " dark:shadow-[0_0_15px_5px_rgba(80,92,212,0.6)]" : ""}
+      className={`sticky top-0 z-50 flex  items-center justify-between p-2 font-ubuntu text-blue-400   md:p-5
+       ${shadowHeader ? "backdrop-blur-md dark:shadow-[0_0_15px_5px_rgba(80,92,212,0.6)]" : ""}
        ${pathname === "/" ? "mix-blend-color-dodge" : ""}
        `}
     >
@@ -64,9 +64,9 @@ const Header = () => {
             <Link
               key={item.name}
               href={item.link}
-              className={`uppercase hover:text-blue-600 ${
+              className={`transform font-extrabold uppercase bg-blend-exclusion duration-200 hover:scale-110 ${
                 pathname === item.link
-                  ? "text-blue-600 underline  underline-offset-4"
+                  ? " text-blue-600 underline  underline-offset-4"
                   : ""
               }`}
             >
