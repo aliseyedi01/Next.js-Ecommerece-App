@@ -56,7 +56,7 @@ const BannerCarousel = () => {
       //   dynamicBullets: true,
       // }}
       autoplay={{
-        delay: 2000,
+        delay: 4000,
         disableOnInteraction: false,
       }}
       modules={[Autoplay, EffectFade]}
@@ -68,7 +68,7 @@ const BannerCarousel = () => {
           key={index}
           className="!flex flex-col-reverse items-center justify-center p-10 md:flex-row"
         >
-          <div className="flex w-full flex-col items-center justify-center gap-5 font-bold text-white md:w-1/2">
+          <div className="flex w-full flex-col items-center justify-center gap-5 font-bold text-white max-md:pb-10 md:w-1/2">
             <p className="w-40 text-center text-4xl md:w-80 md:text-start md:text-7xl">
               {image.text}
             </p>
