@@ -41,7 +41,7 @@ const Brands = () => {
               alt={brand.label}
               width={100}
               height={100}
-              className="size-20  object-contain md:size-32"
+              className="size-20 object-contain md:size-32"
             />
           </div>
         ))}
