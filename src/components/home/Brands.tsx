@@ -3,7 +3,7 @@ import Image from "next/image";
 const BRANDS_LIST = [
   {
     label: "Adidas",
-    src: "/images/brands/adidas.jpg",
+    src: "/images/brands/adidas.png",
   },
   {
     label: "Gucci",
@@ -11,11 +11,11 @@ const BRANDS_LIST = [
   },
   {
     label: "versace",
-    src: "/images/brands/versace.jpg",
+    src: "/images/brands/versace.png",
   },
   {
     label: "Levis",
-    src: "/images/brands/levis.jpg",
+    src: "/images/brands/levis.png",
   },
   {
     label: "Nike",
@@ -23,7 +23,7 @@ const BRANDS_LIST = [
   },
   {
     label: "Chanel",
-    src: "/images/brands/chanel.jpg",
+    src: "/images/brands/chanel1.png",
   },
 ];
 
