@@ -51,7 +51,7 @@ const Header = () => {
     <div
       className={`sticky top-0 z-50 flex  items-center justify-between p-2 font-ubuntu text-blue-400   md:p-5
        ${shadowHeader ? "backdrop-blur-md dark:shadow-[0_0_15px_5px_rgba(80,92,212,0.6)]" : ""}
-       ${pathname === "/" ? "mix-blend-color-dodge" : ""}
+
        `}
     >
       <div className="flex items-center md:gap-16">

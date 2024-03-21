@@ -29,22 +29,24 @@ const BRANDS_LIST = [
 
 const Brands = () => {
   return (
-    <section className=" p-5 md:px-12" id="brands">
-      <h2 className="text-center  text-3xl font-bold  tracking-widest text-blue-800 md:text-left">
-        Brands
-      </h2>
-      <div className="w-ful grid  grid-cols-3 place-items-center gap-5 py-5 md:grid-cols-6 md:place-items-start md:py-9">
-        {BRANDS_LIST.map((brand, i) => (
-          <div key={i}>
-            <Image
-              src={brand.src}
-              alt={brand.label}
-              width={100}
-              height={100}
-              className="size-20 object-contain md:size-32"
-            />
-          </div>
-        ))}
+    <section className="w-full py-7" id="brands">
+      <div className="mx-auto max-w-7xl  px-5 sm:px-6">
+        <h2 className="text-center text-3xl font-bold  tracking-widest text-primary lg:text-4xl ">
+          Brands
+        </h2>
+        <div className="flex flex-row flex-wrap items-center justify-between px-4 py-5  md:py-9">
+          {BRANDS_LIST.map((brand, i) => (
+            <div key={i}>
+              <Image
+                src={brand.src}
+                alt={brand.label}
+                width={100}
+                height={100}
+                className="size-20 object-contain md:size-32 "
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
