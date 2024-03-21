@@ -92,7 +92,7 @@ const BannerCarousel = () => {
         </SwiperSlide>
       ))}
       <Link href="/#brands">
-        <ChevronsDown className="absolute bottom-2 left-[45%] size-7  animate-bounce text-white md:left-[49%] md:size-10" />
+        <CircleArrowDown className="absolute bottom-2 left-[45%] z-50 size-7  animate-bounce text-white md:left-[49%] md:size-10" />
       </Link>
     </Swiper>
   );

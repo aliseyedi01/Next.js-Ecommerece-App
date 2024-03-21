@@ -10,6 +10,7 @@ import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import Footer from "@/components/footer/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import Header from "@/components/header/Header";
+import ProgressProvider from "@/components/utility/ProgressProvider";
 
 export const metadata: Metadata = {
   title: "Online Shop",
@@ -31,7 +32,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          {children}
+          <ProgressProvider>{children}</ProgressProvider>
           <Footer />
           <Toaster />
         </ThemeProvider>
