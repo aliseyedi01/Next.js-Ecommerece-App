@@ -17,6 +17,7 @@ import { CartButton } from "./CartButton";
 import KeyboardShortcuts from "../Setting/KeyboardShortcuts";
 import { NavbarButton } from "./NavbarMobile";
 import { useScrollPercentage } from "@/hooks/UseScrollPercentage";
+import { useEffect, useState } from "react";
 
 const ItemsData = [
   {
@@ -43,9 +44,18 @@ const ItemsData = [
 
 const Header = () => {
   const pathname = usePathname();
-
   const scrollPercentage = useScrollPercentage();
-  const shadowHeader = Number(scrollPercentage) < 80;
+  const [blurPercentage, setBlurPercentage] = useState(80);
+
+  useEffect(() => {
+    if (pathname === "/") {
+      setBlurPercentage(90);
+    } else {
+      setBlurPercentage(80);
+    }
+  }, [pathname]);
+
+  const shadowHeader = Number(scrollPercentage) <= blurPercentage;
 
   return (
     <div
