@@ -9,7 +9,7 @@ import { EffectFade, Pagination, Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
 import { Button } from "../ui/button";
 // icons
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CircleArrowDown, icons } from "lucide-react";
 import Link from "next/link";
 
 const BannerData = [
@@ -61,7 +61,7 @@ const BannerCarousel = () => {
       }}
       modules={[Autoplay, EffectFade]}
       // modules={[Autoplay, Pagination, EffectFade]}
-      className="h-screen w-full bg-blue-800"
+      className="relative h-screen w-full bg-blue-800"
     >
       {BannerData.map((image, index) => (
         <SwiperSlide
@@ -89,6 +89,9 @@ const BannerCarousel = () => {
             alt={`slide-${index}`}
             className="h-screen w-full object-contain md:w-1/2 "
           />
+          <Link href="/#brands">
+            <CircleArrowDown className="absolute bottom-2 left-[45%]  size-10 animate-bounce text-white md:left-1/2" />
+          </Link>
         </SwiperSlide>
       ))}
     </Swiper>

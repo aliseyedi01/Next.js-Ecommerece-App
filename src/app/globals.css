@@ -98,7 +98,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply scroll-smooth border-border;
   }
   body {
     @apply relative bg-background  font-ubuntu text-foreground scrollbar scrollbar-thumb-primary  scrollbar-corner-indigo-500  scrollbar-track-rounded-xl scrollbar-thumb-rounded-md scrollbar-w-[10px];

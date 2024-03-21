@@ -29,7 +29,7 @@ const BRANDS_LIST = [
 
 const Brands = () => {
   return (
-    <section className=" p-5 md:px-12">
+    <section className=" p-5 md:px-12" id="brands">
       <h2 className="text-center  text-3xl font-bold  tracking-widest text-blue-800 md:text-left">
         Brands
       </h2>
