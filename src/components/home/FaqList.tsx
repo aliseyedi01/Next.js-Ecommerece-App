@@ -14,11 +14,6 @@ const faqs = [
       "Provide information on the ordering process, including steps to add items to the cart, checkout procedures, and any account creation requirements.",
   },
   {
-    question: "What payment methods do you accept?",
-    answer:
-      "List the various payment options available to customers, such as credit/debit cards, PayPal, Apple Pay, Google Pay, etc.",
-  },
-  {
     question: "What is your return policy?",
     answer:
       "Detail your return and exchange policy, including eligibility criteria, timeframes, and any restocking fees or return shipping costs.",
@@ -28,24 +23,18 @@ const faqs = [
     answer:
       "Explain how customers can track their orders, whether through order confirmation emails, account dashboards, or shipment tracking links.",
   },
-  // {
-  //   question: "Do you offer international shipping?",
-  //   answer:
-  //     "Clarify whether you offer shipping beyond your domestic region, including any additional costs, delivery times, and countries you ship to.",
-  // },
-  // {
-  //   question: "What if I receive a damaged or defective item?",
-  //   answer:
-  //     "Outline the procedure for handling damaged or defective items, including how to report issues, initiate returns or exchanges, and receive refunds or replacements.",
-  // },
+  {
+    question: "International shipping?",
+    answer: "Yes, we ship worldwide. Contact us for details.",
+  },
 ];
 
 const FaqList = () => {
   return (
-    <section className="py-14">
-      <div className="mx-auto max-w-7xl px-5 sm:px-6">
-        <div className="grid grid-cols-2">
-          <div className="min-h-[25rem]">
+    <section className="w-full  py-14">
+      <div className="mx-auto w-full max-w-7xl  px-5 sm:px-6">
+        <div className="bg -emerald-700 grid w-full grid-cols-1 place-items-center  md:grid-cols-2">
+          <div className="min-h-[25rem]  w-full ">
             <h3 className="text-2xl font-bold text-blue-800">
               Popular Question
             </h3>
@@ -55,22 +44,28 @@ const FaqList = () => {
               className="w-full text-blue-950"
             >
               {faqs.map((faq, index) => (
-                <AccordionItem key={index} className="" value={`item-${index}`}>
+                <AccordionItem
+                  key={index}
+                  className="w-full"
+                  value={`item-${index}`}
+                >
                   <AccordionTrigger className="text-lg font-semibold">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent>{faq.answer}</AccordionContent>
+                  <AccordionContent className="w-full max-w-full">
+                    {faq.answer}
+                  </AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
           </div>
-          <div className="">
+          <div className=" ">
             <Image
-              src="/images/pages/faq1.svg"
+              src="/images/pages/faq.svg"
               alt="About Us Image"
               width={500}
               height={500}
-              className=""
+              className="hidden md:flex"
             />
           </div>
         </div>
