@@ -1,8 +1,6 @@
 import React from "react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import Link from "next/link";
-import { Mail } from "lucide-react";
 import Image from "next/image";
 
 const Newsletter = () => {

@@ -1,5 +1,7 @@
 import BannerCarousel from "./BannerCarousel";
 import Brands from "./Brands";
+import FaqList from "./FaqList";
+
 import Features from "./Features";
 import Newsletter from "./NewsLetter";
 
@@ -9,6 +11,7 @@ const HomePage = () => {
       <BannerCarousel />
       <Brands />
       <Features />
+      <FaqList />
       <Newsletter />
     </div>
   );
