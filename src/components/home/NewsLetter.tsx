@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Newsletter = () => {
   return (
-    <section className="py-14">
+    <section className="py-7 md:py-14">
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <div className="rid-rows-2 grid grid-flow-row place-content-center gap-5 md:grid-flow-col md:grid-cols-2 ">
           <Image
