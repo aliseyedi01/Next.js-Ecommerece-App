@@ -34,7 +34,7 @@ const Brands = () => {
         <h2 className="text-center text-3xl font-bold  tracking-widest text-primary lg:text-4xl ">
           Brands
         </h2>
-        <div className="flex flex-row flex-wrap items-center justify-between px-4 py-5  md:py-9">
+        <div className="flex flex-row flex-wrap items-center justify-between px-4 py-5 max-md:gap-2  md:py-9">
           {BRANDS_LIST.map((brand, i) => (
             <div key={i}>
               <Image
