@@ -22,8 +22,8 @@ const LISTS = [
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col bg-primary/15 font-ubuntu text-accent-foreground shadow-xl ">
-      <div className="flex w-full flex-col justify-around p-5 max-md:gap-3 md:flex-row md:p-9">
+    <footer className="flex flex-col  bg-primary/15 font-ubuntu text-accent-foreground shadow-xl ">
+      <div className="mx-auto flex w-full max-w-7xl flex-col justify-between p-5 max-md:gap-3 md:flex-row md:p-9">
         <div className="space-y-2">
           <h3 className="text-lg font-bold">Online Shop</h3>
           <p className="w-80 text-wrap md:w-96">

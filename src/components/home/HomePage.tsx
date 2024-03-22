@@ -1,6 +1,7 @@
 import BannerCarousel from "./BannerCarousel";
 import Brands from "./Brands";
 import Features from "./Features";
+import Newsletter from "./NewsLetter";
 
 const HomePage = () => {
   return (
@@ -8,6 +9,7 @@ const HomePage = () => {
       <BannerCarousel />
       <Brands />
       <Features />
+      <Newsletter />
     </div>
   );
 };
