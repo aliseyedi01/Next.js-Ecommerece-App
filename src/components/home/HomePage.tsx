@@ -1,7 +1,6 @@
 import BannerCarousel from "./BannerCarousel";
 import Brands from "./Brands";
 import FaqList from "./FaqList";
-
 import Features from "./Features";
 import Newsletter from "./NewsLetter";
 

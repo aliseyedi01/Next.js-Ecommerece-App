@@ -7,7 +7,7 @@ import "swiper/css/effect-fade";
 // import "swiper/css/pagination";
 import { EffectFade, Pagination, Navigation, Autoplay } from "swiper/modules";
 import Image from "next/image";
-import { Button } from "../ui/button";
+import { Button } from "@components/ui/button";
 // icons
 import { ArrowRight, CircleArrowDown, icons, ChevronsDown } from "lucide-react";
 import Link from "next/link";

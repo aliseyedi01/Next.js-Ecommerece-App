@@ -1,5 +1,5 @@
+import Container from "@components/utility/Container";
 import Image from "next/image";
-import Container from "../utility/Container";
 
 const BRANDS_LIST = [
   {

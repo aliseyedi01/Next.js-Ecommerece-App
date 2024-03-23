@@ -19,8 +19,10 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
+      // "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
+      "@components/utility/*": ["src/components/utility/*"],
+      "@hooks/*": ["src/hooks/*"],
       "@assets/*": ["src/assets/*"],
       "@lib/*": ["src/lib/*"],
     }

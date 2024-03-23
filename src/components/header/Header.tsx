@@ -9,6 +9,7 @@ import {
 } from "@radix-ui/react-icons";
 // next
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 // component
 import SearchButton from "./SearchButton";
@@ -16,8 +17,7 @@ import ProfileButton from "./ProfileButton";
 import { CartButton } from "./CartButton";
 import KeyboardShortcuts from "../Setting/KeyboardShortcuts";
 import { NavbarButton } from "./NavbarMobile";
-import { useScrollPercentage } from "@/hooks/UseScrollPercentage";
-import { useEffect, useState } from "react";
+import { useScrollPercentage } from "@hooks/UseScrollPercentage";
 
 const ItemsData = [
   {

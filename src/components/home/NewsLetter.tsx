@@ -1,8 +1,7 @@
 import React from "react";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
 import Image from "next/image";
-import Container from "../utility/Container";
+import Container from "@components/utility/Container";
+import { Button, Input } from "@components/ui";
 
 const Newsletter = () => {
   return (

@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@components/ui/button";
 import {
   Sheet,
   SheetClose,
@@ -10,7 +10,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "@components/ui/sheet";
 import { PanelLeft, Trash2, Home, Store, PhoneCall, Info } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

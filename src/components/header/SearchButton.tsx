@@ -1,7 +1,7 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { Button } from "../ui/button";
+import { cn } from "@lib/utils";
+
 import { useCallback, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
@@ -13,7 +13,8 @@ import {
   CommandItem,
   CommandList,
   CommandSeparator,
-} from "@/components/ui/command";
+} from "@components/ui/command";
+import { Button } from "@components/ui";
 
 const products = [
   { id: 1, title: "Product 1" },

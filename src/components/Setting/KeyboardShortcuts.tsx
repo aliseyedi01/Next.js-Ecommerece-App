@@ -1,13 +1,14 @@
 "use client";
 
+import { Badge, Button } from "@components/ui";
 import {
   Drawer,
   DrawerContent,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/components/ui/drawer";
-import { Button } from "../ui/button";
+} from "@components/ui/drawer";
+
 import {
   Keyboard,
   UserRound,
@@ -16,7 +17,6 @@ import {
   Search,
   Palette,
 } from "lucide-react";
-import { Badge } from "../ui/badge";
 
 const shortcuts = [
   { icon: <UserRound />, name: "Profile", shortcut: "Ctr P" },

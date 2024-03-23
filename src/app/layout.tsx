@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 // style
 import "./globals.css";
-import { ubuntu } from "@/lib/font";
-import { cn } from "@/lib/utils";
+import { ubuntu } from "@lib/font";
+import { cn } from "@lib/utils";
 // theme
-import { ThemeProvider } from "@/components/theme/ThemeProvider";
-
-import Footer from "@/components/footer/Footer";
-import { Toaster } from "@/components/ui/toaster";
-import Header from "@/components/header/Header";
-import ProgressProvider from "@/components/utility/ProgressProvider";
+import { ThemeProvider } from "@components/theme/ThemeProvider";
+import Footer from "@components/footer/Footer";
+import { Toaster } from "@components/ui/toaster";
+import Header from "@components/header/Header";
+import ProgressProvider from "@components/utility/ProgressProvider";
 
 export const metadata: Metadata = {
   title: "Online Shop",
