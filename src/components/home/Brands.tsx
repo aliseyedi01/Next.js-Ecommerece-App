@@ -33,7 +33,7 @@ const Brands = () => {
     <section className="w-full py-7" id="brands">
       <Container>
         <h2 className="section-heading">Brands</h2>
-        <div className="flex flex-row flex-wrap items-center justify-between gap-8 px-4 py-5  md:py-9">
+        <div className="flex flex-row flex-wrap items-center justify-between gap-8 px-4 py-5 md:px-24  md:py-9">
           {BRANDS_LIST.map((brand, i) => (
             <div key={i}>
               <Image
