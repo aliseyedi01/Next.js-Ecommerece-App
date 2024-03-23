@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Container from "../utility/Container";
 
 const BRANDS_LIST = [
   {
@@ -30,7 +31,7 @@ const BRANDS_LIST = [
 const Brands = () => {
   return (
     <section className="w-full py-7" id="brands">
-      <div className="mx-auto max-w-7xl  px-5 sm:px-6">
+      <Container>
         <h2 className="section-heading">Brands</h2>
         <div className="flex flex-row flex-wrap items-center justify-between px-4 py-5 max-md:gap-2  md:py-9">
           {BRANDS_LIST.map((brand, i) => (
@@ -45,7 +46,7 @@ const Brands = () => {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

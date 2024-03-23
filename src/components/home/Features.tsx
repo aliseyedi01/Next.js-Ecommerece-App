@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Container from "../utility/Container";
 
 const FEATURES_LIST = [
   {
@@ -27,7 +28,7 @@ const FEATURES_LIST = [
 const Features = () => {
   return (
     <section className="py-14">
-      <div className="mx-auto max-w-7xl px-5 sm:px-6">
+      <Container>
         <h2 className=" section-heading">Features</h2>
         <div className="mt-12 grid gap-10 text-primary sm:grid-cols-2 lg:grid-cols-4">
           {FEATURES_LIST.map((feature) => (
@@ -49,7 +50,7 @@ const Features = () => {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

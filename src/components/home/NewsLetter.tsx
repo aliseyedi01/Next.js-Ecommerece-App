@@ -2,11 +2,12 @@ import React from "react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import Container from "../utility/Container";
 
 const Newsletter = () => {
   return (
     <section className="py-7 md:py-14">
-      <div className="mx-auto max-w-7xl px-5 sm:px-6">
+      <Container>
         <div className="rid-rows-2 grid grid-flow-row place-content-center gap-5 md:grid-flow-col md:grid-cols-2 ">
           <Image
             src="/images/pages/newsletter.svg"
@@ -48,7 +49,7 @@ const Newsletter = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
