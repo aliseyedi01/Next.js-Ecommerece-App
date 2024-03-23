@@ -28,11 +28,7 @@ const Features = () => {
   return (
     <section className="py-14">
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
-        <header className="text-center text-primary ">
-          <h2 className="mb-3 text-3xl  font-semibold lg:text-4xl">
-            Capabilities
-          </h2>
-        </header>
+        <h2 className=" section-heading">Features</h2>
         <div className="mt-12 grid gap-10 text-primary sm:grid-cols-2 lg:grid-cols-4">
           {FEATURES_LIST.map((feature) => (
             <div

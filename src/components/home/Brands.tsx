@@ -31,9 +31,7 @@ const Brands = () => {
   return (
     <section className="w-full py-7" id="brands">
       <div className="mx-auto max-w-7xl  px-5 sm:px-6">
-        <h2 className="text-center text-3xl font-bold  tracking-widest text-primary lg:text-4xl ">
-          Brands
-        </h2>
+        <h2 className="section-heading">Brands</h2>
         <div className="flex flex-row flex-wrap items-center justify-between px-4 py-5 max-md:gap-2  md:py-9">
           {BRANDS_LIST.map((brand, i) => (
             <div key={i}>

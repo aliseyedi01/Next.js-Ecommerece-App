@@ -104,3 +104,9 @@
     @apply relative bg-background  font-ubuntu text-foreground scrollbar scrollbar-thumb-primary  scrollbar-corner-indigo-500  scrollbar-track-rounded-xl scrollbar-thumb-rounded-md scrollbar-w-[10px];
   }
 }
+
+@layer utilities {
+  .section-heading {
+    @apply text-center text-3xl font-semibold text-primary md:text-left;
+  }
+}

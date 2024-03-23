@@ -31,17 +31,15 @@ const faqs = [
 
 const FaqList = () => {
   return (
-    <section className="w-full py-10  md:py-14">
-      <div className="mx-auto w-full max-w-7xl  px-5 sm:px-6">
-        <div className="bg -emerald-700 grid w-full grid-cols-1 place-items-center  md:grid-cols-2">
-          <div className="min-h-[22rem]   w-full  md:min-h-[25rem] ">
-            <h3 className="text-2xl font-bold text-blue-800">
-              Popular Question
-            </h3>
+    <section className="w-full py-10 md:py-14">
+      <div className="mx-auto w-full max-w-7xl px-5 sm:px-6">
+        <div className="grid w-full grid-cols-1 place-items-center  md:grid-cols-2">
+          <div className="min-h-[22rem] w-full md:min-h-[25rem] ">
+            <h2 className="section-heading">Popular Question</h2>
             <Accordion
               type="single"
               collapsible
-              className="w-full text-blue-950"
+              className="w-full pt-4 text-blue-950"
             >
               {faqs.map((faq, index) => (
                 <AccordionItem
