@@ -1,46 +1,45 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, FC, ComponentProps } from "react";
 import { cn } from "@lib/utils";
 import Image from "next/image";
+import { Skeleton } from "@components/ui";
 
-interface BlurringImageProps {
-  src: string;
-  alt: string;
-  width?: number | `${number}` | undefined;
-  height?: number | `${number}` | undefined;
-  className?: string | undefined;
-}
+// interface BlurringImageProps {
+//   src: string;
+//   alt: string;
+//   width?: number | `${number}` | undefined;
+//   height?: number | `${number}` | undefined;
+//   className?: string | undefined;
+// }
 
-const BlurringImage: React.FC<BlurringImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className,
-}) => {
+type ImageBlurProps = ComponentProps<typeof Image>;
+
+const BlurringImage: FC<ImageBlurProps> = ({ ...imageProps }) => {
   const [isLoading, setIsLoading] = useState(true);
-  const hasLoaded = useRef(false);
+  const { onLoad, className, alt, ...finalImageProps } = imageProps;
 
   const handleOnLoad = () => {
     setIsLoading(false);
   };
 
   return (
-    <Image
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      onLoad={handleOnLoad}
-      className={cn(
-        "size-[29rem] rounded-lg object-contain ease-in-out",
-        className,
-        isLoading
-          ? hasLoaded.current
-            ? "scale-100 blur-0 saturate-100"
-            : "scale-110 blur-2xl saturate-200 duration-500"
-          : "scale-100 blur-0 saturate-100",
+    <div className="relative">
+      <Image
+        alt={alt}
+        onLoad={handleOnLoad}
+        {...finalImageProps}
+        className={cn(
+          "size-[29rem] rounded-lg object-contain ease-in-out",
+          className,
+          isLoading ? "opacity-0" : "opacity-100",
+          // isLoading
+          //   ? "blur-2xl saturate-200 duration-500"
+          //   : "blur-0 saturate-100",
+        )}
+      />
+      {isLoading && (
+        <Skeleton className="absolute inset-0 size-[29rem] rounded-2xl" />
       )}
-    />
+    </div>
   );
 };
 
