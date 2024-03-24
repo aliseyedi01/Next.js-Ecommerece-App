@@ -15,7 +15,6 @@ import { usePathname } from "next/navigation";
 import SearchButton from "./SearchButton";
 import ProfileButton from "./ProfileButton";
 import { CartButton } from "./CartButton";
-import KeyboardShortcuts from "../Setting/KeyboardShortcuts";
 import { NavbarButton } from "./NavbarMobile";
 import { useScrollPercentage } from "@hooks/UseScrollPercentage";
 import { ModeToggle } from "@components/theme/ModeToggle";

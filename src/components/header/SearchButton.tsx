@@ -38,17 +38,17 @@ const SearchButton = ({ ...props }) => {
       <Button
         variant="ghost"
         className={cn(
-          "flex h-9 w-full flex-row justify-between border text-sm  font-normal  text-muted-foreground shadow-none   hover:bg-blue-500/90 hover:backdrop-blur-lg md:w-64 md:border",
+          "flex h-9 w-full flex-row justify-between border border-destructive-foreground  text-sm  font-normal text-muted-foreground  shadow-none hover:bg-primary hover:text-card-foreground  md:w-64 md:border",
         )}
         onClick={() => setOpen(true)}
         {...props}
       >
         <div className="flex w-full">
           <Search className="size-5 " />
-          <span className="ml-2 hidden lg:inline-flex">Search Products...</span>
+          <span className="ml-2 hidden md:inline-flex">Search Products...</span>
           <span className="inline-flex pl-2 lg:hidden">Search...</span>
         </div>
-        <kbd className="hidden select-none items-center gap-1 rounded border bg-muted  px-1.5 font-mono text-[10px] font-medium text-blue-600  sm:flex">
+        <kbd className="hidden select-none items-center gap-1 rounded  bg-primary px-1.5 font-mono text-[10px] font-medium text-destructive-foreground/75  sm:flex">
           <span className="text-xs">⌘</span>K
         </kbd>
       </Button>
@@ -59,7 +59,7 @@ const SearchButton = ({ ...props }) => {
         />
         <CommandList>
           <CommandEmpty className="font-ubuntu">No results found.</CommandEmpty>
-          <CommandGroup heading="Products">
+          <CommandGroup heading="Products" className="">
             {products.map((product) => (
               <CommandItem
                 key={product.id}
