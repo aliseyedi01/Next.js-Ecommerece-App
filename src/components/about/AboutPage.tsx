@@ -24,6 +24,7 @@ export default function AboutPage() {
             alt="About Us Image"
             width={600}
             height={400}
+            priority={false}
             className="object-contain "
           />
         </div>

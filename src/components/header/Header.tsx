@@ -18,6 +18,7 @@ import { CartButton } from "./CartButton";
 import KeyboardShortcuts from "../Setting/KeyboardShortcuts";
 import { NavbarButton } from "./NavbarMobile";
 import { useScrollPercentage } from "@hooks/UseScrollPercentage";
+import { ModeToggle } from "@components/theme/ModeToggle";
 
 const ItemsData = [
   {
@@ -60,7 +61,7 @@ const Header = () => {
   return (
     <div
       className={`sticky top-0 z-50 flex  items-center justify-between p-2 font-ubuntu text-blue-400   md:p-5
-       ${shadowHeader ? "backdrop-blur-md dark:shadow-[0_0_15px_5px_rgba(80,92,212,0.6)]" : ""}
+       ${shadowHeader ? "shadow-md backdrop-blur-md" : ""}
        `}
     >
       <div className="flex items-center md:gap-16">
@@ -87,7 +88,8 @@ const Header = () => {
 
       <div className="flex items-center justify-between ">
         <SearchButton />
-        <KeyboardShortcuts />
+        {/* <KeyboardShortcuts /> */}
+        <ModeToggle />
         <CartButton />
         <ProfileButton />
       </div>
