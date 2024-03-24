@@ -34,18 +34,18 @@ const FaqList = () => {
     <section className="w-full py-10 md:py-14">
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <div className="grid w-full grid-cols-1 place-items-center  md:grid-cols-2">
-          <div className="min-h-[22rem] w-full md:min-h-[25rem] ">
+          <div className="min-h-[22rem] w-full md:min-h-[26rem] ">
             <h2 className="section-heading">Popular Question</h2>
             <Accordion
               type="single"
               collapsible
-              className="w-full pt-4 text-blue-950"
+              className="w-full pt-4 text-foreground"
             >
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
-                  className="w-full"
                   value={`item-${index}`}
+                  className="accordion-item w-full p-2"
                 >
                   <AccordionTrigger className="text-lg font-semibold">
                     {faq.question}
