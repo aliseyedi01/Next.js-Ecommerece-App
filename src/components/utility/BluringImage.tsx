@@ -30,14 +30,13 @@ const BlurringImage: FC<ImageBlurProps> = ({ ...imageProps }) => {
         className={cn(
           "size-[29rem] rounded-lg object-contain ease-in-out",
           className,
-          isLoading ? "opacity-0" : "opacity-100",
-          // isLoading
-          //   ? "blur-2xl saturate-200 duration-500"
-          //   : "blur-0 saturate-100",
+          isLoading
+            ? "opacity-100 blur-2xl saturate-200 duration-500"
+            : "opacity-100 blur-0 saturate-100",
         )}
       />
       {isLoading && (
-        <Skeleton className="absolute inset-0 size-[29rem] rounded-2xl" />
+        <Skeleton className="absolute inset-0 size-[29rem] rounded-full" />
       )}
     </div>
   );
