@@ -68,7 +68,7 @@ const Categories = () => {
                 alt={category.label}
                 width={200}
                 height={200}
-                className="h-14 w-24 rounded-lg object-cover brightness-50  md:h-36 md:w-56"
+                className="h-14 w-24 rounded-lg object-cover brightness-50 dark:brightness-[0.65]  md:h-36 md:w-56"
               />
               <p className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-sm font-bold text-blue-200  md:text-2xl">
                 {category.label}
