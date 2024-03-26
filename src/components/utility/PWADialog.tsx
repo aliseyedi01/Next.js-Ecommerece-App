@@ -12,7 +12,7 @@ import React, { useEffect, useState } from "react";
 import { BeforeInstallPromptEvent } from "@type/common";
 
 export default function PWADialog() {
-  const [showDialog, setShowDialog] = useState(false);
+  const [showDialog, setShowDialog] = useState(true);
   const [prompt, setPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [promptTriggered, setPromptTriggered] = useState<boolean>(false);
 
@@ -69,20 +69,29 @@ export default function PWADialog() {
   return (
     <div>
       <Dialog open={showDialog}>
-        <DialogContent className="sm:max-w-[425px]">
+        <DialogContent className="w-5/6 rounded-md sm:max-w-[425px]">
           <DialogHeader>
-            <DialogTitle className="text-xl">🚀 Install The App </DialogTitle>
+            <DialogTitle className="text-left md:text-xl">
+              🚀 Install The App{" "}
+            </DialogTitle>
           </DialogHeader>
-          <div className="font-ubuntu font-medium leading-7">
+          <div className="font-ubuntu font-medium leading-6">
             Enjoy the perks of our PWA : <br />
-            seamless offline access and faster loading times. <br />
-            Install now!
+            seamless offline access and faster loading times
           </div>
           <DialogFooter>
-            <Button onClick={handleInstall}>Install App</Button>
-            <Button variant="destructive" onClick={closeDialog}>
-              Close
-            </Button>
+            <div className="flex items-center justify-end gap-1 md:gap-3 ">
+              <Button onClick={handleInstall} className="w-[5.2rem] md:w-32">
+                Install App
+              </Button>
+              <Button
+                variant="destructive"
+                onClick={closeDialog}
+                className="w-12 md:w-16"
+              >
+                Close
+              </Button>
+            </div>
           </DialogFooter>
         </DialogContent>
       </Dialog>
