@@ -19,8 +19,7 @@ export default function PWADialog() {
   useEffect(() => {
     const handleBeforeInstallPrompt = (event: Event) => {
       event.preventDefault();
-      const beforeInstallPromptEvent = event as BeforeInstallPromptEvent;
-      setPrompt(beforeInstallPromptEvent);
+      setPrompt(event as BeforeInstallPromptEvent);
 
       if (!window.matchMedia("(display-mode: standalone)").matches) {
         setShowDialog(true);
@@ -82,7 +81,7 @@ export default function PWADialog() {
           </div>
           <DialogFooter>
             <div className="flex items-center justify-end gap-1 md:gap-3 ">
-              <Button onClick={handleInstall} className="w-[5.2rem] md:w-32">
+              <Button onClick={handleInstall} className="w-[5.2rem]  md:w-32">
                 Install
               </Button>
               <Button
