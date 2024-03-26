@@ -69,10 +69,13 @@ export default function PWADialog() {
   return (
     <div>
       <Dialog open={showDialog}>
-        <DialogContent className="w-5/6 rounded-md sm:max-w-[425px]">
+        <DialogContent
+          className="w-5/6 rounded-md sm:max-w-[425px]"
+          hideCloseButton={true}
+        >
           <DialogHeader>
             <DialogTitle className="text-left md:text-xl">
-              🚀 Install The App{" "}
+              🚀 Install The App
             </DialogTitle>
           </DialogHeader>
           <div className="font-ubuntu font-medium leading-6">
