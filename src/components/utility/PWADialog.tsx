@@ -12,14 +12,15 @@ import React, { useEffect, useState } from "react";
 import { BeforeInstallPromptEvent } from "@type/common";
 
 export default function PWADialog() {
-  const [showDialog, setShowDialog] = useState(true);
+  const [showDialog, setShowDialog] = useState(false);
   const [prompt, setPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [promptTriggered, setPromptTriggered] = useState<boolean>(false);
 
   useEffect(() => {
-    const handleBeforeInstallPrompt = (event: any) => {
+    const handleBeforeInstallPrompt = (event: Event) => {
       event.preventDefault();
-      setPrompt(event);
+      const beforeInstallPromptEvent = event as BeforeInstallPromptEvent;
+      setPrompt(beforeInstallPromptEvent);
 
       if (!window.matchMedia("(display-mode: standalone)").matches) {
         setShowDialog(true);
@@ -82,7 +83,7 @@ export default function PWADialog() {
           <DialogFooter>
             <div className="flex items-center justify-end gap-1 md:gap-3 ">
               <Button onClick={handleInstall} className="w-[5.2rem] md:w-32">
-                Install App
+                Install
               </Button>
               <Button
                 variant="destructive"
