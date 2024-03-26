@@ -4,16 +4,11 @@ import {
   Button,
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
-  Input,
-  Label,
 } from "@components/ui";
 import React, { useEffect, useState } from "react";
-import { DialogClose } from "@radix-ui/react-dialog";
 import { BeforeInstallPromptEvent } from "@type/common";
 
 export default function PWADialog() {
@@ -68,9 +63,6 @@ export default function PWADialog() {
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
             <DialogTitle className="text-xl">🚀 Install The App </DialogTitle>
-            {/* <DialogDescription className="pt-4 font-semibold text-foreground">
-              Click The Button Below To Install App on your device.
-            </DialogDescription> */}
           </DialogHeader>
           <div className="font-ubuntu font-medium leading-7">
             Enjoy the perks of our PWA : <br />

@@ -35,6 +35,7 @@ const nextConfig = {
       },
     ],
   },
+  reactStrictMode: false,
 };
 
 export default makePWA(nextConfig);
