@@ -14,6 +14,7 @@ import { BeforeInstallPromptEvent } from "@type/common";
 export default function PWADialog() {
   const [showDialog, setShowDialog] = useState(false);
   const [prompt, setPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [promptTriggered, setPromptTriggered] = useState<boolean>(false);
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (event: any) => {
@@ -23,9 +24,17 @@ export default function PWADialog() {
       if (!window.matchMedia("(display-mode: standalone)").matches) {
         setShowDialog(true);
       }
+
+      setPromptTriggered(true);
+      window.removeEventListener(
+        "beforeinstallprompt",
+        handleBeforeInstallPrompt,
+      );
     };
 
-    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+    if (!promptTriggered) {
+      window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+    }
 
     return () => {
       window.removeEventListener(
@@ -33,7 +42,7 @@ export default function PWADialog() {
         handleBeforeInstallPrompt,
       );
     };
-  }, []);
+  }, [promptTriggered]);
 
   const closeDialog = () => {
     setShowDialog(false);
