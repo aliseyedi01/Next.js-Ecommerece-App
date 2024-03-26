@@ -71,7 +71,6 @@ export default function PWADialog() {
   };
 
   const handleCheckboxChange = (event: boolean) => {
-    console.log("event", event);
     setDontShowAgain(event);
     localStorage.setItem("dontShowAgain", event.toString());
   };
@@ -82,8 +81,6 @@ export default function PWADialog() {
       setDontShowAgain(dontShowAgainStorage === "true");
     }
   }, []);
-
-  console.log("dontShowAgain", dontShowAgain);
 
   return (
     <div>
@@ -107,7 +104,7 @@ export default function PWADialog() {
               htmlFor="terms"
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
-              Don't ask me again
+              Don&apos;t ask me again
             </label>
           </div>
           <DialogFooter>
