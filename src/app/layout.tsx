@@ -9,6 +9,7 @@ import Footer from "@components/footer/Footer";
 import { Toaster } from "@components/ui/toaster";
 import Header from "@components/header/Header";
 import ProgressProvider from "@components/utility/ProgressProvider";
+import PWADialog from "@components/utility/PWADialog";
 
 export const metadata: Metadata = {
   title: "Online Shop",
@@ -53,6 +54,7 @@ export default function RootLayout({
           <ProgressProvider>{children}</ProgressProvider>
           <Footer />
           <Toaster />
+          <PWADialog />
         </ThemeProvider>
       </body>
     </html>
