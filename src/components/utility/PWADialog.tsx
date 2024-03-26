@@ -2,6 +2,7 @@
 
 import {
   Button,
+  Checkbox,
   Dialog,
   DialogContent,
   DialogFooter,
@@ -15,13 +16,17 @@ export default function PWADialog() {
   const [showDialog, setShowDialog] = useState(false);
   const [prompt, setPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [promptTriggered, setPromptTriggered] = useState<boolean>(false);
+  const [dontShowAgain, setDontShowAgain] = useState<boolean>(false);
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (event: Event) => {
       event.preventDefault();
       setPrompt(event as BeforeInstallPromptEvent);
 
-      if (!window.matchMedia("(display-mode: standalone)").matches) {
+      if (
+        !window.matchMedia("(display-mode: standalone)").matches &&
+        !dontShowAgain
+      ) {
         setShowDialog(true);
       }
 
@@ -42,7 +47,7 @@ export default function PWADialog() {
         handleBeforeInstallPrompt,
       );
     };
-  }, [promptTriggered]);
+  }, [promptTriggered, dontShowAgain]);
 
   const closeDialog = () => {
     setShowDialog(false);
@@ -50,7 +55,6 @@ export default function PWADialog() {
 
   const handleInstall = () => {
     if (prompt) {
-      console.log("prompt", prompt);
       prompt.prompt();
       prompt.userChoice.then(
         (choiceResult: { outcome: "accepted" | "dismissed" }) => {
@@ -65,6 +69,21 @@ export default function PWADialog() {
       );
     }
   };
+
+  const handleCheckboxChange = (event: boolean) => {
+    console.log("event", event);
+    setDontShowAgain(event);
+    localStorage.setItem("dontShowAgain", event.toString());
+  };
+
+  useEffect(() => {
+    const dontShowAgainStorage = localStorage.getItem("dontShowAgain");
+    if (dontShowAgainStorage !== null) {
+      setDontShowAgain(dontShowAgainStorage === "true");
+    }
+  }, []);
+
+  console.log("dontShowAgain", dontShowAgain);
 
   return (
     <div>
@@ -81,6 +100,15 @@ export default function PWADialog() {
           <div className="font-ubuntu font-medium leading-6">
             Enjoy the perks of our PWA : <br />
             seamless offline access and faster loading times
+          </div>
+          <div className="flex items-center space-x-2">
+            <Checkbox id="terms" onCheckedChange={handleCheckboxChange} />
+            <label
+              htmlFor="terms"
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              Don't ask me again
+            </label>
           </div>
           <DialogFooter>
             <div className="flex items-center justify-end gap-1 md:gap-3 ">
