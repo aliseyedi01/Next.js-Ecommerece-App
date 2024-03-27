@@ -73,7 +73,7 @@ const SearchButton = ({ ...props }) => {
       title: "Settings",
       items: [
         {
-          id: 1,
+          id: 5,
           title: "Sing Up",
           icon: <SmilePlus className="mr-2 h-4 w-4" />,
           route: "/signup",
@@ -81,7 +81,7 @@ const SearchButton = ({ ...props }) => {
           disabled: false,
         },
         {
-          id: 2,
+          id: 6,
           title: "Log In",
           icon: <LogInIcon className="mr-2 h-4 w-4" />,
           route: "/login",
@@ -89,7 +89,7 @@ const SearchButton = ({ ...props }) => {
           disabled: false,
         },
         {
-          id: 3,
+          id: 7,
           title: "Profile",
           icon: <User className="mr-2 h-4 w-4" />,
           route: "/profile",
@@ -97,7 +97,7 @@ const SearchButton = ({ ...props }) => {
           disabled: false,
         },
         {
-          id: 4,
+          id: 8,
           title: "Settings",
           icon: <Settings className="mr-2 h-4 w-4" />,
           route: "/settings",
@@ -105,7 +105,7 @@ const SearchButton = ({ ...props }) => {
           disabled: false,
         },
         {
-          id: 5,
+          id: 9,
           title: "Log Out",
           icon: <LogOut className="mr-2 h-4 w-4 rotate-180" />,
           route: "/logout",
@@ -118,19 +118,19 @@ const SearchButton = ({ ...props }) => {
       title: "Theme",
       items: [
         {
-          id: 6,
+          id: 10,
           title: "Light",
           icon: <SunIcon className="mr-2 h-4 w-4" />,
           onSelect: () => runCommand(() => setTheme("light")),
         },
         {
-          id: 7,
+          id: 11,
           title: "Dark",
           icon: <MoonIcon className="mr-2 h-4 w-4" />,
           onSelect: () => runCommand(() => setTheme("dark")),
         },
         {
-          id: 8,
+          id: 12,
           title: "System",
           icon: <LaptopIcon className="mr-2 h-4 w-4" />,
           onSelect: () => runCommand(() => setTheme("system")),
