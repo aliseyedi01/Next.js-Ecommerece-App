@@ -161,21 +161,26 @@ const SearchButton = ({ ...props }) => {
       <Button
         variant="ghost"
         className={cn(
-          "flex h-9 w-full flex-row justify-between border border-primary text-sm  font-normal  text-muted-foreground shadow-none  hover:bg-primary/30 hover:text-card-foreground md:mr-8  md:w-64 md:border",
+          "flex  w-fit flex-row justify-between  border-primary  px-2 text-sm font-normal text-muted-foreground  shadow-none hover:bg-primary/30  hover:text-card-foreground md:mr-8 md:h-9 md:w-64  md:border",
         )}
         onClick={() => setOpen(true)}
         {...props}
       >
         <div className="flex w-full text-input">
-          <Search className="size-5" />
-          <span className="ml-2 hidden md:inline-flex">Type / To Search</span>
-          <span className="inline-flex pl-2 lg:hidden">Command</span>
+          <Search className="hidden size-5 md:flex" />
+          <span className="hidden md:ml-2 md:inline-flex">
+            Type / To Search
+          </span>
         </div>
-        <span className="hidden select-none text-destructive-foreground/75  sm:flex">
-          <SquareSlash className="size-7 text-blue-600" />
+        <span className="select-none text-destructive-foreground/75">
+          <SquareSlash className="size-7 text-blue-500" />
         </span>
       </Button>
-      <CommandDialog open={open} onOpenChange={setOpen}>
+      <CommandDialog
+        open={open}
+        onOpenChange={setOpen}
+        className="top-[30%] w-[90%] rounded-lg shadow-lg"
+      >
         <CommandInput placeholder="Type a command or search..." />
         <CommandList className="text-primary scrollbar scrollbar-w-1">
           <CommandEmpty>No results found.</CommandEmpty>
