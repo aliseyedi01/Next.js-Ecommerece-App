@@ -4,3 +4,19 @@ export interface BeforeInstallPromptEvent extends Event {
   readonly userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
   prompt(): Promise<void>;
 }
+
+type CommandItem = {
+  id: number;
+  title: string;
+  icon: JSX.Element;
+  route: string;
+  shortcut?: string;
+  disabled?: boolean;
+};
+
+type CommandGroup = {
+  title: string;
+  items: CommandItem[];
+};
+
+export type CommandRegistry = CommandGroup[];
