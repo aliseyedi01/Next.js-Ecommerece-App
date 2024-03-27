@@ -9,9 +9,10 @@ type CommandItem = {
   id: number;
   title: string;
   icon: JSX.Element;
-  route: string;
+  route?: string;
   shortcut?: string;
   disabled?: boolean;
+  onSelect?: () => void;
 };
 
 type CommandGroup = {

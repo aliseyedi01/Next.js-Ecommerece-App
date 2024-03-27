@@ -18,6 +18,7 @@ import {
   Tv2,
   Handshake,
   PersonStanding,
+  SquareSlash,
 } from "lucide-react";
 import {
   CommandDialog,
@@ -33,91 +34,114 @@ import { useTheme } from "next-themes";
 import { Button } from "@components/ui";
 import { CommandRegistry } from "@type/common";
 
-const commandRegistry: CommandRegistry = [
-  {
-    title: "Pages",
-    items: [
-      {
-        id: 1,
-        title: "Home",
-        route: "/",
-        icon: <Tv2 className="mr-2 h-4 w-4" />,
-      },
-      {
-        id: 2,
-        title: "Products",
-        route: "products",
-        icon: <PackageOpen className="mr-2 h-4 w-4" />,
-      },
-      {
-        id: 3,
-        title: "About",
-        route: "about",
-        icon: <PersonStanding className="mr-2 h-4 w-4" />,
-      },
-      {
-        id: 4,
-        title: "Contact",
-        route: "contact",
-        icon: <Handshake className="mr-2 h-4 w-4" />,
-      },
-    ],
-  },
-  {
-    title: "Settings",
-    items: [
-      {
-        id: 1,
-        title: "Sing Up",
-        icon: <SmilePlus className="mr-2 h-4 w-4" />,
-        route: "/signup",
-        shortcut: "⌘B",
-        disabled: false,
-      },
-      {
-        id: 2,
-        title: "Log In",
-        icon: <LogInIcon className="mr-2 h-4 w-4" />,
-        route: "/login",
-        shortcut: "⌘B",
-        disabled: false,
-      },
-      {
-        id: 3,
-        title: "Profile",
-        icon: <User className="mr-2 h-4 w-4" />,
-        route: "/profile",
-        shortcut: "⌘P",
-        disabled: false,
-      },
-      {
-        id: 4,
-        title: "Settings",
-        icon: <Settings className="mr-2 h-4 w-4" />,
-        route: "/settings",
-        shortcut: "⌘S",
-        disabled: false,
-      },
-      {
-        id: 5,
-        title: "Log Out",
-        icon: <LogOut className="mr-2 h-4 w-4 rotate-180" />,
-        route: "/logout",
-        shortcut: "⌘B",
-        disabled: false,
-      },
-    ],
-  },
-];
-
 const SearchButton = ({ ...props }) => {
   const [open, setOpen] = useState(false);
   const { setTheme } = useTheme();
   const router = useRouter();
 
+  const commandRegistry: CommandRegistry = [
+    {
+      title: "Pages",
+      items: [
+        {
+          id: 1,
+          title: "Home",
+          route: "/",
+          icon: <Tv2 className="mr-2 h-4 w-4" />,
+        },
+        {
+          id: 2,
+          title: "Products",
+          route: "products",
+          icon: <PackageOpen className="mr-2 h-4 w-4" />,
+        },
+        {
+          id: 3,
+          title: "About",
+          route: "about",
+          icon: <PersonStanding className="mr-2 h-4 w-4" />,
+        },
+        {
+          id: 4,
+          title: "Contact",
+          route: "contact",
+          icon: <Handshake className="mr-2 h-4 w-4" />,
+        },
+      ],
+    },
+    {
+      title: "Settings",
+      items: [
+        {
+          id: 1,
+          title: "Sing Up",
+          icon: <SmilePlus className="mr-2 h-4 w-4" />,
+          route: "/signup",
+          shortcut: "⌘B",
+          disabled: false,
+        },
+        {
+          id: 2,
+          title: "Log In",
+          icon: <LogInIcon className="mr-2 h-4 w-4" />,
+          route: "/login",
+          shortcut: "⌘B",
+          disabled: false,
+        },
+        {
+          id: 3,
+          title: "Profile",
+          icon: <User className="mr-2 h-4 w-4" />,
+          route: "/profile",
+          shortcut: "⌘P",
+          disabled: false,
+        },
+        {
+          id: 4,
+          title: "Settings",
+          icon: <Settings className="mr-2 h-4 w-4" />,
+          route: "/settings",
+          shortcut: "⌘S",
+          disabled: false,
+        },
+        {
+          id: 5,
+          title: "Log Out",
+          icon: <LogOut className="mr-2 h-4 w-4 rotate-180" />,
+          route: "/logout",
+          shortcut: "⌘B",
+          disabled: false,
+        },
+      ],
+    },
+    {
+      title: "Theme",
+      items: [
+        {
+          id: 6,
+          title: "Light",
+          icon: <SunIcon className="mr-2 h-4 w-4" />,
+          onSelect: () => runCommand(() => setTheme("light")),
+        },
+        {
+          id: 7,
+          title: "Dark",
+          icon: <MoonIcon className="mr-2 h-4 w-4" />,
+          onSelect: () => runCommand(() => setTheme("dark")),
+        },
+        {
+          id: 8,
+          title: "System",
+          icon: <LaptopIcon className="mr-2 h-4 w-4" />,
+          onSelect: () => runCommand(() => setTheme("system")),
+        },
+      ],
+    },
+  ];
+
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
-      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+      if (e.key === "/") {
         e.preventDefault();
         setOpen((open) => !open);
       }
@@ -144,12 +168,12 @@ const SearchButton = ({ ...props }) => {
       >
         <div className="flex w-full text-input">
           <Search className="size-5" />
-          <span className="ml-2 hidden md:inline-flex">Search Command ...</span>
-          <span className="inline-flex pl-2 lg:hidden">Search...</span>
+          <span className="ml-2 hidden md:inline-flex">Type / To Search</span>
+          <span className="inline-flex pl-2 lg:hidden">Command</span>
         </div>
-        <kbd className="hidden select-none items-center gap-1 rounded  bg-primary px-1.5 font-mono text-[10px] font-medium text-destructive-foreground/75  sm:flex">
-          <span className="text-xs">⌘</span>K
-        </kbd>
+        <span className="hidden select-none text-destructive-foreground/75  sm:flex">
+          <SquareSlash className="size-7 text-blue-600" />
+        </span>
       </Button>
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
@@ -163,9 +187,11 @@ const SearchButton = ({ ...props }) => {
                     key={item.id}
                     value={item.title}
                     disabled={item.disabled || false}
-                    onSelect={() => {
-                      runCommand(() => router.push(item.route));
-                    }}
+                    onSelect={
+                      item.onSelect ||
+                      (() =>
+                        runCommand(() => router.push(item.route as string)))
+                    }
                   >
                     {item.icon}
                     <span>{item.title}</span>
@@ -178,20 +204,6 @@ const SearchButton = ({ ...props }) => {
               <CommandSeparator />
             </>
           ))}
-          <CommandGroup heading="Theme">
-            <CommandItem onSelect={() => runCommand(() => setTheme("light"))}>
-              <SunIcon className="mr-2 h-4 w-4" />
-              Light
-            </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => setTheme("dark"))}>
-              <MoonIcon className="mr-2 h-4 w-4" />
-              Dark
-            </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => setTheme("system"))}>
-              <LaptopIcon className="mr-2 h-4 w-4" />
-              System
-            </CommandItem>
-          </CommandGroup>
         </CommandList>
       </CommandDialog>
     </>
