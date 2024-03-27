@@ -161,7 +161,7 @@ const SearchButton = ({ ...props }) => {
       <Button
         variant="ghost"
         className={cn(
-          "flex  w-fit flex-row justify-between  border-primary  px-2 text-sm font-normal text-muted-foreground  shadow-none hover:bg-primary/30  hover:text-card-foreground md:mr-8 md:h-9 md:w-64  md:border",
+          "flex  w-fit flex-row justify-between  border-primary  px-2 text-sm font-normal shadow-none hover:bg-primary/30  hover:text-card-foreground md:mr-8 md:h-9 md:w-64 md:border",
         )}
         onClick={() => setOpen(true)}
         {...props}
@@ -179,7 +179,7 @@ const SearchButton = ({ ...props }) => {
       <CommandDialog
         open={open}
         onOpenChange={setOpen}
-        className="top-[30%] w-[90%] rounded-lg shadow-lg"
+        className="w-[90%] rounded-lg shadow-lg max-md:top-[27%]"
       >
         <CommandInput placeholder="Type a command or search..." />
         <CommandList className="text-primary scrollbar scrollbar-w-1">

@@ -7,7 +7,7 @@ import Newsletter from "./NewsLetter";
 
 const HomePage = () => {
   return (
-    <div className="bg-blue-40 flex h-full w-full -translate-y-14 flex-col items-center justify-center  md:-translate-y-20">
+    <div className="bg-blue-40 flex h-full w-full -translate-y-12 flex-col items-center justify-center  md:-translate-y-14">
       <BannerCarousel />
       <Categories />
       <Brands />
