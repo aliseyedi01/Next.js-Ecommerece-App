@@ -82,9 +82,9 @@ const SearchButton = ({ ...props }) => {
         },
         {
           id: 6,
-          title: "Log In",
+          title: "Sign In",
           icon: <LogInIcon className="mr-2 h-4 w-4" />,
-          route: "/login",
+          route: "/signin",
           shortcut: "⌘B",
           disabled: false,
         },

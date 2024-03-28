@@ -15,7 +15,7 @@ import {
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
-import { User, Mail, MessageSquareText } from "lucide-react";
+import { User, Mail, MessageSquareText, UserRound } from "lucide-react";
 import { toast } from "../ui/use-toast";
 
 const FormSchema = z.object({
@@ -78,8 +78,8 @@ export default function ContactForm() {
               <FormControl>
                 <Input
                   className="relative"
-                  placeholder="Message"
-                  icon={<User />}
+                  placeholder="Username"
+                  icon={<UserRound />}
                   {...field}
                 />
               </FormControl>

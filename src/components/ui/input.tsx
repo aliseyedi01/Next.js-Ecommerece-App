@@ -22,8 +22,11 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           {...props}
         />
         {icon && (
-          <span className="absolute left-2 top-[7px]  transform text-sky-500 dark:text-indigo-300 ">
-            {icon}
+          <span className="absolute left-2 top-[7px] transform text-background dark:text-indigo-300 ">
+            {/* {icon} */}
+            {React.cloneElement(icon as React.ReactElement, {
+              className: "fill-blue-400 stroke-2",
+            })}
           </span>
         )}
       </div>
