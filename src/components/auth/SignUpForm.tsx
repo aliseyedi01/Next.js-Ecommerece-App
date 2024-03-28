@@ -21,12 +21,39 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import { KeyRound, Lock, LockKeyhole, Mail } from "lucide-react";
+import {
+  KeyRound,
+  Lock,
+  LockKeyhole,
+  Mail,
+  NotebookPen,
+  UserRound,
+} from "lucide-react";
 import { toast } from "../ui/use-toast";
 import Link from "next/link";
 import Image from "next/image";
 
 const FormSchema = z.object({
+  username: z
+    .string({
+      required_error: "Please enter a Username",
+    })
+    .min(2, {
+      message: "Username must be at least 2 characters.",
+    })
+    .max(16, {
+      message: "Username must not be longer than 16 characters.",
+    }),
+  fullname: z
+    .string({
+      required_error: "Please enter a fullname",
+    })
+    .min(2, {
+      message: "Fullname must be at least 2 characters.",
+    })
+    .max(16, {
+      message: "Fullname must not be longer than 16 characters.",
+    }),
   email: z
     .string({
       required_error: "Please enter an email",
@@ -44,7 +71,7 @@ const FormSchema = z.object({
     .max(18, "Password is too long."),
 });
 
-export default function SignInForm() {
+export default function SignUpForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
@@ -60,15 +87,53 @@ export default function SignInForm() {
 
   return (
     <div className="flex h-screen items-center  justify-center text-foreground">
-      <div className="h-fit w-[90%]  space-y-7 md:w-[25rem]">
+      <div className="h-fit w-[90%]  space-y-6 md:w-[25rem]">
         <h2 className="text-left text-xl font-bold text-foreground">
-          Nice to see you again
+          Welcome To Online Shop
         </h2>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="font-kanit rtl:font-iranSans order-1 w-full space-y-6 md:order-2"
+            className="font-kanit rtl:font-iranSans order-1 w-full space-y-5 md:order-2"
           >
+            <div className="flex gap-3">
+              {/* Fullname Field */}
+              <FormField
+                control={form.control}
+                name="fullname"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input
+                        className="relative "
+                        placeholder="Fullname"
+                        icon={<NotebookPen />}
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              {/* username Field */}
+              <FormField
+                control={form.control}
+                name="fullname"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input
+                        className="relative"
+                        placeholder="Username"
+                        icon={<UserRound />}
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
             {/* Email Field */}
             <FormField
               control={form.control}
@@ -100,27 +165,30 @@ export default function SignInForm() {
                 </FormItem>
               )}
             />
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
-                <Checkbox id="terms" />
-                <label
-                  htmlFor="terms"
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                >
-                  Remember Me
-                </label>
-              </div>
-              <div>
-                <Link href="/contact">
-                  <p className="text-sm text-blue-600">Forget Password ?</p>
-                </Link>
-              </div>
-            </div>
+            {/* Re-type Password Field */}
+            <FormField
+              control={form.control}
+              name="password"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      placeholder="Re-type Password"
+                      type="password"
+                      icon={<KeyRound />}
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <div className="flex items-center justify-between"></div>
             <Button
               type="submit"
               className="font-mitr rtl:font-iranSans  w-full rounded-full text-lg tracking-widest"
             >
-              Sign In
+              Sign Up
             </Button>
           </form>
         </Form>
@@ -143,11 +211,9 @@ export default function SignInForm() {
           </Link>
         </div>
         <div className="flex items-center justify-center gap-2">
-          <p className=" text-center text-foreground/75">
-            Dont have a account ?
-          </p>
-          <Link href="/signup">
-            <p className="text-blue-600">Sign up now</p>
+          <p className=" text-center text-foreground/75">Have a account ?</p>
+          <Link href="/signin">
+            <p className="text-blue-600">Sign In now</p>
           </Link>
         </div>
       </div>

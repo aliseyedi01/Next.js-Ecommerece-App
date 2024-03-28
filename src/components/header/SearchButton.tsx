@@ -74,7 +74,7 @@ const SearchButton = ({ ...props }) => {
       items: [
         {
           id: 5,
-          title: "Sing Up",
+          title: "Sing up",
           icon: <SmilePlus className="mr-2 h-4 w-4" />,
           route: "/signup",
           shortcut: "⌘B",
