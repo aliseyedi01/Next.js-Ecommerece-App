@@ -26,6 +26,7 @@
       "@app/*": ["src/app/*"],
       "@hooks/*": ["src/hooks/*"],
       "@assets/*": ["src/assets/*"],
+      "@style/*": ["src/style/*"],
       "@lib/*": ["src/libs/*"]
     }
   },
