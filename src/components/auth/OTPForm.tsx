@@ -49,7 +49,7 @@ export default function OTPForm() {
 
   const [resendVisible, setResendVisible] = useState(false);
 
-  const seconds = useCountdown(4);
+  const seconds = useCountdown(10);
   const minutes = Math.floor(seconds / 60);
   const formattedSeconds = seconds % 60;
 
@@ -92,17 +92,18 @@ export default function OTPForm() {
                   </InputOTPGroup>
                 </InputOTP>
               </FormControl>
-              <FormDescription className="">
+              {/* <div className=""> */}
+              {resendVisible ? (
+                <p className="text-foreground">
+                  Did not receive OTP ?
+                  <span className="ml-2 cursor-pointer text-blue-400 underline">
+                    Resend
+                  </span>
+                </p>
+              ) : (
                 <p className="text-base text-blue-500">{`${minutes.toString().padStart(2, "0")}:${formattedSeconds.toString().padStart(2, "0")}`}</p>
-                {resendVisible && (
-                  <p className="text-foreground">
-                    Did not receive OTP ?
-                    <span className="ml-2 cursor-pointer text-blue-400 underline">
-                      Resend
-                    </span>
-                  </p>
-                )}
-              </FormDescription>
+              )}
+              {/* </div> */}
               <FormMessage />
             </FormItem>
           )}
