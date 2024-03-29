@@ -102,136 +102,134 @@ export default function SignUpForm() {
   }
 
   return (
-    <div className="flex h-screen items-center  justify-center text-foreground">
-      <div className="h-fit w-[90%]  space-y-6 md:w-[25rem]">
-        <h2 className="text-left text-xl font-bold text-foreground">
-          Welcome To Online Shop
-        </h2>
-        <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="font-kanit rtl:font-iranSans order-1 w-full space-y-5 md:order-2"
+    <div className="h-fit w-[90%] space-y-6  text-foreground md:w-[25rem]">
+      <h2 className="text-left text-xl font-bold text-foreground">
+        Welcome To Online Shop
+      </h2>
+      <Form {...form}>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="font-kanit rtl:font-iranSans order-1 w-full space-y-5 md:order-2"
+        >
+          <div className="flex gap-3">
+            {/* Fullname Field */}
+            <FormField
+              control={form.control}
+              name="fullname"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      className="relative "
+                      placeholder="Fullname"
+                      icon={<NotebookPen />}
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {/* username Field */}
+            <FormField
+              control={form.control}
+              name="username"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      className="relative"
+                      placeholder="Username"
+                      icon={<UserRound />}
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          {/* Email Field */}
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input placeholder="Email" icon={<Mail />} {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          {/* Password Field */}
+          <FormField
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input
+                    placeholder="Password"
+                    type="password"
+                    icon={<KeyRound />}
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          {/* Re-type Password Field */}
+          <FormField
+            control={form.control}
+            name="retypepassword"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input
+                    placeholder="Re-type Password"
+                    type="password"
+                    icon={<KeyRound />}
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <div className="flex items-center justify-between"></div>
+          <Button
+            type="submit"
+            className="font-mitr rtl:font-iranSans  w-full rounded-full text-lg tracking-widest"
           >
-            <div className="flex gap-3">
-              {/* Fullname Field */}
-              <FormField
-                control={form.control}
-                name="fullname"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <Input
-                        className="relative "
-                        placeholder="Fullname"
-                        icon={<NotebookPen />}
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              {/* username Field */}
-              <FormField
-                control={form.control}
-                name="username"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <Input
-                        className="relative"
-                        placeholder="Username"
-                        icon={<UserRound />}
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-            {/* Email Field */}
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input placeholder="Email" icon={<Mail />} {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
+            Sign Up
+          </Button>
+        </form>
+      </Form>
+      <Separator className="rounded-full bg-blue-500/60" />
+      <div>
+        <Link href="/contact">
+          <Button
+            type="submit"
+            className="font-mitr rtl:font-iranSans w-full gap-2 rounded-full bg-blue-800 text-lg text-background"
+          >
+            <Image
+              src="/images/pages/google.svg"
+              alt="google logo"
+              width={100}
+              height={100}
+              className="size-6 rounded-full   object-contain "
             />
-            {/* Password Field */}
-            <FormField
-              control={form.control}
-              name="password"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input
-                      placeholder="Password"
-                      type="password"
-                      icon={<KeyRound />}
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            {/* Re-type Password Field */}
-            <FormField
-              control={form.control}
-              name="retypepassword"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input
-                      placeholder="Re-type Password"
-                      type="password"
-                      icon={<KeyRound />}
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <div className="flex items-center justify-between"></div>
-            <Button
-              type="submit"
-              className="font-mitr rtl:font-iranSans  w-full rounded-full text-lg tracking-widest"
-            >
-              Sign Up
-            </Button>
-          </form>
-        </Form>
-        <Separator className="rounded-full bg-blue-500/60" />
-        <div>
-          <Link href="/contact">
-            <Button
-              type="submit"
-              className="font-mitr rtl:font-iranSans w-full gap-2 rounded-full bg-blue-800 text-lg text-background"
-            >
-              <Image
-                src="/images/pages/google.svg"
-                alt="google logo"
-                width={100}
-                height={100}
-                className="size-6 rounded-full   object-contain "
-              />
-              Continue With Google
-            </Button>
-          </Link>
-        </div>
-        <div className="flex items-center justify-center gap-2">
-          <p className=" text-center text-foreground/75">Have a account ?</p>
-          <Link href="/signin">
-            <p className="text-blue-600">Sign In now</p>
-          </Link>
-        </div>
+            Continue With Google
+          </Button>
+        </Link>
+      </div>
+      <div className="flex items-center justify-center gap-2">
+        <p className=" text-center text-foreground/75">Have a account ?</p>
+        <Link href="/signin">
+          <p className="text-blue-600">Sign In now</p>
+        </Link>
       </div>
     </div>
   );
