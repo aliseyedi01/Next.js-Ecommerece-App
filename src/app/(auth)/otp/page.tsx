@@ -1,4 +1,4 @@
-import OTPForm from "@components/auth/OTPForm";
+import OTPPage from "@components/auth/OTPPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,5 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default function OTP() {
-  return <OTPForm />;
+  return <OTPPage />;
 }

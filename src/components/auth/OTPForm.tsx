@@ -21,6 +21,7 @@ import {
 } from "@components/ui/input-otp";
 import { toast } from "@components/ui/use-toast";
 import { useCountdown } from "@hooks/UseCountDown";
+import BlurringImage from "@components/utility/BluringImage";
 
 const FormSchema = z.object({
   pin: z.string().min(6, {
@@ -66,11 +67,11 @@ export default function OTPForm() {
           control={form.control}
           name="pin"
           render={({ field }) => (
-            <FormItem className="space-y-3">
+            <FormItem className="space-y-5">
               <FormLabel className="md:text-xl">
                 Authenticate Your Account
               </FormLabel>
-              <FormDescription className="w-52 text-foreground md:w-96 md:text-base">
+              <FormDescription className="w-64 text-foreground md:w-96 md:text-base">
                 Enter the code that we send to your email : <br />
                 <span className=" text-blue-400">
                   m***********432@gmail.com
@@ -92,9 +93,8 @@ export default function OTPForm() {
                   </InputOTPGroup>
                 </InputOTP>
               </FormControl>
-              {/* <div className=""> */}
               {resendVisible ? (
-                <p className="text-foreground">
+                <p className="text-xs text-foreground md:text-base">
                   Did not receive OTP ?
                   <span className="ml-2 cursor-pointer text-blue-400 underline">
                     Resend
@@ -103,13 +103,12 @@ export default function OTPForm() {
               ) : (
                 <p className="text-base text-blue-500">{`${minutes.toString().padStart(2, "0")}:${formattedSeconds.toString().padStart(2, "0")}`}</p>
               )}
-              {/* </div> */}
               <FormMessage />
             </FormItem>
           )}
         />
 
-        <Button type="submit" className="w-1/2">
+        <Button type="submit" className="md:w-1/2">
           Verify
         </Button>
       </form>
