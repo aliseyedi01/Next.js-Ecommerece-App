@@ -20,7 +20,7 @@ import {
   InputOTPSlot,
 } from "@components/ui/input-otp";
 import { toast } from "@components/ui/use-toast";
-import { useCountdown } from "@hooks/UseCountDown";
+import { useCountdown } from "@hooks/use-count-down";
 import BlurringImage from "@components/utility/BluringImage";
 
 const FormSchema = z.object({

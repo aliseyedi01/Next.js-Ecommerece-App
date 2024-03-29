@@ -1,5 +1,6 @@
-import AboutPage from "@components/about/AboutPage";
+// import AboutPage from "src/app/about/_components/AboutPage";
 import type { Metadata } from "next";
+import AboutPage from "./_components/AboutPage";
 
 export const metadata: Metadata = {
   title: "About Us | Online Shop",

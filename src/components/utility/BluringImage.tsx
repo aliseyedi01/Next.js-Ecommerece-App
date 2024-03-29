@@ -1,5 +1,5 @@
 import React, { useState, useRef, FC, ComponentProps, useEffect } from "react";
-import { cn } from "@lib/utils";
+import { cn } from "src/libs/utils";
 import Image from "next/image";
 
 type ImageBlurProps = ComponentProps<typeof Image>;

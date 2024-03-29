@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@lib/utils";
+import { cn } from "src/libs/utils";
 
 import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";

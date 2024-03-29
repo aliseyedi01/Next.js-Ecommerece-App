@@ -1,9 +1,11 @@
 "use client";
 
 import React from "react";
-import { ContactForm, SocialMedia } from "@components/contact";
+// import { ContactForm, SocialMedia } from "@components/contact";
 import { useState } from "react";
 import BlurringImage from "@components/utility/BluringImage";
+import SocialMedia from "./SocialMedia";
+import ContactForm from "./ContactForm";
 
 export default function ContactPage() {
   const [isLoading, setIsLoading] = useState(true);

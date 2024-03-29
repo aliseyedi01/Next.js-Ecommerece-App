@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
 // style
 import "./globals.css";
-import { ubuntu } from "@lib/font";
-import { cn } from "@lib/utils";
+import { ubuntu } from "src/libs/font";
+import { cn } from "src/libs/utils";
 // theme
 import { ThemeProvider } from "@components/theme/ThemeProvider";
 import Footer from "@components/footer/Footer";
@@ -10,6 +10,8 @@ import { Toaster } from "@components/ui/toaster";
 import Header from "@components/header/Header";
 import ProgressProvider from "@components/utility/ProgressProvider";
 import PWADialog from "@components/utility/PWADialog";
+import { FC } from "react";
+import { RootLayoutProps } from "@type/common";
 
 export const metadata: Metadata = {
   title: "Online Shop",
@@ -36,11 +38,7 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
       <body className={cn(ubuntu.variable)}>
@@ -59,4 +57,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

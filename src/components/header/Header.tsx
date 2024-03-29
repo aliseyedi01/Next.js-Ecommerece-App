@@ -16,7 +16,7 @@ import SearchButton from "./SearchButton";
 import ProfileButton from "./ProfileButton";
 import { CartButton } from "./CartButton";
 import { NavbarButton } from "./NavbarMobile";
-import { useScrollPercentage } from "@hooks/UseScrollPercentage";
+import { useScrollPercentage } from "@hooks/use-scroll-percentage";
 import { ModeToggle } from "@components/theme/ModeToggle";
 
 const ItemsData = [

@@ -12,11 +12,8 @@ import {
   FormItem,
   FormMessage,
 } from "@components/ui/form";
-import { Textarea } from "../ui/textarea";
-import { Button } from "../ui/button";
-import { Input } from "../ui/input";
 import { User, Mail, MessageSquareText, UserRound } from "lucide-react";
-import { toast } from "../ui/use-toast";
+import { Button, Input, Textarea, toast } from "@components/ui";
 
 const FormSchema = z.object({
   username: z

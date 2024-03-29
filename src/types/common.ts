@@ -21,3 +21,8 @@ type CommandGroup = {
 };
 
 export type CommandRegistry = CommandGroup[];
+
+
+export type RootLayoutProps = Readonly<{
+  children: React.ReactNode;
+}>;
