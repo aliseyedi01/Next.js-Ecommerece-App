@@ -10,7 +10,7 @@ import {
   Input,
   Separator,
 } from "@components/ui";
-import React from "react";
+import React, { useState } from "react";
 import {
   Form,
   FormControl,
@@ -69,6 +69,12 @@ const FormSchema = z.object({
     })
     .min(8, "Password must be at least 8 characters long")
     .max(18, "Password is too long."),
+  retypepassword: z
+    .string({
+      required_error: "Please enter a re-type password",
+    })
+    .min(8, "Password must be at least 8 characters long")
+    .max(18, "Password is too long."),
 });
 
 export default function SignUpForm() {
@@ -77,6 +83,16 @@ export default function SignUpForm() {
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
+    if (data.password !== data.retypepassword) {
+      toast({
+        title: "Error",
+        description: "Passwords do not match",
+        variant: "destructive",
+        className: "rtl:font-iranSans font text-lg font-kanit",
+      });
+      return;
+    }
+
     toast({
       title: "Success !",
       description: "your message has been sent successfully",
@@ -118,7 +134,7 @@ export default function SignUpForm() {
               {/* username Field */}
               <FormField
                 control={form.control}
-                name="fullname"
+                name="username"
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
@@ -168,7 +184,7 @@ export default function SignUpForm() {
             {/* Re-type Password Field */}
             <FormField
               control={form.control}
-              name="password"
+              name="retypepassword"
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
