@@ -49,9 +49,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
           <ProgressProvider>{children}</ProgressProvider>
-          <Footer />
           <Toaster />
           <PWADialog />
         </ThemeProvider>

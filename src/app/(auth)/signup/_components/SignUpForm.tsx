@@ -29,7 +29,7 @@ import {
   NotebookPen,
   UserRound,
 } from "lucide-react";
-import { toast } from "../ui/use-toast";
+import { toast } from "../../../../components/ui/use-toast";
 import Link from "next/link";
 import Image from "next/image";
 

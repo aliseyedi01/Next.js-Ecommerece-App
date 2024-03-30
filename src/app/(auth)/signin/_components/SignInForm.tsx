@@ -22,7 +22,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { KeyRound, Lock, LockKeyhole, Mail } from "lucide-react";
-import { toast } from "../ui/use-toast";
+import { toast } from "../../../../components/ui/use-toast";
 import Link from "next/link";
 import Image from "next/image";
 
