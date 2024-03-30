@@ -34,7 +34,7 @@ import { useTheme } from "next-themes";
 import { Button } from "@components/ui";
 import { CommandRegistry } from "@type/common";
 
-const SearchButton = ({ ...props }) => {
+const CommandButton = ({ ...props }) => {
   const [open, setOpen] = useState(false);
   const { setTheme } = useTheme();
   const router = useRouter();
@@ -215,4 +215,4 @@ const SearchButton = ({ ...props }) => {
   );
 };
 
-export default SearchButton;
+export default CommandButton;

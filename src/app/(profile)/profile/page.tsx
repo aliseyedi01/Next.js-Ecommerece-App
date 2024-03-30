@@ -5,5 +5,5 @@ export const metadata: Metadata = {
 };
 
 export default function Profile() {
-  return <div>Profile</div>;
+  return <div className="w-full p-10">Profile</div>;
 }

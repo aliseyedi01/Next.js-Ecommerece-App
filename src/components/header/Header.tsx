@@ -12,12 +12,13 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 // component
-import SearchButton from "./SearchButton";
+import SearchButton from "./command-button";
 import ProfileButton from "./ProfileButton";
 import { CartButton } from "./CartButton";
 import { NavbarButton } from "./NavbarMobile";
 import { useScrollPercentage } from "@hooks/use-scroll-percentage";
 import { ModeToggle } from "@components/theme/ModeToggle";
+import CommandButton from "./command-button";
 
 const ItemsData = [
   {
@@ -86,7 +87,7 @@ const Header = () => {
       </div>
 
       <div className="flex items-center justify-between ">
-        <SearchButton />
+        <CommandButton />
         {/* <KeyboardShortcuts /> */}
         <ModeToggle />
         <CartButton />

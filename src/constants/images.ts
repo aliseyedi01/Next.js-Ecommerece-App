@@ -35,3 +35,7 @@ export { default as cashFlowFeatures } from '@public/images/features/cash-flow.p
 export { default as maskFeatures } from '@public/images/features/mask.png';
 export { default as trolleyFeatures } from '@public/images/features/trolley.png';
 export { default as cargoTruckFeatures } from '@public/images/features/cargo-truck.png';
+
+
+// pages
+export { default as shopIcon } from '@public/images/pages/shop.png';
