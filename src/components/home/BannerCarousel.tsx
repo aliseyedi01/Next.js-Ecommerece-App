@@ -11,37 +11,7 @@ import { Button } from "@components/ui/button";
 // icons
 import { ArrowRight, CircleArrowDown, icons, ChevronsDown } from "lucide-react";
 import Link from "next/link";
-
-const BannerData = [
-  {
-    src: "images/banners/gadget.svg",
-    text: "Electronics Gadgets",
-  },
-  {
-    src: "images/banners/fashion.svg",
-    text: "Fashion Apparel",
-  },
-  {
-    src: "images/banners/furnishing.svg",
-    text: "HomeDecor Furnishings",
-  },
-  {
-    src: "images/banners/health.svg",
-    text: "Health Wellness",
-  },
-  {
-    src: "images/banners/sports.svg",
-    text: "Sports Fitness",
-  },
-  {
-    src: "images/banners/food.svg",
-    text: "Food Groceries",
-  },
-  {
-    src: "images/banners/books.svg",
-    text: "Books Literature",
-  },
-];
+import { BannersData } from "@data/banner-data";
 
 const BannerCarousel = () => {
   return (
@@ -63,7 +33,7 @@ const BannerCarousel = () => {
       // modules={[Autoplay, Pagination, EffectFade]}
       className="relative h-screen w-full bg-blue-800"
     >
-      {BannerData.map((image, index) => (
+      {BannersData.map((image, index) => (
         <SwiperSlide
           key={index}
           className="!flex flex-col-reverse items-center justify-center p-10 md:flex-row"

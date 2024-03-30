@@ -20,11 +20,14 @@
     "baseUrl": "./",
     "paths": {
       // "@/*": ["src/*"],
+      "@public/*": ["public/*"],
       "@components/*": ["src/components/*"],
       "@components/utility/*": ["src/components/utility/*"],
       "@type/*": ["src/types/*"],
       "@app/*": ["src/app/*"],
       "@hooks/*": ["src/hooks/*"],
+      "@data/*": ["src/data/*"],
+      "@constants/*": ["src/constants/*"],
       "@assets/*": ["src/assets/*"],
       "@style/*": ["src/style/*"],
       "@lib/*": ["src/libs/*"]

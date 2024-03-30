@@ -1,24 +1,6 @@
+import { FooterData } from "@data/footer-data";
 import Link from "next/link";
 import React from "react";
-
-const LISTS = [
-  {
-    label: "Company",
-    items: [
-      { label: "About Us", link: "/" },
-      { label: "Contact", link: "/" },
-      { label: "Affiliates", link: "/" },
-    ],
-  },
-  {
-    label: "Support",
-    items: [
-      { label: "FAQs", link: "/" },
-      { label: "Cookie Policy", link: "/" },
-      { label: "Terms of Service", link: "/" },
-    ],
-  },
-];
 
 const Footer = () => {
   return (
@@ -33,7 +15,7 @@ const Footer = () => {
         </div>
 
         <nav className="flex flex-wrap  gap-14 md:gap-20">
-          {LISTS.map((list) => (
+          {FooterData.map((list) => (
             <div key={list.label} className="mb-4 md:mb-0">
               <h3 className="text-lg font-bold">{list.label}</h3>
               <ul className="mt-2 flex flex-col gap-2">

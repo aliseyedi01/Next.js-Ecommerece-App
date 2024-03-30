@@ -1,29 +1,6 @@
 import Container from "@components/utility/Container";
+import { FeaturesData } from "@data/features-data";
 import Image from "next/image";
-
-const FEATURES_LIST = [
-  {
-    label: "Authenticity Guarantee",
-    description: "Authenticity guaranteed or your money back.",
-    iconSrc: "/images/features/cash-flow.png",
-  },
-  {
-    label: "Hassle-free Exchange",
-    description: "Not happy with your purchase? We'll exchange it hassle-free.",
-    iconSrc: "/images/features/mask.png",
-  },
-  {
-    label: "Daily New Arrivals",
-    description: "Discover new items added daily to our collections.",
-    iconSrc: "/images/features/trolley.png",
-  },
-  {
-    label: "Speedy & Free Shipping",
-    description:
-      "Enjoy speedy delivery at no extra cost for our loyal customers.",
-    iconSrc: "/images/features/cargo-truck.png",
-  },
-];
 
 const Features = () => {
   return (
@@ -31,7 +8,7 @@ const Features = () => {
       <Container>
         <h2 className=" section-heading">Features</h2>
         <div className="mt-12 grid gap-10 text-primary sm:grid-cols-2 lg:grid-cols-4">
-          {FEATURES_LIST.map((feature) => (
+          {FeaturesData.map((feature) => (
             <div
               key={feature.label}
               className="flex flex-col items-center text-primary"

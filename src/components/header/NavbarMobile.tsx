@@ -5,39 +5,14 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@components/ui/sheet";
-import { PanelLeft, Trash2, Home, Store, PhoneCall, Info } from "lucide-react";
+import { NavbarData } from "@data/navbar-data";
+import { PanelLeft } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
-
-const ItemsData = [
-  {
-    name: "Home",
-    link: "/",
-    icon: <Home />,
-  },
-  {
-    name: "Products",
-    link: "/products",
-    icon: <Store />,
-  },
-  {
-    name: "About",
-    link: "/about",
-    icon: <Info />,
-  },
-  {
-    name: "Contact",
-    link: "/contact",
-    icon: <PhoneCall />,
-  },
-];
 
 export function NavbarButton() {
   const pathname = usePathname();
@@ -62,7 +37,7 @@ export function NavbarButton() {
           <SheetTitle>Menu</SheetTitle>
         </SheetHeader>
         <ul className="mt-3 list-none space-y-3">
-          {ItemsData.map((item, index) => (
+          {NavbarData.map((item, index) => (
             <li key={index} className="flex  gap-2">
               <SheetClose asChild>
                 <Link

@@ -1,56 +1,6 @@
 import Container from "@components/utility/Container";
+import { CategoriesList } from "@data/categories-data";
 import Image from "next/image";
-
-const CategoriesList = [
-  {
-    label: "Men",
-    src: "/images/categories/men.png",
-  },
-  {
-    label: "Women",
-    src: "/images/categories/women.png",
-  },
-  {
-    label: "Health",
-    src: "/images/categories/health.jpg",
-  },
-  {
-    label: "Home",
-    src: "/images/categories/home.png",
-  },
-  {
-    label: "Sports",
-    src: "/images/categories/sport.png",
-  },
-  {
-    label: "Gadget",
-    src: "/images/categories/gadget.png",
-  },
-  {
-    label: "Foods",
-    src: "/images/categories/foods.png",
-  },
-  {
-    label: "Books",
-    src: "/images/categories/book.jpg",
-  },
-  {
-    label: "Toys",
-    src: "/images/categories/toy.png",
-  },
-  {
-    label: "Garden",
-    src: "/images/categories/garden.png",
-  },
-  {
-    label: "Cars",
-    src: "/images/categories/cars.jpg",
-  },
-  {
-    label: "Gaming",
-    src: "/images/categories/gaming.png",
-  },
-];
 
 const Categories = () => {
   return (
