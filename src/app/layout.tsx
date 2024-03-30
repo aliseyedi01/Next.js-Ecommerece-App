@@ -6,13 +6,11 @@ import { ubuntu } from "src/libs/font";
 import { cn } from "src/libs/utils";
 // theme
 import { ThemeProvider } from "@components/theme/ThemeProvider";
-import Footer from "@components/footer/Footer";
 import { Toaster } from "@components/ui/toaster";
-import Header from "@components/header/Header";
 import ProgressProvider from "@components/utility/ProgressProvider";
 import PWADialog from "@components/utility/PWADialog";
 import { FC } from "react";
-import { RootLayoutProps } from "@type/common";
+import { RootLayoutProps } from "@type/layout-props";
 
 export const metadata: Metadata = {
   title: "Online Shop",

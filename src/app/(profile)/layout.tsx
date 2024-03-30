@@ -1,4 +1,4 @@
-import { RootLayoutProps } from "@type/common";
+import { RootLayoutProps } from "@type/layout-props";
 import { FC } from "react";
 
 const ProfileLayout: FC<RootLayoutProps> = ({ children }) => {
