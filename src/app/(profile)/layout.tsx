@@ -1,7 +1,7 @@
 import { RootLayoutProps } from "@type/layout-props";
 import { FC } from "react";
-import NavbarProfile from "./_components/navbar-profile";
-import HeaderProfile from "./_components/header-profile";
+import NavbarProfile from "./profile/_components/navbar-profile";
+import HeaderProfile from "./profile/_components/header-profile";
 
 const ProfileLayout: FC<RootLayoutProps> = ({ children }) => {
   return (

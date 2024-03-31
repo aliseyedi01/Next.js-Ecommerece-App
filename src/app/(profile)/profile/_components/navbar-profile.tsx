@@ -13,42 +13,49 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const navListProfile = [
   {
     title: "account",
     items: [
-      { name: "profile", icon: <UserRound /> },
-      { name: "edit profile", icon: <UserRoundCog /> },
+      { name: "profile", icon: <UserRound />, link: "/profile/view" },
+      { name: "edit profile", icon: <UserRoundCog />, link: "/profile/edit" },
     ],
   },
   {
-    title: "Order",
+    title: "order",
     items: [
-      { name: "My Order", icon: <ShoppingBasket /> },
-      { name: "Favorites", icon: <Heart /> },
+      { name: "my Order", icon: <ShoppingBasket />, link: "/my-orders" },
+      { name: "favorites", icon: <Heart />, link: "/favorites" },
     ],
   },
   {
     title: "settings",
     items: [
-      { name: "Appearance", icon: <Paintbrush /> },
-      { name: "Notifications", icon: <Bell /> },
+      { name: "appearance", icon: <Paintbrush />, link: "/appearance" },
+      { name: "notifications", icon: <Bell />, link: "/notifications" },
     ],
   },
   {
     title: "actions",
     items: [
-      { name: "delete account", icon: <UserRoundMinus /> },
-      { name: "log out", icon: <LogOut /> },
+      {
+        name: "delete account",
+        icon: <UserRoundMinus />,
+        link: "/delete-account",
+      },
+      { name: "log out", icon: <LogOut />, link: "/logout" },
     ],
   },
 ];
 
 export default function NavbarProfile() {
+  const pathname = usePathname();
   return (
     <div className="h-full w-[18%] flex-col space-y-8  px-4 py-5">
+      {/* Logo Shop */}
       <div className="flex -translate-x-2 items-center justify-center gap-3">
         <Image
           src={shopIcon}
@@ -61,15 +68,14 @@ export default function NavbarProfile() {
           <h2 className="text-xl tracking-wide text-primary">Online Shop</h2>
         </Link>
       </div>
-
+      {/* Review Account */}
       <div>
         <Link
           href="/profile"
-          className="flex items-center justify-start gap-5 rounded-md p-1 hover:bg-blue-100"
+          className="flex items-center justify-start gap-5 rounded-md p-1 hover:bg-muted-foreground/40"
         >
           <Avatar>
             <AvatarImage src={boyProf.src} />
-            {/* <AvatarImage src="/images/profile/prof-girl-1.jpg" /> */}
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
 
@@ -79,7 +85,7 @@ export default function NavbarProfile() {
           </div>
         </Link>
       </div>
-
+      {/* Navbar List */}
       <div>
         {navListProfile.map((nav, index) => (
           <div key={index} className="flex flex-col space-x-2 pb-4">
@@ -89,9 +95,12 @@ export default function NavbarProfile() {
             {nav.items && (
               <ul className="space-y-1 pt-2">
                 {nav.items.map((item) => (
-                  <li
+                  <Link
+                    href={item.link as string}
                     key={item.name}
-                    className="flex cursor-pointer   items-center gap-3  rounded-md p-1 hover:bg-blue-200"
+                    className={`flex cursor-pointer items-center gap-3 rounded-md p-1 hover:bg-muted-foreground/20 ${
+                      pathname === item.link ? "bg-muted-foreground/40" : ""
+                    }`}
                   >
                     {/* {item.icon} */}
                     {React.cloneElement(item.icon as React.ReactElement, {
@@ -99,7 +108,7 @@ export default function NavbarProfile() {
                         "size-6 fill-slate-400 stroke-1  stroke-slate-500 ",
                     })}
                     <p className="capitalize">{item.name}</p>
-                  </li>
+                  </Link>
                 ))}
               </ul>
             )}

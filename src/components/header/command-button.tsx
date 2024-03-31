@@ -92,7 +92,7 @@ const CommandButton = ({ ...props }) => {
           id: 7,
           title: "Profile",
           icon: <User className="mr-2 h-4 w-4" />,
-          route: "/profile",
+          route: "/profile/view",
           shortcut: "⌘P",
           disabled: false,
         },

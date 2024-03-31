@@ -60,7 +60,7 @@ const Header = () => {
 
   return (
     <div
-      className={`sticky top-0 z-50 flex h-12  items-center justify-between p-2 font-ubuntu text-blue-400 md:h-14 md:p-5
+      className={`sticky top-0 z-50 flex h-12 items-center justify-between p-2 font-ubuntu text-blue-400 md:h-14 md:p-5
        ${shadowHeader ? "bg-blue-600/5 shadow-md backdrop-blur-md" : ""}
        `}
     >
