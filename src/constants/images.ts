@@ -39,3 +39,9 @@ export { default as cargoTruckFeatures } from '@public/images/features/cargo-tru
 
 // pages
 export { default as shopIcon } from '@public/images/pages/shop.png';
+
+
+
+// profile
+export { default as girlProf } from '@public/images/profile/prof-girl-1.jpg';
+export { default as boyProf } from '@public/images/profile/prof-boy-1.jpg';

@@ -20,3 +20,4 @@ export * from "./use-toast";
 export * from "./skeleton";
 export * from "./checkbox";
 export * from "./card";
+export * from "./avatar";
