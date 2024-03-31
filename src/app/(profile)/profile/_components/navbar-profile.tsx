@@ -69,21 +69,17 @@ export default function NavbarProfile() {
         </Link>
       </div>
       {/* Review Account */}
-      <div>
-        <Link
-          href="/profile"
-          className="flex items-center justify-start gap-5 rounded-md p-1 hover:bg-muted-foreground/40"
-        >
-          <Avatar>
-            <AvatarImage src={boyProf.src} />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
 
-          <div>
-            <p className="text-base font-medium">Hello 🤚</p>
-            <p className="text-lg tracking-wider">Ali Seyedi</p>
-          </div>
-        </Link>
+      <div className="pointer-events-none flex items-center justify-start gap-5 rounded-md p-1">
+        <Avatar>
+          <AvatarImage src={boyProf.src} />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+
+        <div>
+          <p className="text-base font-medium">Hello 🤚</p>
+          <p className="text-lg tracking-wider">Ali Seyedi</p>
+        </div>
       </div>
       {/* Navbar List */}
       <div>
