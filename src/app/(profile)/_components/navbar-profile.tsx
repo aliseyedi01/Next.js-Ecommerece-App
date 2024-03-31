@@ -1,10 +1,54 @@
 "use client";
 import { Avatar, AvatarFallback, AvatarImage, Separator } from "@components/ui";
-import BlurringImage from "@components/utility/BluringImage";
 import { boyProf, girlProf, shopIcon } from "@constants/images";
+import {
+  Bell,
+  Heart,
+  LogOut,
+  Paintbrush,
+  Palette,
+  PersonStanding,
+  ShoppingBasket,
+  UserCog,
+  UserRound,
+  UserRoundCog,
+  UserRoundMinus,
+  View,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
+const navListProfile = [
+  {
+    title: "account",
+    items: [
+      { name: "profile", icon: <UserRound /> },
+      { name: "edit profile", icon: <UserRoundCog /> },
+    ],
+  },
+  {
+    title: "Order",
+    items: [
+      { name: "My Order", icon: <ShoppingBasket /> },
+      { name: "Favorites", icon: <Heart /> },
+    ],
+  },
+  {
+    title: "settings",
+    items: [
+      { name: "Appearance", icon: <Paintbrush /> },
+      { name: "Notifications", icon: <Bell /> },
+    ],
+  },
+  {
+    title: "actions",
+    items: [
+      { name: "delete account", icon: <UserRoundMinus /> },
+      { name: "log out", icon: <LogOut /> },
+    ],
+  },
+];
 
 export default function NavbarProfile() {
   return (
@@ -33,11 +77,40 @@ export default function NavbarProfile() {
             {/* <AvatarImage src="/images/profile/prof-girl-1.jpg" /> */}
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
+
           <div>
-            <p className="text-base font-medium">Hello</p>
+            <p className="text-base font-medium">Hello 🤚</p>
             <p className="text-lg tracking-wider">Ali Seyedi</p>
           </div>
         </Link>
+      </div>
+
+      <div>
+        {navListProfile.map((nav, index) => (
+          <div key={index} className="flex flex-col space-x-2 pb-4">
+            <span className="pointer-events-none font-mono text-sm uppercase leading-5 text-foreground/70">
+              {nav.title}
+            </span>
+            {nav.items && (
+              <ul className="space-y-1 pt-2">
+                {nav.items.map((item) => (
+                  <li
+                    key={item.name}
+                    className="flex cursor-pointer   items-center gap-3  rounded-md p-1 hover:bg-blue-200"
+                  >
+                    {/* {item.icon} */}
+                    {React.cloneElement(item.icon as React.ReactElement, {
+                      className:
+                        // "size-6 fill-blue-300 stroke-1  stroke-blue-400 ",
+                        "size-6 fill-slate-400 stroke-1  stroke-slate-500 ",
+                    })}
+                    <p className="capitalize">{item.name}</p>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
