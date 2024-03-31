@@ -36,14 +36,14 @@ export default function Profile() {
         </div>
 
         <div className="mt-20 flex w-4/12 flex-col gap-4">
-          <h3 className="font-semibold">Personal Information</h3>
+          <h3 className="font-semibold text-blue-950">Personal Information</h3>
           <div className="flex flex-col gap-4">
             {InformationList.map((info, index) => (
               <div key={index} className="grid grid-cols-2">
                 <span className="font-medium capitalize text-gray-400">
                   {info.title}
                 </span>
-                <span className="text-left">{info.value}</span>
+                <span className="text-left text-black">{info.value}</span>
               </div>
             ))}
           </div>
