@@ -1,4 +1,4 @@
-import { boyProf, girlProf } from "@constants/images";
+import { avatar1 } from "@constants/images";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -20,7 +20,7 @@ export default function Profile() {
       <div className="rounded-lg rounded-es-none bg-gradient-to-r from-blue-300 to-yellow-300">
         <div className="flex translate-x-5 translate-y-16 items-end gap-4">
           <Image
-            src={boyProf}
+            src={avatar1}
             alt="profile"
             height={100}
             width={100}

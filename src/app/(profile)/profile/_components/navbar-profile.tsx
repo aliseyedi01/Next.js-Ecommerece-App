@@ -1,6 +1,6 @@
 "use client";
 import { Avatar, AvatarFallback, AvatarImage } from "@components/ui";
-import { boyProf, shopIcon } from "@constants/images";
+import { avatar1, boyProf, shopIcon } from "@constants/images";
 import {
   Bell,
   Heart,
@@ -72,7 +72,7 @@ export default function NavbarProfile() {
 
       <div className="pointer-events-none flex items-center justify-start gap-5 rounded-md p-1">
         <Avatar>
-          <AvatarImage src={boyProf.src} />
+          <AvatarImage src={avatar1.src} />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
 

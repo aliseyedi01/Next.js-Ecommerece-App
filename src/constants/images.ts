@@ -43,5 +43,10 @@ export { default as shopIcon } from '@public/images/pages/shop.png';
 
 
 // profile
-export { default as girlProf } from '@public/images/profile/prof-girl-1.jpg';
-export { default as boyProf } from '@public/images/profile/prof-boy-1.jpg';
+export { default as avatar1 } from '@public/images/profile/avatar-1.jpg';
+export { default as avatar2 } from '@public/images/profile/avatar-2.jpg';
+export { default as avatar3 } from '@public/images/profile/avatar-3.jpg';
+export { default as avatar4 } from '@public/images/profile/avatar-4.jpg';
+export { default as avatar5 } from '@public/images/profile/avatar-5.jpg';
+export { default as avatar6 } from '@public/images/profile/avatar-6.jpg';
+

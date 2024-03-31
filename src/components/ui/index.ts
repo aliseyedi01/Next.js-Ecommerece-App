@@ -21,3 +21,4 @@ export * from "./skeleton";
 export * from "./checkbox";
 export * from "./card";
 export * from "./avatar";
+export * from "./radio-group";
