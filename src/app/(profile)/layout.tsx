@@ -9,7 +9,11 @@ const ProfileLayout: FC<RootLayoutProps> = ({ children }) => {
       <NavbarProfile />
       <div className="flex h-full w-full flex-col">
         <HeaderProfile />
-        {children}
+        <div className="size-full p-6">
+          <div className="size-full rounded-lg bg-white p-6 dark:bg-white/95 ">
+            {children}
+          </div>
+        </div>
       </div>
     </div>
   );

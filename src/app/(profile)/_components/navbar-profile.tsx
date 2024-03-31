@@ -1,19 +1,15 @@
 "use client";
-import { Avatar, AvatarFallback, AvatarImage, Separator } from "@components/ui";
-import { boyProf, girlProf, shopIcon } from "@constants/images";
+import { Avatar, AvatarFallback, AvatarImage } from "@components/ui";
+import { boyProf, shopIcon } from "@constants/images";
 import {
   Bell,
   Heart,
   LogOut,
   Paintbrush,
-  Palette,
-  PersonStanding,
   ShoppingBasket,
-  UserCog,
   UserRound,
   UserRoundCog,
   UserRoundMinus,
-  View,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -52,7 +48,6 @@ const navListProfile = [
 
 export default function NavbarProfile() {
   return (
-    // <div className="h-full w-[18%] flex-col space-y-8 bg-navbar px-4 py-5">
     <div className="h-full w-[18%] flex-col space-y-8  px-4 py-5">
       <div className="flex -translate-x-2 items-center justify-center gap-3">
         <Image
@@ -101,7 +96,6 @@ export default function NavbarProfile() {
                     {/* {item.icon} */}
                     {React.cloneElement(item.icon as React.ReactElement, {
                       className:
-                        // "size-6 fill-blue-300 stroke-1  stroke-blue-400 ",
                         "size-6 fill-slate-400 stroke-1  stroke-slate-500 ",
                     })}
                     <p className="capitalize">{item.name}</p>
