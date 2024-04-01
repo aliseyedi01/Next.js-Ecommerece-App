@@ -29,12 +29,7 @@ const avatarOptions = [
 export default function EditPhotoProfile() {
   const [selectedAvatar, setSelectedAvatar] = useState(avatar1.src);
 
-  useEffect(() => {
-    console.log("selectedAvatar changed:", selectedAvatar);
-  }, [selectedAvatar]);
-
   const changeRadioButton = (e: any) => {
-    console.log("e", e);
     setSelectedAvatar(e);
   };
 

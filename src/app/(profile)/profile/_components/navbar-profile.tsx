@@ -1,6 +1,6 @@
 "use client";
 import { Avatar, AvatarFallback, AvatarImage } from "@components/ui";
-import { avatar1, boyProf, shopIcon } from "@constants/images";
+import { avatar1, shopIcon } from "@constants/images";
 import {
   Bell,
   Heart,
