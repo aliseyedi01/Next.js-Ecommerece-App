@@ -18,27 +18,32 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const avatarOptions = [
-  { src: avatar1, alt: "Avatar-1" },
-  { src: avatar2, alt: "Avatar-2" },
-  { src: avatar3, alt: "Avatar-3" },
-  { src: avatar4, alt: "Avatar-4" },
-  { src: avatar5, alt: "Avatar-5" },
-  { src: avatar6, alt: "Avatar-6" },
+  { src: avatar1.src, alt: "Avatar1" },
+  { src: avatar2.src, alt: "Avatar2" },
+  { src: avatar3.src, alt: "Avatar3" },
+  { src: avatar4.src, alt: "Avatar4" },
+  { src: avatar5.src, alt: "Avatar5" },
+  { src: avatar6.src, alt: "Avatar6" },
 ];
 
 export default function EditPhotoProfile() {
-  const [selectedAvatar, setSelectedAvatar] = useState();
+  const [selectedAvatar, setSelectedAvatar] = useState(avatar1.src);
 
   useEffect(() => {
     console.log("selectedAvatar changed:", selectedAvatar);
   }, [selectedAvatar]);
+
+  const changeRadioButton = (e: any) => {
+    console.log("e", e);
+    setSelectedAvatar(e);
+  };
 
   return (
     <div className="flex h-fit w-1/2 flex-col overflow-hidden rounded-lg bg-slate-100">
       {/* Photo */}
       <div className="relative h-20  w-full bg-gradient-to-r from-blue-300 to-yellow-300">
         <Image
-          src={avatar1}
+          src={selectedAvatar}
           alt="profile"
           height={100}
           width={100}
@@ -54,7 +59,7 @@ export default function EditPhotoProfile() {
               Your Profile Photo
             </h3>
             <p>This photo will be your profile picture.</p>
-            <p>Acceptable formats: .jpg, .jpeg, .png</p>
+            <p>Acceptable formats: .jpg .jpeg, .png</p>
             <p>Maximum file size: 5 MB</p>
           </div>
 
@@ -70,8 +75,9 @@ export default function EditPhotoProfile() {
           <div className="font-semibold text-blue-950">Avatar Default</div>
           <RadioGroup
             value={selectedAvatar}
-            onChange={setSelectedAvatar}
-            defaultValue={avatar1}
+            // onChange={setSelectedAvatar}
+            onValueChange={changeRadioButton}
+            defaultValue={avatar1 as unknown as string}
             className="grid grid-cols-6 gap-1"
           >
             {avatarOptions.map((avatar, index) => (
