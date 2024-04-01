@@ -29,14 +29,14 @@ const avatarOptions = [
 export default function EditPhotoProfile() {
   const [selectedAvatar, setSelectedAvatar] = useState(avatar1.src);
 
-  const changeRadioButton = (e: any) => {
+  const changeRadioButton = (e: string) => {
     setSelectedAvatar(e);
   };
 
   return (
     <div className="flex h-fit w-1/2 flex-col overflow-hidden rounded-lg bg-slate-100">
       {/* Photo */}
-      <div className="relative h-20  w-full bg-gradient-to-r from-blue-300 to-yellow-300">
+      <div className="profile-gradient relative  h-20 w-full">
         <Image
           src={selectedAvatar}
           alt="profile"
@@ -70,7 +70,6 @@ export default function EditPhotoProfile() {
           <div className="font-semibold text-blue-950">Avatar Default</div>
           <RadioGroup
             value={selectedAvatar}
-            // onChange={setSelectedAvatar}
             onValueChange={changeRadioButton}
             defaultValue={avatar1 as unknown as string}
             className="grid grid-cols-6 gap-1"

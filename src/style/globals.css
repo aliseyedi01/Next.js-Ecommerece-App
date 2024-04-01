@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply scroll-smooth border-border;
+  }
+  body {
+    @apply scrollbar-main relative bg-background font-ubuntu text-foreground;
+  }
   :root {
     --background: 214 100% 97%;
     --foreground: 222.2 84% 4.9%;
@@ -98,20 +104,20 @@
   }
 }
 
-@layer base {
-  * {
-    @apply scroll-smooth border-border;
-  }
-  body {
-    @apply relative bg-background font-ubuntu text-foreground scrollbar scrollbar-thumb-primary scrollbar-thumb-rounded-md scrollbar-w-2;
-  }
-}
-
 @layer utilities {
   .section-heading {
     @apply text-center text-3xl font-semibold text-primary md:text-left;
   }
   .accordion-item[data-state="open"] {
     @apply rounded-md  bg-blue-300 dark:bg-blue-900;
+  }
+}
+
+@layer components {
+  .profile-gradient {
+    @apply bg-gradient-to-r from-blue-300 to-yellow-300;
+  }
+  .scrollbar-main {
+    @apply scrollbar scrollbar-thumb-primary scrollbar-thumb-rounded-md scrollbar-w-2;
   }
 }

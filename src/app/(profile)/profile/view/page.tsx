@@ -17,7 +17,7 @@ export default function Profile() {
   return (
     <div className="flex flex-col gap-3">
       {/* Header */}
-      <div className="rounded-lg rounded-es-none bg-gradient-to-r from-blue-300 to-yellow-300">
+      <div className="profile-gradient rounded-lg rounded-es-none">
         <div className="flex translate-x-5 translate-y-16 items-end gap-4">
           <Image
             src={avatar1}
