@@ -33,15 +33,19 @@ export default function Profile() {
         </div>
       </div>
       {/* Show Information */}
-      <div className="mt-20 flex w-4/12 flex-col gap-4">
-        <h3 className="font-semibold text-blue-950">Personal Information</h3>
+      <div className="bg-section-profile mt-20 flex w-4/12 flex-col gap-4 rounded-md p-5">
+        <h3 className="text-xl font-semibold text-blue-950 dark:text-blue-300">
+          Personal Information
+        </h3>
         <div className="flex flex-col gap-4">
           {InformationList.map((info, index) => (
             <div key={index} className="grid grid-cols-2">
               <span className="font-medium capitalize text-gray-400">
                 {info.title}
               </span>
-              <span className="text-left text-black">{info.value}</span>
+              <span className="text-left text-black dark:text-white">
+                {info.value}
+              </span>
             </div>
           ))}
         </div>

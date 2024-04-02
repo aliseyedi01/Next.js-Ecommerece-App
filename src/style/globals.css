@@ -111,11 +111,14 @@
   .accordion-item[data-state="open"] {
     @apply rounded-md  bg-blue-300 dark:bg-blue-900;
   }
+  .bg-section-profile {
+    @apply bg-slate-100 dark:bg-blue-950;
+  }
 }
 
 @layer components {
   .profile-gradient {
-    @apply bg-gradient-to-r from-blue-300 to-yellow-300;
+    @apply bg-gradient-to-r from-blue-300 to-yellow-300 dark:bg-gradient-to-r dark:from-blue-300 dark:via-blue-600 dark:to-blue-900;
   }
   .scrollbar-main {
     @apply scrollbar scrollbar-thumb-primary scrollbar-thumb-rounded-md scrollbar-w-2;

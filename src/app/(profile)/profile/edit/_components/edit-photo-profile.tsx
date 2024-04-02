@@ -18,7 +18,7 @@ export default function EditPhotoProfile() {
   };
 
   return (
-    <div className="flex h-fit w-1/2 flex-col overflow-hidden rounded-lg bg-slate-100">
+    <div className="bg-section-profile flex h-fit w-1/2 flex-col overflow-hidden rounded-lg">
       {/* Photo */}
       <div className="profile-gradient relative  h-20 w-full">
         <Image

@@ -22,3 +22,5 @@ export * from "./checkbox";
 export * from "./card";
 export * from "./avatar";
 export * from "./radio-group";
+export * from "./calendar";
+export * from "./popover";

@@ -1,19 +1,34 @@
 "use client";
 import {
   Button,
+  Calendar,
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
+  FormLabel,
   FormMessage,
   Input,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
   toast,
 } from "@components/ui";
-import { Mail, NotebookPen, Phone, UserRound } from "lucide-react";
+import {
+  CalendarDays,
+  CalendarIcon,
+  Mail,
+  NotebookPen,
+  Phone,
+  UserRound,
+} from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { cn } from "@lib/utils";
+import { format } from "date-fns";
 
 const FormSchema = z.object({
   username: z
@@ -56,6 +71,9 @@ const FormSchema = z.object({
         /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(value),
       "Invalid phone number format",
     ),
+  dob: z.date({
+    required_error: "A date of birth is required.",
+  }),
 });
 
 export default function EditInformationProfile() {
@@ -105,23 +123,22 @@ export default function EditInformationProfile() {
   };
 
   return (
-    <div className="flex h-full w-1/2 flex-col space-y-8 rounded-lg bg-slate-100 p-7">
+    <div className="bg-section-profile flex h-full w-1/2 flex-col space-y-8 rounded-lg p-7 ">
       <h3 className="font-medium">Personal Information</h3>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="flex w-full flex-col space-y-5 px-5 md:order-2"
+          className="flex w-full flex-col space-y-7  px-5 md:order-2"
         >
-          <div className="flex gap-3">
+          <div className="flex w-full gap-3">
             {/* Fullname Field */}
             <FormField
               control={form.control}
               name="fullname"
               render={({ field }) => (
-                <FormItem className="">
+                <FormItem className="w-full">
                   <FormControl>
                     <Input
-                      className=""
                       placeholder="Fullname"
                       icon={<NotebookPen />}
                       {...field}
@@ -136,15 +153,74 @@ export default function EditInformationProfile() {
               control={form.control}
               name="username"
               render={({ field }) => (
-                <FormItem className="">
+                <FormItem className="w-full">
                   <FormControl>
                     <Input
-                      className=""
                       placeholder="Username"
                       icon={<UserRound />}
                       {...field}
                     />
                   </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          <div className="flex w-full gap-3">
+            {/* Gender Field */}
+            <FormField
+              control={form.control}
+              name="fullname"
+              render={({ field }) => (
+                <FormItem className="w-full">
+                  <FormControl>
+                    <Input
+                      placeholder="Gender"
+                      icon={<NotebookPen />}
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {/* Data Picker Field */}
+            <FormField
+              control={form.control}
+              name="dob"
+              render={({ field }) => (
+                <FormItem className=" w-full ">
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <FormControl>
+                        <Button
+                          variant={"outline"}
+                          className={cn(
+                            "flex h-9 w-full items-center justify-start pl-3 text-left font-normal",
+                            !field.value && "text-muted-foreground",
+                          )}
+                        >
+                          <CalendarDays className="size-6 -translate-x-1 fill-blue-400 stroke-background stroke-2 text-left" />
+                          {field.value ? (
+                            format(field.value, "PPP")
+                          ) : (
+                            <span className="text-blue-300">Pick a date</span>
+                          )}
+                        </Button>
+                      </FormControl>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0" align="center">
+                      <Calendar
+                        mode="single"
+                        selected={field.value}
+                        onSelect={field.onChange}
+                        disabled={(date) =>
+                          date > new Date() || date < new Date("1900-01-01")
+                        }
+                        initialFocus
+                      />
+                    </PopoverContent>
+                  </Popover>
                   <FormMessage />
                 </FormItem>
               )}
