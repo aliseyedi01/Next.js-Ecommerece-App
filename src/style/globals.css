@@ -4,7 +4,7 @@
 
 @layer base {
   * {
-    @apply scroll-smooth border-border;
+    @apply scroll-smooth border-border outline-none;
   }
   body {
     @apply scrollbar-main relative bg-background font-ubuntu text-foreground;

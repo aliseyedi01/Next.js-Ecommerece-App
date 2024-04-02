@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 // component
 import SearchButton from "./command-button";
-import ProfileButton from "./ProfileButton";
+import ProfileButton from "./profile-button";
 import { CartButton } from "./CartButton";
 import { NavbarButton } from "./NavbarMobile";
 import { useScrollPercentage } from "@hooks/use-scroll-percentage";

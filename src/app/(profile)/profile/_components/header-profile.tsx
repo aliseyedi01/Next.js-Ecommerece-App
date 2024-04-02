@@ -1,4 +1,4 @@
-import ProfileButton from "@components/header/ProfileButton";
+import ProfileButton from "@components/header/profile-button";
 import CommandButton from "@components/header/command-button";
 import { CommandDialog } from "@components/ui";
 import React from "react";
