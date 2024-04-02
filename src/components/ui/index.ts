@@ -24,3 +24,4 @@ export * from "./avatar";
 export * from "./radio-group";
 export * from "./calendar";
 export * from "./popover";
+export * from "./select";

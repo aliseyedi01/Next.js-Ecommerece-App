@@ -13,6 +13,11 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
   toast,
 } from "@components/ui";
 import {
@@ -29,6 +34,7 @@ import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { cn } from "@lib/utils";
 import { format } from "date-fns";
+import Link from "next/link";
 
 const FormSchema = z.object({
   username: z
@@ -170,16 +176,39 @@ export default function EditInformationProfile() {
             {/* Gender Field */}
             <FormField
               control={form.control}
-              name="fullname"
+              name="email"
               render={({ field }) => (
                 <FormItem className="w-full">
-                  <FormControl>
-                    <Input
-                      placeholder="Gender"
-                      icon={<NotebookPen />}
-                      {...field}
-                    />
-                  </FormControl>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                  >
+                    <FormControl>
+                      <SelectTrigger className="flex h-9 items-center  justify-between text-blue-300">
+                        <div className="flex items-center">
+                          <UserRound className="size-6 -translate-x-1 fill-blue-400 stroke-background stroke-2 text-left" />
+                          <SelectValue
+                            placeholder="Select Gender"
+                            className=""
+                          />
+                        </div>
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent className="bg-section-profile ">
+                      <SelectItem
+                        value="male"
+                        className="hover:ring-1 hover:ring-blue-500"
+                      >
+                        Male
+                      </SelectItem>
+                      <SelectItem
+                        value="female"
+                        className="hover:ring-1 hover:ring-blue-500"
+                      >
+                        Female
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
                   <FormMessage />
                 </FormItem>
               )}
