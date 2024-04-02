@@ -6,28 +6,12 @@ import {
   RadioGroupItem,
   Separator,
 } from "@components/ui";
-import {
-  avatar1,
-  avatar2,
-  avatar3,
-  avatar4,
-  avatar5,
-  avatar6,
-} from "@constants/images";
+import { AvatarsData, DefaultAvatar } from "@data/avatar-data";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
-
-const avatarOptions = [
-  { src: avatar1.src, alt: "Avatar1" },
-  { src: avatar2.src, alt: "Avatar2" },
-  { src: avatar3.src, alt: "Avatar3" },
-  { src: avatar4.src, alt: "Avatar4" },
-  { src: avatar5.src, alt: "Avatar5" },
-  { src: avatar6.src, alt: "Avatar6" },
-];
+import React, { useState } from "react";
 
 export default function EditPhotoProfile() {
-  const [selectedAvatar, setSelectedAvatar] = useState(avatar1.src);
+  const [selectedAvatar, setSelectedAvatar] = useState(DefaultAvatar.src);
 
   const changeRadioButton = (e: string) => {
     setSelectedAvatar(e);
@@ -71,13 +55,13 @@ export default function EditPhotoProfile() {
           <RadioGroup
             value={selectedAvatar}
             onValueChange={changeRadioButton}
-            defaultValue={avatar1 as unknown as string}
+            defaultValue={DefaultAvatar as unknown as string}
             className="grid grid-cols-6 gap-1"
           >
-            {avatarOptions.map((avatar, index) => (
+            {AvatarsData.map((avatar, index) => (
               <Label
                 key={index}
-                className="rounded-full border-2 border-muted ring-offset-1 transition-transform duration-150 ease-in-out hover:scale-110  [&:has([data-state=checked])]:ring-2"
+                className="rounded-full border-2 border-muted ring-offset-1  transition-shadow duration-200  ease-in hover:ring-1 [&:has([data-state=checked])]:ring-2"
               >
                 <RadioGroupItem value={avatar.src} className="sr-only" />
                 <Image
