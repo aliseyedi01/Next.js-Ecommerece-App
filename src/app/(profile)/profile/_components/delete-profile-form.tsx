@@ -10,7 +10,6 @@ import {
   FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
   Button,
   Input,
@@ -18,18 +17,15 @@ import {
 } from "@components/ui";
 import { Bomb } from "lucide-react";
 
+const ConfirmationWord = "DELETE";
+
 const FormSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
-  }),
+  confirmation: z.literal(ConfirmationWord),
 });
 
 export function DeleteProfileForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
-    defaultValues: {
-      username: "",
-    },
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
@@ -48,19 +44,14 @@ export function DeleteProfileForm() {
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
         <FormField
           control={form.control}
-          name="username"
+          name="confirmation"
           render={({ field }) => (
             <FormItem>
               <FormDescription className="pb-2 font-mono text-sm">
                 To confirm this , type &#34;DELETE&#34;
               </FormDescription>
               <FormControl>
-                <Input
-                  placeholder=""
-                  {...field}
-                  icon={<Bomb />}
-                  className="w-1/2"
-                />
+                <Input {...field} icon={<Bomb />} className="w-1/2" />
               </FormControl>
               <FormMessage />
             </FormItem>
