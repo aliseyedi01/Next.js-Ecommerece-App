@@ -1,55 +1,11 @@
 "use client";
 import { Avatar, AvatarFallback, AvatarImage } from "@components/ui";
 import { avatar1, shopIcon } from "@constants/images";
-import {
-  Bell,
-  Heart,
-  LogOut,
-  Paintbrush,
-  ShoppingBasket,
-  UserRound,
-  UserRoundCog,
-  UserRoundMinus,
-} from "lucide-react";
+import { NavbarProfileData } from "@data/navbar-profile-data";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-
-const navListProfile = [
-  {
-    title: "account",
-    items: [
-      { name: "profile", icon: <UserRound />, link: "/profile/view" },
-      { name: "edit profile", icon: <UserRoundCog />, link: "/profile/edit" },
-    ],
-  },
-  {
-    title: "order",
-    items: [
-      { name: "my Order", icon: <ShoppingBasket />, link: "/my-orders" },
-      { name: "favorites", icon: <Heart />, link: "/favorites" },
-    ],
-  },
-  {
-    title: "settings",
-    items: [
-      { name: "appearance", icon: <Paintbrush />, link: "/setting/appearance" },
-      { name: "notifications", icon: <Bell />, link: "/setting/notifications" },
-    ],
-  },
-  {
-    title: "actions",
-    items: [
-      {
-        name: "delete account",
-        icon: <UserRoundMinus />,
-        link: "/delete-account",
-      },
-      { name: "log out", icon: <LogOut />, link: "/logout" },
-    ],
-  },
-];
 
 export default function NavbarProfile() {
   const pathname = usePathname();
@@ -68,22 +24,24 @@ export default function NavbarProfile() {
           <h2 className="text-xl tracking-wide text-primary">Online Shop</h2>
         </Link>
       </div>
-      {/* Review Account */}
 
+      {/* Review Account */}
       <div className="pointer-events-none flex items-center justify-start gap-5 rounded-md p-1">
         <Avatar>
           <AvatarImage src={avatar1.src} />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
-
         <div>
-          <p className="text-base font-medium">Hello 🤚</p>
+          <p className="text-xs font-medium tracking-widest text-slate-400">
+            Hello
+          </p>
           <p className="text-lg tracking-wider">Ali Seyedi</p>
         </div>
       </div>
+
       {/* Navbar List */}
       <div>
-        {navListProfile.map((nav, index) => (
+        {NavbarProfileData.map((nav, index) => (
           <div key={index} className="flex flex-col space-x-2 pb-4">
             <span className="pointer-events-none font-mono text-sm uppercase leading-5 text-foreground/70">
               {nav.title}
