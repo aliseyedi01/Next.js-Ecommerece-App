@@ -25,3 +25,4 @@ export * from "./radio-group";
 export * from "./calendar";
 export * from "./popover";
 export * from "./select";
+export * from "./button";
