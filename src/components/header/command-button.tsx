@@ -2,7 +2,7 @@
 
 import { cn } from "src/libs/utils";
 
-import { useCallback, useEffect, useState } from "react";
+import { FC, useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   Settings,
@@ -34,7 +34,16 @@ import { useTheme } from "next-themes";
 import { Button } from "@components/ui";
 import { CommandRegistry } from "@type/common";
 
-const CommandButton = ({ ...props }) => {
+type CommandProps = {
+  className?: string;
+  place?: "page" | "header";
+};
+
+const CommandButton: FC<CommandProps> = ({
+  className,
+  place = "header",
+  ...props
+}) => {
   const [open, setOpen] = useState(false);
   const { setTheme } = useTheme();
   const router = useRouter();
@@ -162,16 +171,26 @@ const CommandButton = ({ ...props }) => {
         variant="ghost"
         className={cn(
           "flex  w-fit flex-row justify-between  border-primary  px-2 text-sm font-normal shadow-none hover:bg-primary/30  hover:text-card-foreground md:mr-8 md:h-9 md:w-64 md:border",
+          place === "page" ? "w-full border md:w-96" : "",
+          className,
         )}
         onClick={() => setOpen(true)}
         {...props}
       >
-        <div className="flex w-full text-input">
-          <Search className="hidden size-5 md:flex" />
-          <span className="hidden md:ml-2 md:inline-flex">
-            Type / To Search
-          </span>
-        </div>
+        {place === "page" ? (
+          <div className="flex w-full text-input">
+            <Search className="size-5 md:flex" />
+            <span className="ml-2 md:inline-flex">Search Commands</span>
+          </div>
+        ) : (
+          <div className="flex w-full text-input">
+            <Search className="hidden size-5 md:flex" />
+            <span className="hidden md:ml-2 md:inline-flex">
+              Search Commands
+            </span>
+          </div>
+        )}
+
         <span className="select-none text-destructive-foreground/75">
           <SquareSlash className="size-7 text-blue-500" />
         </span>
