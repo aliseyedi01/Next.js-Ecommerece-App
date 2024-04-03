@@ -35,7 +35,7 @@ const navListProfile = [
     title: "settings",
     items: [
       { name: "appearance", icon: <Paintbrush />, link: "/setting/appearance" },
-      { name: "notifications", icon: <Bell />, link: "/notifications" },
+      { name: "notifications", icon: <Bell />, link: "/setting/notifications" },
     ],
   },
   {
