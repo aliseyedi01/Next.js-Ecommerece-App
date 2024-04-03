@@ -129,175 +129,173 @@ export default function EditInformationProfile() {
   };
 
   return (
-    <div className="bg-section-profile flex h-full w-1/2 flex-col space-y-8 rounded-lg p-7 ">
+    <div className="bg-section-profile flex h-full w-full flex-col space-y-8 rounded-lg p-7 ">
       <h3 className="font-medium">Personal Information</h3>
-      <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onSubmit)}
-          className="flex w-full flex-col space-y-7  px-5 md:order-2"
-        >
-          <div className="flex w-full gap-3">
-            {/* Fullname Field */}
+      <div className="h-full">
+        <Form {...form}>
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="flex h-3/4 w-full flex-col  justify-between"
+          >
+            <div className="flex w-full gap-3">
+              {/* Fullname Field */}
+              <FormField
+                control={form.control}
+                name="fullname"
+                render={({ field }) => (
+                  <FormItem className="w-full">
+                    <FormControl>
+                      <Input
+                        placeholder="Fullname"
+                        icon={<NotebookPen />}
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              {/* username Field */}
+              <FormField
+                control={form.control}
+                name="username"
+                render={({ field }) => (
+                  <FormItem className="w-full">
+                    <FormControl>
+                      <Input
+                        placeholder="Username"
+                        icon={<UserRound />}
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <div className="flex w-full gap-3">
+              {/* Gender Field */}
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem className="w-full">
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger className="flex h-9 items-center  justify-between text-blue-300">
+                          <div className="flex items-center">
+                            <UserRound className="size-6 -translate-x-1 fill-blue-400 stroke-background stroke-2 text-left" />
+                            <SelectValue
+                              placeholder="Select Gender"
+                              className=""
+                            />
+                          </div>
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent className="bg-section-profile ">
+                        <SelectItem
+                          value="male"
+                          className="hover:ring-1 hover:ring-blue-500"
+                        >
+                          Male
+                        </SelectItem>
+                        <SelectItem
+                          value="female"
+                          className="hover:ring-1 hover:ring-blue-500"
+                        >
+                          Female
+                        </SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              {/* Data Picker Field */}
+              <FormField
+                control={form.control}
+                name="dob"
+                render={({ field }) => (
+                  <FormItem className=" w-full ">
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <FormControl>
+                          <Button
+                            variant={"outline"}
+                            className={cn(
+                              "flex h-9 w-full items-center justify-start pl-3 text-left font-normal",
+                              !field.value && "text-muted-foreground",
+                            )}
+                          >
+                            <CalendarDays className="size-6 -translate-x-1 fill-blue-400 stroke-background stroke-2 text-left" />
+                            {field.value ? (
+                              format(field.value, "PPP")
+                            ) : (
+                              <span className="text-blue-300">Pick a date</span>
+                            )}
+                          </Button>
+                        </FormControl>
+                      </PopoverTrigger>
+                      <PopoverContent className="w-auto p-0" align="center">
+                        <Calendar
+                          mode="single"
+                          selected={field.value}
+                          onSelect={field.onChange}
+                          disabled={(date) =>
+                            date > new Date() || date < new Date("1900-01-01")
+                          }
+                          initialFocus
+                        />
+                      </PopoverContent>
+                    </Popover>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            {/* Phone Number Field */}
             <FormField
               control={form.control}
-              name="fullname"
+              name="phone"
               render={({ field }) => (
-                <FormItem className="w-full">
+                <FormItem>
                   <FormControl>
                     <Input
-                      placeholder="Fullname"
-                      icon={<NotebookPen />}
+                      onFocus={handleFocus}
+                      placeholder="+98-XXX-XXX-XXXX"
                       {...field}
+                      value={inputValue}
+                      onBlur={handleBlur}
+                      onChange={handlePhoneChange}
+                      icon={<Phone />}
                     />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            {/* username Field */}
-            <FormField
-              control={form.control}
-              name="username"
-              render={({ field }) => (
-                <FormItem className="w-full">
-                  <FormControl>
-                    <Input
-                      placeholder="Username"
-                      icon={<UserRound />}
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          <div className="flex w-full gap-3">
-            {/* Gender Field */}
+            {/* Email Field */}
             <FormField
               control={form.control}
               name="email"
               render={({ field }) => (
-                <FormItem className="w-full">
-                  <Select
-                    onValueChange={field.onChange}
-                    defaultValue={field.value}
-                  >
-                    <FormControl>
-                      <SelectTrigger className="flex h-9 items-center  justify-between text-blue-300">
-                        <div className="flex items-center">
-                          <UserRound className="size-6 -translate-x-1 fill-blue-400 stroke-background stroke-2 text-left" />
-                          <SelectValue
-                            placeholder="Select Gender"
-                            className=""
-                          />
-                        </div>
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent className="bg-section-profile ">
-                      <SelectItem
-                        value="male"
-                        className="hover:ring-1 hover:ring-blue-500"
-                      >
-                        Male
-                      </SelectItem>
-                      <SelectItem
-                        value="female"
-                        className="hover:ring-1 hover:ring-blue-500"
-                      >
-                        Female
-                      </SelectItem>
-                    </SelectContent>
-                  </Select>
+                <FormItem>
+                  <FormControl>
+                    <Input placeholder="Email" icon={<Mail />} {...field} />
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            {/* Data Picker Field */}
-            <FormField
-              control={form.control}
-              name="dob"
-              render={({ field }) => (
-                <FormItem className=" w-full ">
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <FormControl>
-                        <Button
-                          variant={"outline"}
-                          className={cn(
-                            "flex h-9 w-full items-center justify-start pl-3 text-left font-normal",
-                            !field.value && "text-muted-foreground",
-                          )}
-                        >
-                          <CalendarDays className="size-6 -translate-x-1 fill-blue-400 stroke-background stroke-2 text-left" />
-                          {field.value ? (
-                            format(field.value, "PPP")
-                          ) : (
-                            <span className="text-blue-300">Pick a date</span>
-                          )}
-                        </Button>
-                      </FormControl>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0" align="center">
-                      <Calendar
-                        mode="single"
-                        selected={field.value}
-                        onSelect={field.onChange}
-                        disabled={(date) =>
-                          date > new Date() || date < new Date("1900-01-01")
-                        }
-                        initialFocus
-                      />
-                    </PopoverContent>
-                  </Popover>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-          {/* Phone Number Field */}
-          <FormField
-            control={form.control}
-            name="phone"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input
-                    onFocus={handleFocus}
-                    placeholder="+98-XXX-XXX-XXXX"
-                    {...field}
-                    value={inputValue}
-                    onBlur={handleBlur}
-                    onChange={handlePhoneChange}
-                    icon={<Phone />}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          {/* Email Field */}
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input placeholder="Email" icon={<Mail />} {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <div className="flex items-center justify-between"></div>
-          <Button
-            type="submit"
-            className="w-full rounded-full text-lg tracking-widest"
-          >
-            Sign Up
-          </Button>
-        </form>
-      </Form>
+            <Button type="submit" className=" rounded-xl tracking-widest">
+              Edit Information
+            </Button>
+          </form>
+        </Form>
+      </div>
     </div>
   );
 }

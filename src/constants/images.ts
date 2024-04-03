@@ -51,3 +51,6 @@ export { default as avatar5 } from '@public/images/profile/avatar-5.jpg';
 export { default as avatar6 } from '@public/images/profile/avatar-6.jpg';
 
 
+export { default as resetPass } from '@public/images/profile/reset-pass-1.svg';
+
+

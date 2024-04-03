@@ -1,15 +1,6 @@
 "use client";
 
-import {
-  Button,
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  Checkbox,
-  Input,
-  Separator,
-} from "@components/ui";
+import { Button, Input, Separator, toast } from "@components/ui";
 import React, { useState } from "react";
 import {
   Form,
@@ -21,15 +12,7 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import {
-  KeyRound,
-  Lock,
-  LockKeyhole,
-  Mail,
-  NotebookPen,
-  UserRound,
-} from "lucide-react";
-import { toast } from "../../../../components/ui/use-toast";
+import { KeyRound, Mail, NotebookPen, UserRound } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -109,7 +92,7 @@ export default function SignUpForm() {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="font-kanit rtl:font-iranSans order-1 w-full space-y-5 md:order-2"
+          className="order-1 w-full space-y-5 md:order-2"
         >
           <div className="flex gap-3">
             {/* Fullname Field */}
@@ -201,7 +184,7 @@ export default function SignUpForm() {
           <div className="flex items-center justify-between"></div>
           <Button
             type="submit"
-            className="font-mitr rtl:font-iranSans  w-full rounded-full text-lg tracking-widest"
+            className=" w-full rounded-full text-lg tracking-widest"
           >
             Sign Up
           </Button>
@@ -212,7 +195,7 @@ export default function SignUpForm() {
         <Link href="/contact">
           <Button
             type="submit"
-            className="font-mitr rtl:font-iranSans w-full gap-2 rounded-full bg-blue-800 text-lg text-background"
+            className="w-full gap-2 rounded-full bg-blue-800 text-lg text-background"
           >
             <Image
               src="/images/pages/google.svg"
