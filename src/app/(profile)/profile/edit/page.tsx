@@ -5,11 +5,11 @@ import EditPasswordProfile from "./_components/edit-password-profile";
 
 export default function EditProfile() {
   return (
-    <div className="flex h-full gap-5">
-      <div className="w-1/2">
+    <div className="flex h-full flex-col  gap-5 md:flex-row">
+      <div className="w-full md:w-1/2">
         <EditInformationProfile />
       </div>
-      <div className="flex h-full max-h-fit w-1/2 flex-col gap-3">
+      <div className="flex h-full max-h-fit w-full  flex-col gap-3 md:w-1/2">
         <EditPhotoProfile />
         <EditPasswordProfile />
       </div>

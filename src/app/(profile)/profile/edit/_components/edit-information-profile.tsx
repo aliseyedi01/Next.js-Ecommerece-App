@@ -129,13 +129,13 @@ export default function EditInformationProfile() {
   };
 
   return (
-    <div className="bg-section-profile flex h-full w-full flex-col space-y-8 rounded-lg p-7 ">
+    <div className="bg-section-profile flex h-full w-full flex-col space-y-8 rounded-lg px-3 py-6 md:p-7 ">
       <h3 className="font-medium">Personal Information</h3>
       <div className="h-full">
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex h-3/4 w-full flex-col  justify-between"
+            className="flex h-full  w-full flex-col justify-between gap-6  md:h-3/4"
           >
             <div className="flex w-full gap-3">
               {/* Fullname Field */}
@@ -186,11 +186,11 @@ export default function EditInformationProfile() {
                     >
                       <FormControl>
                         <SelectTrigger className="flex h-9 items-center  justify-between text-blue-300">
-                          <div className="flex items-center">
-                            <UserRound className="size-6 -translate-x-1 fill-blue-400 stroke-background stroke-2 text-left" />
+                          <div className="flex items-center placeholder:!text-sm">
+                            <UserRound className="size-6 -translate-x-1  fill-blue-400 stroke-background stroke-2 text-left" />
                             <SelectValue
-                              placeholder="Select Gender"
-                              className=""
+                              placeholder="Gender"
+                              className="bg-red-400 text-sm placeholder:!text-sm"
                             />
                           </div>
                         </SelectTrigger>
@@ -219,7 +219,7 @@ export default function EditInformationProfile() {
                 control={form.control}
                 name="dob"
                 render={({ field }) => (
-                  <FormItem className=" w-full ">
+                  <FormItem className="w-full">
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>

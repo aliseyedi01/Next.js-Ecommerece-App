@@ -63,13 +63,13 @@ export default function EditPasswordProfile() {
     });
   }
   return (
-    <div className="bg-section-profile flex h-1/2 max-h-fit w-full items-center justify-between gap-5 rounded-lg p-3">
-      <div className="flex h-full w-2/4 flex-col gap-2">
+    <div className="bg-section-profile flex h-full max-h-fit w-full items-center justify-between gap-5 rounded-lg p-3 md:h-1/2">
+      <div className="flex h-full w-full flex-col gap-1 md:w-1/2 md:gap-2">
         <h2 className="mb-2">Reset Password</h2>
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex h-full w-full flex-col justify-between"
+            className="mx-auto flex h-full w-full flex-col justify-between gap-5 pt-3 md:w-full md:gap-0 md:pt-0"
           >
             {/* Current Password Field */}
             <FormField
@@ -135,7 +135,7 @@ export default function EditPasswordProfile() {
           </form>
         </Form>
       </div>
-      <div>
+      <div className="hidden md:flex">
         <Image
           src={resetPass}
           alt="About Us Image"

@@ -1,6 +1,4 @@
 import type { Metadata, Viewport } from "next";
-// style
-// import "./globals.css";
 import "@style/globals.css";
 import { ubuntu } from "src/libs/font";
 import { cn } from "src/libs/utils";

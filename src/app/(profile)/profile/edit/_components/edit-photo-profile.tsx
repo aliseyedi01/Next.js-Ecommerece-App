@@ -18,9 +18,9 @@ export default function EditPhotoProfile() {
   };
 
   return (
-    <div className="bg-section-profile flex h-1/2 w-full flex-col overflow-hidden rounded-lg">
+    <div className="bg-section-profile flex h-full w-full flex-col overflow-hidden rounded-lg md:h-1/2">
       {/* Photo */}
-      <div className="profile-gradient relative  h-20 w-full">
+      <div className="profile-gradient relative h-20 w-full">
         <Image
           src={selectedAvatar}
           alt="profile"
@@ -30,11 +30,11 @@ export default function EditPhotoProfile() {
         ></Image>
       </div>
       {/* Photo Information & Selected */}
-      <div className="flex  flex-row items-center justify-start space-x-4 ">
+      <div className="flex flex-col items-center justify-start px-4 md:flex-row md:gap-4  md:px-0 ">
         {/* Photo Profile */}
-        <div className="mt-8 space-y-4 p-3 pr-2">
+        <div className="mt-8 w-full space-y-4 p-1 pr-2 md:w-fit md:p-3">
           <div className="text-sm text-slate-500">
-            <h3 className="mb-2 font-semibold text-blue-950">
+            <h3 className="mb-2 font-semibold text-foreground">
               Your Profile Photo
             </h3>
             <p>This photo will be your profile picture.</p>
@@ -48,10 +48,18 @@ export default function EditPhotoProfile() {
             </Button>
           </div>
         </div>
-        <Separator orientation="vertical" className="h-40 bg-slate-500" />
+        {/* Separator */}
+        <Separator
+          orientation="vertical"
+          className="hidden h-40 bg-slate-500 md:flex"
+        />
+        <Separator
+          orientation="horizontal"
+          className="my-2 w-11/12 bg-slate-500 md:hidden"
+        />
         {/* Avatar */}
-        <div className="flex translate-y-2 flex-col gap-3">
-          <div className="font-semibold text-blue-950">Avatar Default</div>
+        <div className="flex w-full flex-col items-start gap-3 py-3  md:w-fit md:translate-y-2">
+          <div className="font-semibold text-foreground">Avatar Default</div>
           <RadioGroup
             value={selectedAvatar}
             onValueChange={changeRadioButton}
@@ -61,7 +69,7 @@ export default function EditPhotoProfile() {
             {AvatarsData.map((avatar, index) => (
               <Label
                 key={index}
-                className="rounded-full border-2 border-muted ring-offset-1  transition-shadow duration-200  ease-in hover:ring-1 [&:has([data-state=checked])]:ring-2"
+                className="w-fit rounded-full border-2 border-muted ring-offset-1 transition-shadow duration-200  ease-in hover:ring-1 [&:has([data-state=checked])]:ring-2"
               >
                 <RadioGroupItem value={avatar.src} className="sr-only" />
                 <Image
@@ -75,7 +83,7 @@ export default function EditPhotoProfile() {
             ))}
           </RadioGroup>
           <p className="text-sm text-slate-500">Select one for your profile </p>
-          <div className="space-x-2 text-right">
+          <div className="space-x-2 self-end text-right">
             <Button variant="destructive" className="h-8 w-20">
               Remove
             </Button>

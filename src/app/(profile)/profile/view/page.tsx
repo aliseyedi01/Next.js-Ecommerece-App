@@ -33,7 +33,7 @@ export default function Profile() {
         </div>
       </div>
       {/* Show Information */}
-      <div className="bg-section-profile mt-20 flex w-4/12 flex-col gap-4 rounded-md p-5">
+      <div className="bg-section-profile mt-16 flex h-full w-full flex-col  gap-4 rounded-md p-5 md:mt-20 md:w-4/12">
         <h3 className="text-xl font-semibold text-blue-950 dark:text-blue-300">
           Personal Information
         </h3>

@@ -8,10 +8,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-export default function NavbarProfile() {
+export default function NavbarProfileDesktop() {
   const pathname = usePathname();
   return (
-    <div className="h-full w-[18%] flex-col space-y-8  px-4 py-5">
+    <div className="hidden h-full w-[18%] flex-col space-y-8 px-4  py-5 md:flex">
       {/* Logo Shop */}
       <div className="flex -translate-x-2 items-center justify-center gap-3">
         <Image

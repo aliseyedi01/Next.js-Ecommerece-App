@@ -15,7 +15,7 @@ import { usePathname } from "next/navigation";
 import SearchButton from "./command-button";
 import ProfileButton from "./profile-button";
 import { CartButton } from "./CartButton";
-import { NavbarButton } from "./NavbarMobile";
+import { NavbarButton } from "./navbar-mobile";
 import { useScrollPercentage } from "@hooks/use-scroll-percentage";
 import { ModeToggle } from "@components/theme/ModeToggle";
 import CommandButton from "./command-button";
