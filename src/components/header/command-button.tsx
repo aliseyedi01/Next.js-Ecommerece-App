@@ -111,7 +111,7 @@ const CommandButton: FC<CommandProps> = ({
           id: 8,
           title: "Settings",
           icon: <Settings className="mr-2 h-4 w-4" />,
-          route: "/settings",
+          route: "/setting/appearance",
           shortcut: "⌘S",
           disabled: false,
         },

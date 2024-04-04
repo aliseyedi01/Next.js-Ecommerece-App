@@ -40,7 +40,7 @@ const ProfileButton = () => {
               <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
             </DropdownMenuItem>
           </Link>
-          <Link href="/settings">
+          <Link href="/setting/appearance">
             <DropdownMenuItem>
               <div className="flex items-center gap-1">
                 <Settings className="mr-2 size-4" />
