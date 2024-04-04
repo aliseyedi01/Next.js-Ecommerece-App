@@ -41,7 +41,7 @@ export const LogoutForm: FC<LogoutProps> = ({
         ) : (
           <div
             className={cn(
-              "ml-2 mt-3 flex items-center justify-start gap-3 rounded-md py-1 hover:bg-muted-foreground/20",
+              "ml-3 mt-2 flex items-center justify-start gap-3 rounded-md py-1 hover:bg-muted-foreground/20",
             )}
           >
             <LogOut className="fill-slate-400 stroke-slate-500  stroke-1" />
