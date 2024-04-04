@@ -15,15 +15,16 @@ import { FC, useEffect, useState } from "react";
 type LogoutProps = {
   place?: "header" | "navbar" | "command";
   open: boolean;
+  onOpen: any;
 };
 
-export const LogoutForm: FC<LogoutProps> = ({ open, place = "header" }) => {
-  console.log("open Dialog Logout 2", open);
-
-  const [onOpen, setOnOpen] = useState(open);
-
+export const LogoutForm: FC<LogoutProps> = ({
+  open,
+  onOpen,
+  place = "header",
+}) => {
   return (
-    <Dialog open={onOpen} onOpenChange={setOnOpen}>
+    <Dialog open={open} onOpenChange={onOpen}>
       <DialogTrigger
         asChild
         className={cn(place === "command" ? "hidden" : "")}

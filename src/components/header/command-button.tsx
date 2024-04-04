@@ -50,10 +50,6 @@ const CommandButton: FC<CommandProps> = ({
   const router = useRouter();
   const [logoutDialogOpen, setLogoutDialogOpen] = useState(false);
 
-  console.log("--------------------");
-  console.log("open Dialog Command", open);
-  console.log("open Dialog Logout", logoutDialogOpen);
-
   const commandRegistry: CommandRegistry = [
     {
       title: "Pages",
@@ -240,7 +236,11 @@ const CommandButton: FC<CommandProps> = ({
         </CommandList>
       </CommandDialog>
       {logoutDialogOpen && (
-        <LogoutForm place="command" open={logoutDialogOpen} />
+        <LogoutForm
+          place="command"
+          open={logoutDialogOpen}
+          onOpen={setLogoutDialogOpen}
+        />
       )}
     </>
   );
