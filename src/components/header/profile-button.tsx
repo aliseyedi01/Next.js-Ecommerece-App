@@ -49,7 +49,7 @@ const ProfileButton = () => {
               <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
             </DropdownMenuItem>
           </Link>
-          <LogoutForm className="w-full rounded-md p-1 pl-2 hover:!bg-blue-600/20" />
+          <LogoutForm />
         </DropdownMenuContent>
       </DropdownMenu>
     </>

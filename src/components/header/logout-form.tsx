@@ -10,7 +10,7 @@ import {
 } from "@components/ui";
 import { cn } from "@lib/utils";
 import { LogOut } from "lucide-react";
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 
 type LogoutProps = {
   place?: "header" | "navbar" | "command";
