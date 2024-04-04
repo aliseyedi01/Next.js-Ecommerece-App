@@ -14,8 +14,8 @@ import { FC, useEffect, useState } from "react";
 
 type LogoutProps = {
   place?: "header" | "navbar" | "command";
-  open: boolean;
-  onOpen: any;
+  open?: boolean;
+  onOpen?: any;
 };
 
 export const LogoutForm: FC<LogoutProps> = ({
