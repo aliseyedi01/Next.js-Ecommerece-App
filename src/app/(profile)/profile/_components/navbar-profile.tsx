@@ -1,4 +1,5 @@
 "use client";
+import { LogoutForm } from "@components/header/logout-form";
 import { Avatar, AvatarFallback, AvatarImage } from "@components/ui";
 import { avatar1, shopIcon } from "@constants/images";
 import { NavbarProfileData } from "@data/navbar-profile-data";
@@ -42,7 +43,7 @@ export default function NavbarProfile() {
       {/* Navbar List */}
       <div>
         {NavbarProfileData.map((nav, index) => (
-          <div key={index} className="flex flex-col space-x-2 pb-4">
+          <div key={index} className="flex flex-col space-x-2">
             <span className="pointer-events-none font-mono text-sm uppercase leading-5 text-foreground/70">
               {nav.title}
             </span>
@@ -68,6 +69,7 @@ export default function NavbarProfile() {
             )}
           </div>
         ))}
+        <LogoutForm place="navbar" />
       </div>
     </div>
   );

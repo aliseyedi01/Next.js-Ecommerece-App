@@ -33,6 +33,7 @@ import {
 import { useTheme } from "next-themes";
 import { Button } from "@components/ui";
 import { CommandRegistry } from "@type/common";
+import { LogoutForm } from "./logout-form";
 
 type CommandProps = {
   className?: string;
@@ -47,6 +48,11 @@ const CommandButton: FC<CommandProps> = ({
   const [open, setOpen] = useState(false);
   const { setTheme } = useTheme();
   const router = useRouter();
+  const [logoutDialogOpen, setLogoutDialogOpen] = useState(false);
+
+  console.log("--------------------");
+  console.log("open Dialog Command", open);
+  console.log("open Dialog Logout", logoutDialogOpen);
 
   const commandRegistry: CommandRegistry = [
     {
@@ -116,8 +122,11 @@ const CommandButton: FC<CommandProps> = ({
         {
           id: 9,
           title: "Log Out",
-          icon: <LogOut className="mr-2 h-4 w-4 rotate-180" />,
-          route: "/logout",
+          icon: <LogOut className="mr-2 h-4 w-4" />,
+          onSelect: () => {
+            setOpen(false);
+            setLogoutDialogOpen(true);
+          },
           shortcut: "⌘B",
           disabled: false,
         },
@@ -230,6 +239,9 @@ const CommandButton: FC<CommandProps> = ({
           ))}
         </CommandList>
       </CommandDialog>
+      {logoutDialogOpen && (
+        <LogoutForm place="command" open={logoutDialogOpen} />
+      )}
     </>
   );
 };

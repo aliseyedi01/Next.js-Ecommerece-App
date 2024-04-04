@@ -10,8 +10,9 @@ import {
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@components/ui/dropdown-menu";
-import { CircleUserIcon } from "lucide-react";
+import { CircleUserIcon, Settings, User } from "lucide-react";
 import Link from "next/link";
+import { LogoutForm } from "./logout-form";
 
 const ProfileButton = () => {
   const showKeyboardShortcuts = true;
@@ -30,28 +31,27 @@ const ProfileButton = () => {
         <DropdownMenuContent className="mr-4 w-44 md:mr-7 md:w-56">
           <DropdownMenuLabel>My Account</DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuGroup>
-            <Link href="/profile/view">
-              <DropdownMenuItem>
-                Profile
-                <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
-              </DropdownMenuItem>
-            </Link>
-            <Link href="/settings">
-              <DropdownMenuItem>
-                Settings
-                <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
-              </DropdownMenuItem>
-            </Link>
-          </DropdownMenuGroup>
-          {/* <DropdownMenuSeparator /> */}
-          <DropdownMenuItem>
-            Log out
-            <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
-          </DropdownMenuItem>
+          <Link href="/profile/view">
+            <DropdownMenuItem>
+              <div className="flex items-center gap-1">
+                <User className="mr-2 size-4" />
+                <p>Profile</p>
+              </div>
+              <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+            </DropdownMenuItem>
+          </Link>
+          <Link href="/settings">
+            <DropdownMenuItem>
+              <div className="flex items-center gap-1">
+                <Settings className="mr-2 size-4" />
+                <p>Settings</p>
+              </div>
+              <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+            </DropdownMenuItem>
+          </Link>
+          <LogoutForm className="w-full rounded-md p-1 pl-2 hover:!bg-blue-600/20" />
         </DropdownMenuContent>
       </DropdownMenu>
-      {/* <KeyboardShortcuts /> */}
     </>
   );
 };

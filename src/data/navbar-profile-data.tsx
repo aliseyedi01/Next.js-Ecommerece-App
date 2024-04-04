@@ -39,7 +39,7 @@ export const NavbarProfileData = [
         icon: <UserRoundMinus />,
         link: "/profile/delete",
       },
-      { name: "log out", icon: <LogOut />, link: "/logout" },
+      // { name: "log out", icon: <LogOut />, link: "/logout" },
     ],
   },
 ];
