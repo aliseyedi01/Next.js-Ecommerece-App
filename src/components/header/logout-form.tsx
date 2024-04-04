@@ -49,19 +49,21 @@ export const LogoutForm: FC<LogoutProps> = ({
           </div>
         )}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="flex w-10/12  flex-col rounded-md md:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Logout</DialogTitle>
+          <DialogTitle className="text-left">Logout</DialogTitle>
         </DialogHeader>
         <div className=""> Are you sure you want to logout ?</div>
-        <DialogFooter>
+        <DialogFooter className="flex flex-row gap-3 self-end md:gap-0">
           <DialogClose asChild>
             <Button type="button" variant="outline">
               Close
             </Button>
           </DialogClose>
 
-          <Button type="submit">Logout</Button>
+          <Button type="submit" className="px-6">
+            Logout
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
