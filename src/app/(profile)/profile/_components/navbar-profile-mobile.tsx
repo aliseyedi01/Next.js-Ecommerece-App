@@ -26,9 +26,9 @@ export function NavbarProfileMobile() {
           <Menu className="size-4" />
         </Button>
       </SheetTrigger>
-      <SheetContent side="left">
+      <SheetContent side="left" className="">
         {/* Review Account */}
-        <div className="pointer-events-none flex items-center justify-start gap-5 rounded-md p-1">
+        <div className="pointer-events-none mb-4 mt-8 flex items-center justify-start gap-5 rounded-md p-1">
           <Avatar>
             <AvatarImage src={avatar1.src} />
             <AvatarFallback>CN</AvatarFallback>
@@ -42,7 +42,7 @@ export function NavbarProfileMobile() {
         </div>
 
         {NavbarProfileData.map((nav, index) => (
-          <div key={index} className="flex flex-col space-x-2">
+          <div key={index} className="mt-4 flex flex-col space-x-2">
             <span className="pointer-events-none font-mono text-sm uppercase leading-5 text-foreground/70">
               {nav.title}
             </span>
