@@ -16,7 +16,7 @@ import { avatar1 } from "@constants/images";
 import { NavbarProfileData } from "@data/navbar-profile-data";
 import { usePathname } from "next/navigation";
 
-export function NavbarProfileMobile() {
+export function SidebarProfileMobile() {
   const pathname = usePathname();
 
   return (

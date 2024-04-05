@@ -8,7 +8,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-export default function NavbarProfileDesktop() {
+export default function SidebarProfileDesktop() {
   const pathname = usePathname();
   return (
     <div className="hidden h-full w-[18%] flex-col space-y-8 px-4  py-5 md:flex">

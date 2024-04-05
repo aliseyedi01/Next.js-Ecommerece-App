@@ -1,5 +1,5 @@
 import React from "react";
-import { DeleteProfileForm } from "../_components/delete-profile-form";
+import { DeleteProfileForm } from "./_components/delete-profile-form";
 
 export default function DeleteProfile() {
   return (

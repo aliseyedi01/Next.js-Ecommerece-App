@@ -1,12 +1,12 @@
 import { RootLayoutProps } from "@type/layout-props";
 import { FC } from "react";
-import HeaderProfile from "./profile/_components/header-profile";
-import NavbarProfileDesktop from "./profile/_components/navbar-profile-desktop";
+import HeaderProfile from "./_components/header-profile";
+import SidebarProfileDesktop from "./_components/sidebar-profile-desktop";
 
 const ProfileLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <div className="flex h-full md:h-screen">
-      <NavbarProfileDesktop />
+      <SidebarProfileDesktop />
       <div className="flex h-full w-full flex-col">
         <HeaderProfile />
         <div className="size-full p-2 md:p-6">
