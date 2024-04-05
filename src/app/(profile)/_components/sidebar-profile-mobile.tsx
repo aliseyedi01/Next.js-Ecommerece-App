@@ -9,7 +9,7 @@ import {
 } from "@components/ui";
 import React from "react";
 import { Menu } from "lucide-react";
-import { LogoutForm } from "@components/header/logout-form";
+import { LogoutForm } from "@app/(main)/_components/header/logout-form";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@components/ui";
 import { avatar1 } from "@constants/images";

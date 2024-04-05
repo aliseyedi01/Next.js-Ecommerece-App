@@ -16,8 +16,8 @@ import {
 import { ShoppingCartIcon, Trash2 } from "lucide-react";
 import Image from "next/image";
 import QuantitySelector from "./QuantitySelector";
-import { Separator } from "../ui/separator";
-import { CommandSeparator } from "../ui/command";
+import { Separator } from "../../../../components/ui/separator";
+import { CommandSeparator } from "../../../../components/ui/command";
 
 const image1 =
   "https://img.freepik.com/free-vector/paper-bag-mockup-isolated-vector_53876-61350.jpg?w=740";

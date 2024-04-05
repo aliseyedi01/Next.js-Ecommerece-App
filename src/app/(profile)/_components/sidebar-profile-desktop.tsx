@@ -1,5 +1,5 @@
 "use client";
-import { LogoutForm } from "@components/header/logout-form";
+import { LogoutForm } from "@app/(main)/_components/header/logout-form";
 import { Avatar, AvatarFallback, AvatarImage } from "@components/ui";
 import { avatar1, shopIcon } from "@constants/images";
 import { NavbarProfileData } from "@data/navbar-profile-data";

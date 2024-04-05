@@ -1,4 +1,4 @@
-import CommandButton from "@components/header/command-button";
+import CommandButton from "@app/(main)/_components/header/command-button";
 import { notFound } from "@constants/images";
 import Image from "next/image";
 import Link from "next/link";

@@ -63,7 +63,7 @@ const BannerCarousel = () => {
       ))}
       <Link
         href="/#brands"
-        className="absolute bottom-2 left-1/2 z-50 -translate-x-1/2 transform"
+        className="absolute bottom-2 left-1/2 z-50 hidden -translate-x-1/2 transform md:flex"
       >
         <CircleArrowDown className="size-7 animate-bounce text-white md:size-10" />
       </Link>
