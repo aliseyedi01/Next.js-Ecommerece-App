@@ -15,7 +15,7 @@ const InformationList = [
 
 export default function Profile() {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex h-full flex-col  gap-3 max-md:min-h-screen">
       {/* Header */}
       <div className="profile-gradient rounded-lg rounded-es-none">
         <div className="flex translate-x-5 translate-y-16 items-end gap-4">

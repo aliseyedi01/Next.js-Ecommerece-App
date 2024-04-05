@@ -7,7 +7,7 @@ import NavbarProfileMobile from "./_components/navbar-profile-mobile";
 const ProfileLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <>
-      <div className="flex h-full flex-col md:h-screen">
+      <div className="flex h-full flex-row md:h-screen">
         <SidebarProfileDesktop />
         <div className="flex h-full w-full flex-col">
           <HeaderProfile />
