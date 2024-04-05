@@ -22,8 +22,13 @@ export function SidebarProfileMobile() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline" size="icon">
+        <Button
+          variant="outline"
+          size="icon"
+          className="focus:ring-none flex flex-col gap-1 border-none bg-transparent outline-none focus-within:outline-none hover:bg-transparent focus-visible:outline-none"
+        >
           <Menu className="size-4" />
+          <p className="font-mono text-xs">Menu</p>
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="">
