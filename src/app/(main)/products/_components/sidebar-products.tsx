@@ -8,11 +8,13 @@ import {
   AccordionTrigger,
   Badge,
   Checkbox,
+  Input,
   Label,
   RadioGroup,
   RadioGroupItem,
+  Slider,
 } from "@components/ui";
-import { Sliders } from "lucide-react";
+import { ChevronDown, ChevronUp, ChevronUpSquare, Sliders } from "lucide-react";
 import { ColorPickerGroup, ColorPickerGroupItem } from "./colors-picker";
 import {
   BrandsFilterData,
@@ -33,11 +35,7 @@ export default function SidebarProduct() {
         <Sliders size={18} className="hidden text-gray-500 lg:block" />
       </div>
 
-      <Accordion
-        className="w-full"
-        type="multiple"
-        defaultValue={["categories", "brands"]}
-      >
+      <Accordion className="w-full" type="multiple" defaultValue={["price"]}>
         {/* Categories */}
         <AccordionItem value="categories">
           <AccordionTrigger className="accordion-trigger-product">
@@ -118,22 +116,22 @@ export default function SidebarProduct() {
           <AccordionTrigger className="accordion-trigger-product">
             Price
           </AccordionTrigger>
-          <AccordionContent>
-            <div className="mt-2 flex flex-col gap-1 px-3 ">
-              {categories.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-between rounded-md p-1 hover:bg-slate-200"
-                >
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id={item.name} className="rounded-md text-sm" />
-                    <Label>{item.name}</Label>
-                  </div>
-                  <Badge className="  bg-gray-100 text-xs text-gray-800">
-                    3
-                  </Badge>
-                </div>
-              ))}
+          <AccordionContent className="">
+            <div className="flex  h-full flex-col gap-3  p-2">
+              <div className="flex h-full items-center justify-between gap-1 ">
+                <Input placeholder="Min" type="number" icon={<ChevronDown />} />
+                <span className="text-gray-600">-</span>
+                <Input placeholder="Max" type="number" icon={<ChevronUp />} />
+              </div>
+              <div className="h-full  py-3">
+                <Slider
+                  defaultValue={[60, 200]}
+                  max={300}
+                  step={1}
+                  unit="$"
+                  className="h-full "
+                />
+              </div>
             </div>
           </AccordionContent>
         </AccordionItem>
