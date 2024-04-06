@@ -63,19 +63,19 @@ const CommandButton: FC<CommandProps> = ({
         {
           id: 2,
           title: "Products",
-          route: "products",
+          route: "/products",
           icon: <PackageOpen className="mr-2 h-4 w-4" />,
         },
         {
           id: 3,
           title: "About",
-          route: "about",
+          route: "/about",
           icon: <PersonStanding className="mr-2 h-4 w-4" />,
         },
         {
           id: 4,
           title: "Contact",
-          route: "contact",
+          route: "/contact",
           icon: <Handshake className="mr-2 h-4 w-4" />,
         },
       ],
