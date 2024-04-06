@@ -31,14 +31,14 @@ const BannerCarousel = () => {
       }}
       modules={[Autoplay, EffectFade]}
       // modules={[Autoplay, Pagination, EffectFade]}
-      className="relative h-screen w-full bg-blue-800"
+      className="relative h-screen w-full bg-blue-100 dark:bg-blue-900"
     >
       {BannersData.map((image, index) => (
         <SwiperSlide
           key={index}
           className="!flex flex-col-reverse items-center justify-center p-10 md:flex-row"
         >
-          <div className="flex w-full flex-col items-start  justify-center gap-5 font-bold text-white max-md:pb-10 md:w-1/2 md:items-center md:gap-10">
+          <div className="flex w-full flex-col items-start  justify-center gap-5 font-bold text-blue-700 dark:text-white max-md:pb-10 md:w-1/2 md:items-center md:gap-10">
             <p className="w-40 text-left text-4xl tracking-widest md:w-80 md:text-start md:text-7xl">
               {image.text}
             </p>
@@ -65,7 +65,7 @@ const BannerCarousel = () => {
         href="/#brands"
         className="absolute bottom-2 left-1/2 z-50 hidden -translate-x-1/2 transform md:flex"
       >
-        <CircleArrowDown className="size-7 animate-bounce text-white md:size-10" />
+        <CircleArrowDown className="size-7 animate-bounce text-blue-600 dark:text-white md:size-10" />
       </Link>
     </Swiper>
   );

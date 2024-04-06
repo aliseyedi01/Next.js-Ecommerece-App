@@ -55,16 +55,19 @@ export default function NavbarMainMobile() {
             key={item.name}
             href={item.link}
             className={cn(
-              " flex flex-col items-center justify-center gap-1   transition-all duration-500 ease-in-out",
+              " flex flex-col items-center justify-center gap-1 transition-transform duration-1000 ease-in-out",
               pathname === item.link ? "" : "",
             )}
           >
             {React.cloneElement(item.icon as React.ReactElement, {
-              className: `size-4 transition duration-200  ${pathname === item.link ? "size-6 rounded-full outline-[3px] outline-blue-700 outline-offset-8 text-blue-700 dark:text-yellow-500  dark:outline-yellow-400  " : ""}`,
+              className: `size-4 transition duration-200 text-blue-900 dark:text-blue-400  ${pathname === item.link ? "size-6 rounded-full outline-[2px] outline-dotted  outline-[#0644f4]    outline-offset-[6px]  text-[#0644f4] dark:text-blue-100  dark:outline-blue-100  " : ""}`,
             })}
 
             <p
-              className={cn("text-xs ", pathname === item.link ? "hidden" : "")}
+              className={cn(
+                "text-xs text-blue-900 dark:text-blue-400",
+                pathname === item.link ? "hidden" : "",
+              )}
             >
               {item.name}
             </p>
