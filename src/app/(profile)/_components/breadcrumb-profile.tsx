@@ -31,14 +31,9 @@ export function BreadcrumbProfile() {
   return (
     <Breadcrumb>
       <BreadcrumbList>
-        <BreadcrumbItem>
-          <BreadcrumbLink href="/">Home</BreadcrumbLink>
-        </BreadcrumbItem>
         {breadcrumbItems.map((item, index) => (
           <React.Fragment key={index}>
-            <BreadcrumbSeparator>
-              <SlashIcon />
-            </BreadcrumbSeparator>
+            <BreadcrumbSeparator />
             {item}
           </React.Fragment>
         ))}
