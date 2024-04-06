@@ -40,13 +40,13 @@ export default function SidebarProduct() {
               {categories.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-between rounded-md p-1 hover:bg-slate-200 hover:dark:bg-blue-500/20"
+                  className="flex items-center justify-between rounded-md p-1 hover:bg-blue-200/50 hover:dark:bg-blue-500/20"
                 >
                   <div className="flex items-center space-x-2">
                     <Checkbox id={item.name} className="rounded-md text-sm" />
                     <Label>{item.name}</Label>
                   </div>
-                  <Badge className="  bg-gray-100  text-xs text-gray-800 dark:bg-blue-900 dark:text-blue-300">
+                  <Badge className="bg-blue-200  text-xs text-blue-800 dark:bg-blue-900 dark:text-blue-300">
                     3
                   </Badge>
                 </div>
