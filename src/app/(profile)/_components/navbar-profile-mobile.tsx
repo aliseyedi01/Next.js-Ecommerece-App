@@ -7,6 +7,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   Bell,
+  Heart,
   HomeIcon,
   Info,
   LaptopIcon,
@@ -24,19 +25,19 @@ const ItemsData = [
     icon: <HomeIcon />,
   },
   {
-    name: "Products",
+    name: "My Order",
     link: "/products",
     icon: <ShoppingBasket />,
   },
   {
-    name: "About",
-    link: "/about",
-    icon: <Info />,
+    name: "Notification",
+    link: "/setting/notifications",
+    icon: <Bell />,
   },
   {
-    name: "Contact",
-    link: "/contact",
-    icon: <Phone />,
+    name: "Favorites",
+    link: "/favorites",
+    icon: <Heart />,
   },
   {
     name: "Profile",
