@@ -189,15 +189,16 @@ const CommandButton: FC<CommandProps> = ({
           </div>
         ) : (
           <div className="flex w-full text-input">
-            <Search className="hidden size-5 md:flex" />
-            <span className="hidden md:ml-2 md:inline-flex">
+            <Search className="hidden size-5 text-blue-500 md:flex" />
+            <span className="hidden text-blue-500 md:ml-2 md:inline-flex">
               Search Commands
             </span>
           </div>
         )}
 
         <span className="select-none text-destructive-foreground/75">
-          <SquareSlash className="size-7 text-blue-500" />
+          <SquareSlash className=" hidden size-7 text-blue-500 md:flex" />
+          <Search className="flex size-6 text-blue-500 md:hidden" />
         </span>
       </Button>
       <CommandDialog
