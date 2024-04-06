@@ -29,3 +29,4 @@ export * from "./button";
 export * from "./switch";
 export * from "./breadcrumb";
 export * from "./toggle";
+export * from "./tooltip";

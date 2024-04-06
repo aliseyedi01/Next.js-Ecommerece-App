@@ -9,13 +9,8 @@ import {
   Label,
 } from "@components/ui";
 import { Sliders } from "lucide-react";
-
-const categories = [
-  { name: "Clothing" },
-  { name: "Electronics" },
-  { name: "Books" },
-  { name: "Home Goods" },
-];
+import { ColorPickerGroup, ColorPickerGroupItem } from "./color-picker";
+import { categories, colors } from "@data/filter-products-data";
 
 export default function SidebarProduct() {
   return (
@@ -84,21 +79,17 @@ export default function SidebarProduct() {
             Color
           </AccordionTrigger>
           <AccordionContent>
-            <div className="mt-2 flex flex-col gap-1 px-3 ">
-              {categories.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-between rounded-md p-1 hover:bg-slate-200"
-                >
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id={item.name} className="rounded-md text-sm" />
-                    <Label>{item.name}</Label>
-                  </div>
-                  <Badge className="  bg-gray-100 text-xs text-gray-800">
-                    3
-                  </Badge>
-                </div>
-              ))}
+            <div className="">
+              <ColorPickerGroup className="flex flex-wrap items-center gap-2">
+                {colors.map((color, index) => (
+                  <ColorPickerGroupItem
+                    key={index}
+                    label={color.label}
+                    value={color.value}
+                    color={color.value}
+                  />
+                ))}
+              </ColorPickerGroup>
             </div>
           </AccordionContent>
         </AccordionItem>
