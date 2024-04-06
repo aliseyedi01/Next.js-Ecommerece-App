@@ -14,10 +14,11 @@ import {
   RadioGroupItem,
   Slider,
 } from "@components/ui";
-import { ChevronDown, ChevronUp, ChevronUpSquare, Sliders } from "lucide-react";
+import { ChevronDown, ChevronUp, Sliders } from "lucide-react";
 import { ColorPickerGroup, ColorPickerGroupItem } from "./colors-picker";
 import {
   BrandsFilterData,
+  SizeProducts,
   categories,
   colors,
 } from "@data/filter-products-data";
@@ -70,7 +71,7 @@ export default function SidebarProduct() {
           <AccordionTrigger className="accordion-trigger-product">
             Brands
           </AccordionTrigger>
-          <AccordionContent className="">
+          <AccordionContent>
             <RadioGroup className="grid size-full grid-cols-3 place-items-center gap-1 p-1">
               {BrandsFilterData.map((item, index) => (
                 <Label
@@ -146,22 +147,19 @@ export default function SidebarProduct() {
             Size
           </AccordionTrigger>
           <AccordionContent>
-            <div className="mt-2 flex flex-col gap-1 px-3 ">
-              {categories.map((item, index) => (
-                <div
+            <RadioGroup className="grid size-full grid-cols-3 place-items-center gap-1 p-1">
+              {SizeProducts.map((item, index) => (
+                <Label
+                  className="border-blue flex size-full flex-col items-center justify-center gap-1 rounded-md border border-blue-700 px-2 py-2 hover:bg-blue-100 dark:hover:bg-blue-500/50 [&:has([data-state=checked])]:bg-blue-500 dark:[&:has([data-state=checked])]:bg-blue-600"
                   key={index}
-                  className="flex items-center justify-between rounded-md p-1 hover:bg-slate-200"
                 >
-                  <div className="flex items-center space-x-2">
-                    <Checkbox id={item.name} className="rounded-md text-sm" />
-                    <Label>{item.name}</Label>
-                  </div>
-                  <Badge className="  bg-gray-100 text-xs text-gray-800">
-                    3
-                  </Badge>
-                </div>
+                  <RadioGroupItem value={item.value} className="sr-only" />
+                  <p className="font-mono font-semibold uppercase text-blue-950 dark:text-blue-300">
+                    {item.value}
+                  </p>
+                </Label>
               ))}
-            </div>
+            </RadioGroup>
           </AccordionContent>
         </AccordionItem>
       </Accordion>

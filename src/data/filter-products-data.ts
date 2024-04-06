@@ -45,8 +45,6 @@ export const colors = [
 ];
 
 
-
-
 export const BrandsFilterData = [
   {
     label: "Adidas",
@@ -71,5 +69,37 @@ export const BrandsFilterData = [
   {
     label: "Chanel",
     src: chanelBrand
+  },
+];
+
+
+export const SizeProducts = [
+  {
+    label: "XSmall",
+    value: "xs",
+  },
+  {
+    label: "Small",
+    value: "s",
+  },
+  {
+    label: "Medium",
+    value: "m",
+  },
+  {
+    label: "Large",
+    value: "l",
+  },
+  {
+    label: "XLarge",
+    value: "xl",
+  },
+  {
+    label: "2XLarge",
+    value: "xxl",
+  },
+  {
+    label: "3XLarge",
+    value: "xxxl",
   },
 ];
