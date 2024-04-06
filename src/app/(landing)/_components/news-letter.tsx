@@ -21,15 +21,15 @@ const Newsletter = () => {
             <p className="text-4xl font-semibold leading-none">
               our newsletter
             </p>
-            <p className="w-full py-3   text-base font-medium text-primary/70 md:w-[25rem]">
+            <p className="w-full    py-3 text-base font-medium text-primary/70 md:w-9/12">
               Get 20% off on your first order just by subscribing to our
               newsletter
             </p>
           </div>
 
           <div className="order-3 w-full">
-            <div className="mx-auto flex w-full max-w-md flex-wrap justify-center py-3">
-              <div className="relative w-full md:w-4/5 ">
+            <div className="mx-auto w-full max-w-md py-3">
+              <div className="relative w-full  md:w-4/5 ">
                 <Input
                   type="email"
                   placeholder="user@gmail.com"
@@ -42,9 +42,6 @@ const Newsletter = () => {
                   Subscribe
                 </Button>
               </div>
-              <p className="mt-4  text-sm  text-blue-400">
-                We promise not to span you !
-              </p>
             </div>
           </div>
         </div>

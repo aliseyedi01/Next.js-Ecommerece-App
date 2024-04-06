@@ -3,7 +3,7 @@ import Brands from "./Brands";
 import Categories from "./Categories";
 import FaqList from "./FaqList";
 import Features from "./Features";
-import Newsletter from "./NewsLetter";
+import Newsletter from "./news-letter";
 
 const HomePage = () => {
   return (
