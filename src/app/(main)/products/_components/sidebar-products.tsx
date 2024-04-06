@@ -32,7 +32,7 @@ export default function SidebarProduct() {
       >
         {/* Categories */}
         <AccordionItem value="categories">
-          <AccordionTrigger className="accordion-trigger-product font-mono text-base font-semibold uppercase aria-expanded:bg-transparent">
+          <AccordionTrigger className="accordion-trigger-product">
             Category
           </AccordionTrigger>
           <AccordionContent>
