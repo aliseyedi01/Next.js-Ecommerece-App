@@ -35,7 +35,11 @@ export default function SidebarProduct() {
         <Sliders size={18} className="hidden text-gray-500 lg:block" />
       </div>
 
-      <Accordion className="w-full" type="multiple" defaultValue={["price"]}>
+      <Accordion
+        className="w-full"
+        type="multiple"
+        defaultValue={["categories", "colors", "brands", "price", "size"]}
+      >
         {/* Categories */}
         <AccordionItem value="categories">
           <AccordionTrigger className="accordion-trigger-product">
