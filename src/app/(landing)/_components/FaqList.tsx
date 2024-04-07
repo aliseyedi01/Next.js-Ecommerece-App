@@ -13,7 +13,7 @@ const FaqList = () => {
     <section className="w-full py-10 md:py-14">
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <div className="grid w-full grid-cols-1 place-items-center  md:grid-cols-2">
-          <div className="min-h-[22rem] w-full md:min-h-[26rem] ">
+          <div className="min-h-[27rem] w-full md:min-h-[30rem] ">
             <h2 className="section-heading">Popular Question</h2>
             <Accordion
               type="single"
