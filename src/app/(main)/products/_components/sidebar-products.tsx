@@ -164,11 +164,11 @@ export default function SidebarProduct() {
             <RadioGroup className="grid size-full grid-cols-3 place-items-center gap-1 p-1">
               {SizeProducts.map((item, index) => (
                 <Label
-                  className="border-blue flex size-full flex-col items-center justify-center gap-1 rounded-md border border-blue-700 px-2 py-2 hover:bg-blue-100 dark:hover:bg-blue-500/50 [&:has([data-state=checked])]:bg-blue-500 dark:[&:has([data-state=checked])]:bg-blue-600"
+                  className="border-blue flex size-full flex-col items-center justify-center gap-1 rounded-md border border-blue-700 px-2 py-2 hover:bg-blue-100 dark:text-blue-300 dark:hover:bg-blue-500/50 [&:has([data-state=checked])]:bg-blue-500  [&:has([data-state=checked])]:text-white dark:[&:has([data-state=checked])]:bg-blue-600  dark:[&:has([data-state=checked])]:text-white"
                   key={index}
                 >
                   <RadioGroupItem value={item.value} className="sr-only" />
-                  <p className="font-mono font-semibold uppercase text-blue-950 dark:text-blue-300">
+                  <p className="font-mono font-semibold uppercase  ">
                     {item.value}
                   </p>
                 </Label>
