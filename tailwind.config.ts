@@ -58,6 +58,9 @@ const config = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
         ubuntu: ["var(--font-ubuntu)"],
+        kanit: ["var(--font-kanit)"],
+        grenze: ["var(--font-grenze_gotisch)"],
+        exo: ["var(--font-exo2)"],
       },
       borderRadius: {
         lg: "var(--radius)",

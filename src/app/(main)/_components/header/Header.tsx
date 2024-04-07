@@ -67,7 +67,9 @@ const Header = () => {
       <div className="flex items-center md:gap-16 ">
         {/* <NavbarButton /> */}
         <Link href="/">
-          <h1 className="pl-3">Online Shop</h1>
+          <h1 className="pl-2 font-grenze text-2xl font-bold text-primary md:text-3xl">
+            Online Shop
+          </h1>
         </Link>
         <nav className="hidden gap-9 lg:flex ">
           {ItemsData.map((item) => (

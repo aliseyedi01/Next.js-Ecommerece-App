@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "@style/globals.css";
-import { ubuntu } from "src/libs/font";
+import { exo, grenze, kanit, ubuntu } from "src/libs/font";
 import { cn } from "src/libs/utils";
 // theme
 import { ThemeProvider } from "@components/theme/ThemeProvider";
@@ -38,7 +38,14 @@ export const viewport: Viewport = {
 const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={cn(ubuntu.variable)}>
+      <body
+        className={cn(
+          ubuntu.variable,
+          kanit.variable,
+          grenze.variable,
+          exo.variable,
+        )}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

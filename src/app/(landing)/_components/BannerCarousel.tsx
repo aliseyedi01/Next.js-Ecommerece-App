@@ -38,12 +38,12 @@ const BannerCarousel = () => {
           key={index}
           className="!flex flex-col-reverse items-center justify-center p-10 md:flex-row"
         >
-          <div className="flex w-full flex-col items-start  justify-center gap-5 font-bold text-blue-700 dark:text-white max-md:pb-10 md:w-1/2 md:items-center md:gap-10">
-            <p className="w-40 text-left text-4xl tracking-widest md:w-80 md:text-start md:text-7xl">
+          <div className="flex w-full flex-col items-start justify-center  gap-5 font-bold uppercase text-blue-700 dark:text-white max-md:pb-10 md:w-1/2 md:items-center md:gap-10">
+            <p className="w-40 text-left font-kanit text-4xl font-medium !leading-[4.5rem] tracking-widest md:w-80 md:text-start md:text-6xl">
               {image.text}
             </p>
             <Link href="/products">
-              <Button className="flex items-center gap-2 border-2 border-transparent  hover:border-yellow-500 md:h-16 md:w-80 md:text-2xl">
+              <Button className="flex  items-center gap-2 border-2 border-transparent font-kanit  hover:border-yellow-500 md:h-16 md:w-80 md:text-2xl">
                 Discover More
                 <ArrowRight className="h-6 w-6 text-yellow-400" />
               </Button>
