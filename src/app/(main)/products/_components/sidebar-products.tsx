@@ -14,20 +14,27 @@ import {
   RadioGroupItem,
   Slider,
 } from "@components/ui";
-import { ChevronDown, ChevronUp, Sliders } from "lucide-react";
+import { ChevronDown, ChevronUp, Sliders, StarIcon } from "lucide-react";
 import { ColorPickerGroup, ColorPickerGroupItem } from "./colors-picker";
 import {
   BrandsFilterData,
+  RatingFilterData,
   SizeProducts,
   categories,
   colors,
 } from "@data/filter-products-data";
 import Image from "next/image";
+import { StarFilledIcon } from "@radix-ui/react-icons";
 
 export default function SidebarProduct() {
   const [selectedBrand, setSelectedBrand] = useState("");
-
   const handleBrandChange = (brand: any) => setSelectedBrand(brand);
+
+  const [selectedRating, setSelectedRating] = useState("5");
+
+  const handleRatingChange = (event: any) => {
+    setSelectedRating(event.target.value);
+  };
 
   return (
     <div className="h-full w-3/12 rounded-lg border border-gray-200 p-4 pb-6 shadow-md dark:border-blue-400">
@@ -39,7 +46,14 @@ export default function SidebarProduct() {
       <Accordion
         className="w-full"
         type="multiple"
-        defaultValue={["categories", "colors", "brands", "price", "size"]}
+        defaultValue={[
+          "categories",
+          "colors",
+          "brands",
+          "price",
+          "size",
+          "rating",
+        ]}
       >
         {/* Categories */}
         <AccordionItem value="categories">
@@ -158,6 +172,42 @@ export default function SidebarProduct() {
                     {item.value}
                   </p>
                 </Label>
+              ))}
+            </RadioGroup>
+          </AccordionContent>
+        </AccordionItem>
+
+        {/* Rating */}
+        <AccordionItem value="rating">
+          <AccordionTrigger className="accordion-trigger-product">
+            Rating
+          </AccordionTrigger>
+          <AccordionContent>
+            <RadioGroup
+              defaultValue={selectedRating}
+              onChange={handleRatingChange}
+              className=""
+            >
+              {RatingFilterData.map((rating) => (
+                <div key={rating.value} className="flex items-center space-x-2">
+                  <RadioGroupItem
+                    value={rating.value}
+                    id={`r${rating.value}`}
+                  />
+                  <Label htmlFor={`r${rating.value}`}>
+                    <div className="flex w-full flex-row items-center justify-between text-yellow-500">
+                      {[...Array(rating.filledStars)].map((_, index) => (
+                        <StarFilledIcon key={index} className="size-5" />
+                      ))}
+                      {[...Array(rating.emptyStars)].map((_, index) => (
+                        <StarIcon key={index} className="size-5" />
+                      ))}
+                    </div>
+                  </Label>
+                  <p className="text-xs text-yellow-900 dark:text-yellow-400">
+                    ({rating.value})
+                  </p>
+                </div>
               ))}
             </RadioGroup>
           </AccordionContent>

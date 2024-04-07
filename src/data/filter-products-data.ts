@@ -103,3 +103,12 @@ export const SizeProducts = [
     value: "xxxl",
   },
 ];
+
+
+export const RatingFilterData = [
+  { value: "5", filledStars: 5, emptyStars: 0 },
+  { value: "4", filledStars: 4, emptyStars: 1 },
+  { value: "3", filledStars: 3, emptyStars: 2 },
+  { value: "2", filledStars: 2, emptyStars: 3 },
+  { value: "1", filledStars: 1, emptyStars: 4 },
+];
