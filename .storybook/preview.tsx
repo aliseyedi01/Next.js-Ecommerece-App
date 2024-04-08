@@ -4,6 +4,7 @@ import "../src/style/globals.css";
 import { withThemeByClassName } from "@storybook/addon-themes";
 import { kanit } from "../src/libs/font";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
+import { themes } from "@storybook/theming";
 
 const preview: Preview = {
   decorators: [
@@ -42,6 +43,10 @@ const preview: Preview = {
     },
     docs: {
       toc: true,
+    },
+    darkMode: {
+      dark: { ...themes.dark },
+      light: { ...themes.normal },
     },
   },
 };
