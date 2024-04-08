@@ -1,38 +1,109 @@
+import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from "@components/ui";
-import type { Meta, StoryObj } from "@storybook/react";
+
 
 const meta = {
-  title: "Vespi/Button",
   component: Button,
+  title: "Button",
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
   argTypes: {
-    backgroundColor: { control: "color" },
+    children: {
+      control: "text",
+      description: "The contents of the button.",
+    },
+    variant: {
+      control: "radio",
+      description: "The style variant of the button.",
+      options: [
+        "default",
+        "destructive",
+        "outline",
+        "secondary",
+        "link",
+        "ghost",
+      ],
+      table: {
+        defaultValue: {
+          summary: "default",
+        },
+      },
+      title: {
+        control: "text",
+        description:
+          "Used to describe an icon button for screen readers and search engines.",
+      },
+      type: "string",
+    },
+    size: {
+      control: "radio",
+      description: "The size variant of the button.",
+      options: ["default", "sm", "lg" , "icon"],
+      table: {
+        defaultValue: {
+          summary: "default",
+        },
+      },
+      type: "string",
+    },
   },
 } satisfies Meta<typeof Button>;
-export default meta;
 
+export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
-    primary: true,
-    label: "Add to bag",
-    className : "w-full"
+    children: "Default",
+    variant: "default",
   },
 };
 
-export const General: Story = {
+export const Secondary: Story = {
   args: {
-    label: "Learn more about us",
+    children: "Secondary",
+    variant: "secondary",
   },
 };
 
-export const Special: Story = {
+export const Link: Story = {
   args: {
-    label: "Follow us on the gram",
-    icon: true,
+    children: "Link",
+    variant: "link",
   },
 };
+
+export const Outline: Story = {
+  args: {
+    children: "Outline",
+    variant: "outline",
+  },
+};
+
+
+export const Small: Story = {
+  args: {
+    children: "Icon",
+    size: "icon",
+  },
+};
+
+export const Medium: Story = {
+  args: {
+    children: "Small",
+    size: "sm",
+  },
+};
+
+export const Large: Story = {
+  args: {
+    children: "Large",
+    size: "lg",
+  },
+};
+
+
+
+
