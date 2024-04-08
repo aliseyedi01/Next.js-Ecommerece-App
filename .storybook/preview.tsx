@@ -2,21 +2,16 @@ import React from "react";
 import type { Preview } from "@storybook/react";
 import "../src/style/globals.css";
 import { withThemeByClassName } from "@storybook/addon-themes";
-
-import { Kanit } from "next/font/google";
-
-const kanit = Kanit({
-  subsets: ["latin"],
-  variable: "--font-kanit",
-  weight: ["300", "400", "500", "700", "800", "900"],
-});
+import { kanit } from "../src/libs/font";
 
 const preview: Preview = {
   decorators: [
     (Story) => (
-      <div className={`font-sans ${kanit.className}`}>
-        <Story />
-      </div>
+      <>
+        <div className={`font-sans ${kanit.className}`}>
+          <Story />
+        </div>
+      </>
     ),
     withThemeByClassName({
       defaultTheme: "light",
@@ -27,7 +22,6 @@ const preview: Preview = {
     }),
   ],
   parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
         color: /(background|color)$/i,

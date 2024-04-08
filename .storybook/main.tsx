@@ -1,13 +1,8 @@
 import type { StorybookConfig } from "@storybook/nextjs";
 import path from "path";
 
-
-
 const config: StorybookConfig = {
-  stories: [
-    "../src/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx|mdx)"
-  ],
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
     "@storybook/addon-onboarding",
     "@storybook/addon-links",
@@ -15,21 +10,22 @@ const config: StorybookConfig = {
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
     "@storybook/addon-themes",
-    "@storybook/addon-docs"
+    "@storybook/addon-docs",
   ],
   framework: {
     name: "@storybook/nextjs",
     options: {
       // strictMode: true,
+      options: { builder: { useSWC: true } },
       nextConfigPath: path.resolve(__dirname, "../next.config.mjs"),
     },
   },
   docs: {
     autodocs: true,
     defaultName: "Documentation",
-},
-  staticDirs: ["..\\public"],
-  async webpackFinal(config, { configType }) {
+  },
+  staticDirs: ["../public"],
+  webpackFinal: async (config) => {
     if (config?.resolve?.alias) {
       config.resolve.alias = {
         ...config.resolve.alias,
