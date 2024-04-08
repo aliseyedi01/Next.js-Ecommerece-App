@@ -2,21 +2,26 @@ import type { StorybookConfig } from "@storybook/nextjs";
 import path from "path";
 
 
+
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: [
+    "../src/**/*.mdx",
+    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx|mdx)"
+  ],
   addons: [
     "@storybook/addon-onboarding",
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
-    "@storybook/addon-themes"
+    "@storybook/addon-themes",
+    "@storybook/addon-docs"
   ],
   framework: {
     name: "@storybook/nextjs",
     options: {
       // strictMode: true,
-      // nextConfigPath: path.resolve(__dirname, "../next.config.mjs"),
+      nextConfigPath: path.resolve(__dirname, "../next.config.mjs"),
     },
   },
   docs: {

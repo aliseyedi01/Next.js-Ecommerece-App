@@ -3,12 +3,11 @@ import { Button } from "@components/ui";
 
 
 const meta = {
-  component: Button,
   title: "Button",
+  component: Button,
   parameters: {
     layout: "centered",
   },
-  tags: ["autodocs"],
   argTypes: {
     children: {
       control: "text",

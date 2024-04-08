@@ -28,6 +28,9 @@ const preview: Preview = {
         order: ["Button","Footer","Header"]
       },
     },
+    docs: {
+      toc: true,
+    },
   },
 };
 
