@@ -3,6 +3,7 @@ import type { Preview } from "@storybook/react";
 import "../src/style/globals.css";
 import { withThemeByClassName } from "@storybook/addon-themes";
 import { kanit } from "../src/libs/font";
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 const preview: Preview = {
   decorators: [
@@ -27,6 +28,9 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+    },
+    viewport: {
+      viewports: INITIAL_VIEWPORTS,
     },
     nextjs: {
       appDirectory: true,
