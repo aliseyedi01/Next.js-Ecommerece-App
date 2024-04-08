@@ -1,6 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "@components/ui";
-
 
 const meta = {
   title: "Button",
@@ -8,6 +7,7 @@ const meta = {
   parameters: {
     layout: "centered",
   },
+  tags: ["autodocs"],
   argTypes: {
     children: {
       control: "text",
@@ -39,7 +39,7 @@ const meta = {
     size: {
       control: "radio",
       description: "The size variant of the button.",
-      options: ["default", "sm", "lg" , "icon"],
+      options: ["default", "sm", "lg", "icon"],
       table: {
         defaultValue: {
           summary: "default",
@@ -81,7 +81,6 @@ export const Outline: Story = {
   },
 };
 
-
 export const Small: Story = {
   args: {
     children: "Icon",
@@ -102,7 +101,3 @@ export const Large: Story = {
     size: "lg",
   },
 };
-
-
-
-
