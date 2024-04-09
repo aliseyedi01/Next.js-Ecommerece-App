@@ -25,7 +25,7 @@ const config: StorybookConfig = {
   docs: {
     // autodocs: true,
   },
-  staticDirs: ["../public"],
+  staticDirs: ["./public"],
   webpackFinal: async (config) => {
     if (config?.resolve?.alias) {
       config.resolve.alias = {
