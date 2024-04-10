@@ -4,7 +4,9 @@ import theme from './theme';
 
 
 addons.setConfig({
-  theme
+  theme,
+  panelPosition: "right",
+  showPanel: true,
 });
 
 

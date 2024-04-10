@@ -2,9 +2,9 @@ import React from "react";
 import type { Preview } from "@storybook/react";
 import "../src/style/globals.css";
 import { withThemeByClassName } from "@storybook/addon-themes";
-import { kanit } from "../src/libs/font";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { themes } from "@storybook/theming";
+import { kanit } from "../src/libs/font";
 
 const preview: Preview = {
   decorators: [
@@ -24,11 +24,13 @@ const preview: Preview = {
     }),
   ],
   parameters: {
+    layout: "centered",
     controls: {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+      expanded: true,
     },
     viewport: {
       viewports: INITIAL_VIEWPORTS,
@@ -36,13 +38,17 @@ const preview: Preview = {
     nextjs: {
       appDirectory: true,
     },
-    options: {
-      storySort: {
-        order: ["Button", "Footer", "Header"],
-      },
-    },
+    // options: {
+    //   storySort: {
+    //     order: ["Button", "Footer", "Header"],
+    //   },
+    // },
     docs: {
+      theme: themes.light,
       toc: true,
+    },
+    theme: {
+      ...themes.dark,
     },
     darkMode: {
       dark: { ...themes.dark },

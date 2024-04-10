@@ -7,6 +7,7 @@ const meta = {
   parameters: {
     layout: "",
   },
+  // tags: ["autodocs"],
   argTypes: {},
 } satisfies Meta<typeof Header>;
 

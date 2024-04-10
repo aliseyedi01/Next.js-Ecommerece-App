@@ -6,8 +6,9 @@ const meta = {
   component: Button,
   parameters: {
     layout: "centered",
+    docs: {},
   },
-  tags: ["autodocs"],
+  // tags: ["autodocs"],
   argTypes: {
     children: {
       control: "text",
