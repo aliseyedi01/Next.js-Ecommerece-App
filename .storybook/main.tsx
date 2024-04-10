@@ -4,7 +4,7 @@ import path from "path";
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   typescript: {
-    reactDocgen: "react-docgen",
+    // reactDocgen: "react-docgen",
     check: false,
   },
   addons: [
@@ -15,6 +15,14 @@ const config: StorybookConfig = {
     "@storybook/addon-themes",
     "@storybook/addon-viewport",
     "storybook-dark-mode",
+    // "@storybook/addon-docs",
+    {
+      name: "@storybook/addon-docs",
+      options: {
+        csfPluginOptions: null,
+        mdxPluginOptions: {},
+      },
+    },
   ],
   framework: {
     name: "@storybook/nextjs",
