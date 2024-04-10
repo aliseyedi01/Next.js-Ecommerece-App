@@ -24,7 +24,7 @@ export const Default: Story = {
   args: {},
 };
 
-export const Icon: Story = {
+export const WithIcon: Story = {
   args: {
     icon: <UserRound />,
   },

@@ -1,4 +1,3 @@
-import Footer from "@app/(main)/_components/footer/Footer";
 import { Badge } from "@components/ui";
 import type { Meta, StoryObj } from "@storybook/react";
 
