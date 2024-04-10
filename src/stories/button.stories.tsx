@@ -8,7 +8,7 @@ const meta = {
     layout: "centered",
     docs: {},
   },
-  // tags: ["autodocs"],
+  tags: ["autodocs"],
   argTypes: {
     children: {
       control: "text",
@@ -16,6 +16,7 @@ const meta = {
     },
     variant: {
       control: "radio",
+      type: "string",
       description: "The style variant of the button.",
       options: [
         "default",
@@ -35,10 +36,10 @@ const meta = {
         description:
           "Used to describe an icon button for screen readers and search engines.",
       },
-      type: "string",
     },
     size: {
       control: "radio",
+      type: "string",
       description: "The size variant of the button.",
       options: ["default", "sm", "lg", "icon"],
       table: {
@@ -46,7 +47,6 @@ const meta = {
           summary: "default",
         },
       },
-      type: "string",
     },
   },
 } satisfies Meta<typeof Button>;

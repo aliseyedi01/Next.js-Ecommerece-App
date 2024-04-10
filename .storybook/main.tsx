@@ -12,17 +12,18 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
+    "@storybook/addon-onboarding",
     "@storybook/addon-themes",
     "@storybook/addon-viewport",
     "storybook-dark-mode",
-    // "@storybook/addon-docs",
-    {
-      name: "@storybook/addon-docs",
-      options: {
-        csfPluginOptions: null,
-        mdxPluginOptions: {},
-      },
-    },
+    "@storybook/addon-docs",
+    // {
+    //   name: "@storybook/addon-docs",
+    //   options: {
+    //     csfPluginOptions: null,
+    //     mdxPluginOptions: {},
+    //   },
+    // },
   ],
   framework: {
     name: "@storybook/nextjs",
@@ -32,7 +33,7 @@ const config: StorybookConfig = {
     },
   },
   docs: {
-    autodocs: true,
+    autodocs: "tag",
   },
   staticDirs: ["./public"],
   webpackFinal: async (config) => {

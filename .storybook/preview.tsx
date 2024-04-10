@@ -44,7 +44,7 @@ const preview: Preview = {
     //   },
     // },
     docs: {
-      theme: themes.light,
+      theme: themes.normal,
       toc: true,
     },
     theme: {
