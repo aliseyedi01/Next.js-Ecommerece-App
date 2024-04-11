@@ -96,11 +96,11 @@ export const SizeProducts = [
   },
   {
     label: "2XLarge",
-    value: "xxl",
+    value: "2xl",
   },
   {
     label: "3XLarge",
-    value: "xxxl",
+    value: "3xl",
   },
 ];
 
