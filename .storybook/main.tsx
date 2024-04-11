@@ -11,7 +11,7 @@ const config: StorybookConfig = {
     },
     {
       titlePrefix: "section",
-      directory: "../src/components/stories/page",
+      directory: "../src/components/stories/section",
       files: "**/*.stories.@(js|jsx|mjs|ts|tsx|mdx)",
     },
     // "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
