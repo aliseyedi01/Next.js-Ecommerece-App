@@ -32,3 +32,4 @@ export * from "./toggle";
 export * from "./tooltip";
 export * from "./slider";
 export * from "./input-otp";
+export * from "./scroll-area";

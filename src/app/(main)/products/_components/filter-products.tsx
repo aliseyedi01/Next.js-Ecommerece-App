@@ -26,7 +26,7 @@ import {
 import Image from "next/image";
 import { StarFilledIcon } from "@radix-ui/react-icons";
 
-export default function SidebarProduct() {
+export default function FilterProducts() {
   const [selectedBrand, setSelectedBrand] = useState("");
   const handleBrandChange = (brand: any) => setSelectedBrand(brand);
 
@@ -37,14 +37,14 @@ export default function SidebarProduct() {
   };
 
   return (
-    <div className="h-full w-3/12 rounded-lg border border-gray-200 p-4 pb-6 shadow-md dark:border-blue-400">
+    <div className="h-fit w-full rounded-lg border border-gray-200 p-4 pb-6 shadow-md dark:border-blue-400">
       <div className="flex w-full items-center justify-between">
         <p className="text-xl font-semibold">Filters</p>
         <Sliders size={18} className="hidden text-gray-500 lg:block" />
       </div>
 
       <Accordion
-        className="w-full"
+        className="h-full w-full"
         type="multiple"
         defaultValue={[
           "categories",
