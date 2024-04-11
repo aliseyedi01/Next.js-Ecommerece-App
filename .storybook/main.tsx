@@ -4,12 +4,17 @@ import path from "path";
 const config: StorybookConfig = {
   stories: [
     "../src/**/*.mdx",
-    // "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
     {
       titlePrefix: "component",
       directory: "../src/components/stories/ui",
       files: "**/*.stories.@(js|jsx|mjs|ts|tsx|mdx)",
     },
+    {
+      titlePrefix: "section",
+      directory: "../src/components/stories/page",
+      files: "**/*.stories.@(js|jsx|mjs|ts|tsx|mdx)",
+    },
+    // "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
   typescript: {
     // reactDocgen: "react-docgen",
