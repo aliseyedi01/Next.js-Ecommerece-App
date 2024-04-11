@@ -29,11 +29,11 @@ export const Default: CardStory = {
     children: (
       <div className="w-96">
         <CardHeader>
-          <CardTitle>Card Title</CardTitle>
-          <CardDescription>Card Description</CardDescription>
+          <CardTitle>Title</CardTitle>
+          <CardDescription>Description</CardDescription>
         </CardHeader>
-        <CardContent>Card Content</CardContent>
-        <CardFooter>Card Footer</CardFooter>
+        <CardContent>Content</CardContent>
+        <CardFooter>Footer</CardFooter>
       </div>
     ),
   },

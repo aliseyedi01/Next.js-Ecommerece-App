@@ -17,6 +17,7 @@ const config: StorybookConfig = {
     "@storybook/addon-viewport",
     "storybook-dark-mode",
     "@storybook/addon-docs",
+    "@storybook/addon-actions",
     // {
     //   name: "@storybook/addon-docs",
     //   options: {
