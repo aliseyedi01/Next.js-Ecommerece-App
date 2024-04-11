@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui";
+} from "@components/ui";
 import { AccordionImplProps } from "@radix-ui/react-accordion";
 
 const meta: Meta<typeof Accordion> = {
