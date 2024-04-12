@@ -1,20 +1,20 @@
 "use client";
 
+import { LogoutForm } from "@app/(main)/_components/header/logout-form";
 import {
+  Button,
   Sheet,
+  SheetClose,
   SheetContent,
   SheetTrigger,
-  Button,
-  SheetClose,
 } from "@components/ui";
-import React from "react";
-import { Menu } from "lucide-react";
-import { LogoutForm } from "@app/(main)/_components/header/logout-form";
-import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@components/ui";
 import { avatar1 } from "@constants/images";
 import { NavbarProfileData } from "@data/navbar-profile-data";
+import { Menu } from "lucide-react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
+import React from "react";
 
 export function SidebarProfileMobile() {
   const pathname = usePathname();

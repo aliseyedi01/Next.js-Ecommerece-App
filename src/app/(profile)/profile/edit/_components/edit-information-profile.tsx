@@ -4,10 +4,8 @@ import {
   Calendar,
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
   Input,
   Popover,
@@ -20,21 +18,19 @@ import {
   SelectValue,
   toast,
 } from "@components/ui";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { cn } from "@lib/utils";
+import { format } from "date-fns";
 import {
   CalendarDays,
-  CalendarIcon,
   Mail,
   NotebookPen,
   Phone,
   UserRound,
 } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { cn } from "@lib/utils";
-import { format } from "date-fns";
-import Link from "next/link";
 
 const FormSchema = z.object({
   username: z

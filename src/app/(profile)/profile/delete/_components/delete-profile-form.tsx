@@ -1,21 +1,20 @@
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-
 import {
+  Button,
   Form,
   FormControl,
   FormDescription,
   FormField,
   FormItem,
   FormMessage,
-  Button,
   Input,
   toast,
 } from "@components/ui";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Bomb } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 const ConfirmationWord = "DELETE";
 

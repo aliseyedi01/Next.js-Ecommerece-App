@@ -1,7 +1,8 @@
 import React from "react";
-import EditPhotoProfile from "./_components/edit-photo-profile";
+
 import EditInformationProfile from "./_components/edit-information-profile";
 import EditPasswordProfile from "./_components/edit-password-profile";
+import EditPhotoProfile from "./_components/edit-photo-profile";
 
 export default function EditProfile() {
   return (

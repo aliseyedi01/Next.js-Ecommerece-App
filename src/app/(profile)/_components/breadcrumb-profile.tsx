@@ -1,12 +1,10 @@
 "use client";
 
-import { SlashIcon } from "@radix-ui/react-icons";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
-  BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@components/ui";
 import { usePathname } from "next/navigation";

@@ -1,21 +1,11 @@
 "use client";
 
-import React from "react";
-// style
-
+import { cn } from "@lib/utils";
+import { Bell, Heart, HomeIcon, ShoppingBasket, UserRound } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  Bell,
-  Heart,
-  HomeIcon,
-  Info,
-  LaptopIcon,
-  Phone,
-  ShoppingBasket,
-  UserRound,
-} from "lucide-react";
-import { cn } from "@lib/utils";
+import React from "react";
+
 import { SidebarProfileMobile } from "./sidebar-profile-mobile";
 
 const ItemsData = [

@@ -1,8 +1,9 @@
-import ProfileButton from "@app/(main)/_components/header/profile-button";
 import CommandButton from "@app/(main)/_components/header/command-button";
-import React from "react";
-import { BreadcrumbProfile } from "./breadcrumb-profile";
+import ProfileButton from "@app/(main)/_components/header/profile-button";
 import { ModeToggle } from "@components/theme/ModeToggle";
+import React from "react";
+
+import { BreadcrumbProfile } from "./breadcrumb-profile";
 
 export default function HeaderProfile() {
   return (

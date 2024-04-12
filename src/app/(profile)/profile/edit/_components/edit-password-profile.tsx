@@ -1,8 +1,4 @@
 "use client";
-import React from "react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
 import {
   Button,
   Form,
@@ -13,10 +9,13 @@ import {
   Input,
   toast,
 } from "@components/ui";
-import { KeyRound, Lock } from "lucide-react";
-import BlurringImage from "@components/utility/BluringImage";
 import { resetPass } from "@constants/images";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { KeyRound, Lock } from "lucide-react";
 import Image from "next/image";
+import React from "react";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
 
 const FormSchema = z.object({
   current: z
