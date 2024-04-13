@@ -1,14 +1,14 @@
 import * as React from "react";
-
 import { cn } from "src/libs/utils";
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   icon?: React.ReactNode;
+  iconOutline?: React.ReactNode;
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, icon, ...props }, ref) => {
+  ({ className, type, icon, iconOutline, ...props }, ref) => {
     return (
       <div className="relative">
         {/* Add a relative container */}
@@ -26,6 +26,14 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             {/* {icon} */}
             {React.cloneElement(icon as React.ReactElement, {
               className: "fill-blue-400 stroke-2",
+            })}
+          </span>
+        )}
+        {iconOutline && (
+          <span className="absolute left-2 top-1/2 -translate-y-1/2 transform text-background ">
+            {/* {icon} */}
+            {React.cloneElement(iconOutline as React.ReactElement, {
+              className: "size-5 text-blue-800 dark:text-blue-500 mt-[1px]",
             })}
           </span>
         )}

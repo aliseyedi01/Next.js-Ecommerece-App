@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -14,17 +13,19 @@ import {
   RadioGroupItem,
   Slider,
 } from "@components/ui";
-import { ChevronDown, ChevronUp, Sliders, StarIcon } from "lucide-react";
-import { ColorPickerGroup, ColorPickerGroupItem } from "./colors-picker";
 import {
   BrandsFilterData,
-  RatingFilterData,
-  SizeProducts,
   categories,
   colors,
+  RatingFilterData,
+  SizeProducts,
 } from "@data/filter-products-data";
-import Image from "next/image";
 import { StarFilledIcon } from "@radix-ui/react-icons";
+import { ChevronDown, ChevronUp, Sliders, StarIcon } from "lucide-react";
+import Image from "next/image";
+import React, { useState } from "react";
+
+import { ColorPickerGroup, ColorPickerGroupItem } from "./colors-picker";
 
 export default function FilterProducts() {
   const [selectedBrand, setSelectedBrand] = useState("");
@@ -38,7 +39,7 @@ export default function FilterProducts() {
 
   return (
     <div className="h-fit w-full rounded-lg border border-gray-200 p-4 pb-6 shadow-md dark:border-blue-400">
-      <div className="flex w-full items-center justify-between">
+      <div className="flex w-full  items-center justify-between">
         <p className="text-xl font-semibold">Filters</p>
         <Sliders size={18} className="hidden text-gray-500 lg:block" />
       </div>
