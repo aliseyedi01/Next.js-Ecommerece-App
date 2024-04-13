@@ -39,7 +39,7 @@ export default function About() {
               <SortProducts />
             </div>
           </div>
-          <div className="grid h-full w-full grid-cols-1 place-items-center gap-5 pb-5 min-[450px]:grid-cols-2  lg:grid-cols-3">
+          <div className="grid h-full w-full grid-cols-2 place-items-center gap-2 pb-5 min-[450px]:grid-cols-2 md:gap-5  lg:grid-cols-3">
             <ProductSingle />
             <ProductSingle />
             <ProductSingle />
