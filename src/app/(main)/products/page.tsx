@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import ProductSingle from "./_components/product-single";
+
 import FilterProducts from "./_components/filter-products";
+import ProductSingle from "./_components/product-single";
 import SidebarFilterProduct from "./_components/sidebar-filter-products";
+import SortProducts from "./_components/sort-products";
 
 export const metadata: Metadata = {
   title: "Products | Online Shop",
@@ -14,9 +16,13 @@ export default function About() {
         <div className="hidden h-full w-[23%] md:block">
           <FilterProducts />
         </div>
-        <div className="w-full px-5 md:w-[77%]">
+        <div className="h-full w-full  px-5 md:w-[77%]">
           <SidebarFilterProduct />
-          <div className="grid h-full w-full grid-cols-1 place-items-center gap-5 py-5 min-[450px]:grid-cols-2 md:pt-20  lg:grid-cols-3">
+          <div className="mt-6 flex w-full items-center justify-between ">
+            <p>Item</p>
+            <SortProducts />
+          </div>
+          <div className="grid h-full w-full grid-cols-1 place-items-center gap-5 py-5 min-[450px]:grid-cols-2  lg:grid-cols-3">
             <ProductSingle />
             <ProductSingle />
             <ProductSingle />
