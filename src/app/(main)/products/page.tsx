@@ -1,5 +1,6 @@
 import { Separator } from "@components/ui";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import FilterProducts from "./_components/filter-products";
 import ProductSingle from "./_components/product-single";
@@ -40,18 +41,11 @@ export default function About() {
             </div>
           </div>
           <div className="grid h-full w-full grid-cols-2 place-items-center gap-2 pb-5 min-[450px]:grid-cols-2 md:gap-5  lg:grid-cols-3">
-            <ProductSingle />
-            <ProductSingle />
-            <ProductSingle />
-            <ProductSingle />
-            <ProductSingle />
-            <ProductSingle />
-            <ProductSingle />
-            <ProductSingle />
-            <ProductSingle />
-            <ProductSingle />
-            <ProductSingle />
-            <ProductSingle />
+            {Array.from({ length: 18 }, (_, index) => (
+              <Link key={index} href="product" className="w-full">
+                <ProductSingle />
+              </Link>
+            ))}
           </div>
         </div>
       </div>

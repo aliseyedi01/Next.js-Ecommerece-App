@@ -1,17 +1,18 @@
 "use client";
 
 // swiper
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-fade";
-// import "swiper/css/pagination";
-import { EffectFade, Pagination, Navigation, Autoplay } from "swiper/modules";
-import Image from "next/image";
+
 import { Button } from "@components/ui/button";
-// icons
-import { ArrowRight, CircleArrowDown, icons, ChevronsDown } from "lucide-react";
-import Link from "next/link";
 import { BannersData } from "@data/banner-data";
+// icons
+import { ArrowRight, CircleArrowDown } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+// import "swiper/css/pagination";
+import { Autoplay, EffectFade } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const BannerCarousel = () => {
   return (

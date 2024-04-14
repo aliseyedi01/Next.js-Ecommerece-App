@@ -114,6 +114,13 @@
   .bg-section-profile {
     @apply bg-slate-100 dark:bg-blue-950;
   }
+  .preview-product-swiper .swiper-slide {
+    @apply cursor-pointer;
+  }
+
+  .preview-product-swiper .swiper-slide-thumb-active {
+    @apply rounded-lg border-2 border-blue-400;
+  }
 }
 
 @layer components {
