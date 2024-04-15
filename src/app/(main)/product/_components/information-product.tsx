@@ -12,7 +12,7 @@ import React from "react";
 
 export default function InformationProduct() {
   return (
-    <div className="title-info-product flex h-full w-full flex-col items-start gap-4 p-5 md:w-1/2 md:gap-7 md:p-5 ">
+    <div className="title-info-product flex h-full w-full flex-col items-start gap-4 px-5 py-1 md:w-1/2 md:gap-7 md:p-5 ">
       {/* Title & Category */}
       <div className="flex items-end gap-2">
         <h2 className="font-ubuntu text-2xl  font-bold tracking-widest text-blue-900 md:text-3xl">
