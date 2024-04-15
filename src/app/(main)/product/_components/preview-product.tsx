@@ -16,6 +16,7 @@ const PreviewProductData = [TShirt1, TShirt2, TShirt3, TShirt4];
 
 export default function PreviewProduct() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-4 md:w-1/2">
       {/* Images Preview */}
@@ -47,7 +48,8 @@ export default function PreviewProduct() {
       </Swiper>
       {/* thumbnail */}
       <Swiper
-        onSwiper={setThumbsSwiper}
+        // onSwiper={setThumbsSwiper}
+        onSwiper={(swiper: any) => setThumbsSwiper(swiper)}
         spaceBetween={30}
         slidesPerView={4}
         freeMode={true}
