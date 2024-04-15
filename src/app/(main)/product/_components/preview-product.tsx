@@ -29,7 +29,7 @@ export default function PreviewProduct() {
           disableOnInteraction: false,
         }}
         modules={[Autoplay, FreeMode, Navigation, Thumbs]}
-        className="size-[20rem] rounded-lg md:size-[30rem]"
+        className="size-[12rem] rounded-lg md:size-[30rem]"
       >
         {PreviewProductData.map((image, index) => (
           <SwiperSlide key={index} className="">
@@ -54,7 +54,7 @@ export default function PreviewProduct() {
         direction="horizontal"
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="preview-product-swiper h-20 w-10/12  border-blue-600  md:w-96"
+        className="preview-product-swiper h-12 w-8/12 border-blue-600  md:h-20  md:w-96"
       >
         {PreviewProductData.map((image, index) => (
           <SwiperSlide key={index} className="">

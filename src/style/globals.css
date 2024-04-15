@@ -121,6 +121,9 @@
   .preview-product-swiper .swiper-slide-thumb-active {
     @apply rounded-lg border-2 border-blue-400;
   }
+  .title-info-product h4 {
+    @apply font-kanit text-xs uppercase text-blue-500/80 md:text-base md:font-semibold;
+  }
 }
 
 @layer components {

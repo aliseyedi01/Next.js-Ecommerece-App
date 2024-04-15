@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <section className="h-full w-full">
-      <div className="flex h-[calc(100vh-54px)] w-full items-center justify-center   py-7 md:px-3 xl:px-20">
-        <div className="flex h-full w-full flex-col md:flex-row">
+      <div className="flex h-full  w-full items-center justify-center py-7   md:h-[calc(100vh-54px)] md:px-3 xl:px-20">
+        <div className="flex h-full w-full flex-col gap-3  md:flex-row">
           <PreviewProduct />
           <InformationProduct />
         </div>
