@@ -7,6 +7,8 @@ import {
 import { ProductsFaqsData } from "@data/faq-product-data";
 import React from "react";
 
+import NewQuestionProduct from "./new-question-product";
+
 export default function QuestionsProduct() {
   return (
     <div className="grid h-full w-full  grid-cols-1 gap-3 md:grid-cols-2">
@@ -33,7 +35,9 @@ export default function QuestionsProduct() {
           ))}
         </Accordion>
       </div>
-      <div className="bg-red-600">ab</div>
+      <div className="">
+        <NewQuestionProduct />
+      </div>
     </div>
   );
 }
