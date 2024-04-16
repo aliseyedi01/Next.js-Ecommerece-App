@@ -1,12 +1,12 @@
-import React from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@components/ui/accordion";
-import Image from "next/image";
 import { FaqsData } from "@data/faqs-data";
+import Image from "next/image";
+import React from "react";
 
 const FaqList = () => {
   return (
@@ -36,7 +36,7 @@ const FaqList = () => {
               ))}
             </Accordion>
           </div>
-          <div className=" ">
+          <div className="">
             <Image
               src="/images/pages/faq.svg"
               alt="About Us Image"
