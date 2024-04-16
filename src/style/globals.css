@@ -140,3 +140,8 @@
     @apply rounded-md !text-lg  font-semibold text-blue-950 hover:!no-underline dark:text-blue-500;
   }
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply rounded-md bg-blue-500/40 !fill-blue-100 !stroke-blue-100 px-2 py-6 !text-blue-100 backdrop-blur-md md:px-4 md:py-8;
+}
