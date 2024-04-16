@@ -125,7 +125,7 @@
     @apply font-kanit text-xs uppercase text-blue-500/80 md:text-base md:font-semibold;
   }
   .tabs-content {
-    @apply h-[500px] w-full rounded-md bg-blue-200/90 p-5 dark:bg-blue-900/90;
+    @apply h-full w-full rounded-md bg-blue-200/90 p-3  dark:bg-blue-900/90 md:h-[500px] md:p-7;
   }
 }
 

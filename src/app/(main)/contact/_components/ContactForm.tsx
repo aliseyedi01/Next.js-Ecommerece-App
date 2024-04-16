@@ -1,9 +1,6 @@
 "use client";
 
-import * as z from "zod";
-// hooks
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import { Button, Input, Textarea, toast } from "@components/ui";
 // components
 import {
   Form,
@@ -12,8 +9,11 @@ import {
   FormItem,
   FormMessage,
 } from "@components/ui/form";
-import { User, Mail, MessageSquareText, UserRound } from "lucide-react";
-import { Button, Input, Textarea, toast } from "@components/ui";
+// hooks
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Mail, MessageSquareText, UserRound } from "lucide-react";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
 
 const FormSchema = z.object({
   username: z
@@ -64,7 +64,7 @@ export default function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="font-kanit rtl:font-iranSans order-1 w-5/6 space-y-6 md:order-2 md:w-2/3"
+        className="rtl:font-iranSans order-1 w-5/6 space-y-6 font-kanit md:order-2 md:w-2/3"
       >
         {/* UserName Field */}
         <FormField

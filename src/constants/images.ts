@@ -54,6 +54,7 @@ export { default as resetPass } from '@public/images/profile/resetpassword.svg';
 
 
 // products
+export { default as reviews } from '@public/images/products/reviews.webp';
 export { default as sampleProductsImg } from '@public/images/products/sample-product.jpg';
 export { default as TShirt1 } from '@public/images/products/tshirt-1.webp';
 export { default as TShirt2 } from '@public/images/products/tshirt-2.webp';
