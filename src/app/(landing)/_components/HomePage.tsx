@@ -2,6 +2,7 @@ import BannerCarousel from "./BannerCarousel";
 import Brands from "./Brands";
 import Categories from "./Categories";
 import FaqList from "./FaqList";
+import FeaturedProducts from "./featured-products";
 import Features from "./Features";
 import Newsletter from "./news-letter";
 
@@ -11,6 +12,7 @@ const HomePage = () => {
       <BannerCarousel />
       <Categories />
       <Brands />
+      <FeaturedProducts />
       <Features />
       <FaqList />
       <Newsletter />

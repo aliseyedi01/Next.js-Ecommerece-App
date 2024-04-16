@@ -8,7 +8,7 @@ export default function NewQuestionProduct() {
   return (
     <div className="flex w-full flex-col justify-between gap-7 px-2 py-7">
       <div className="flex w-full justify-between">
-        <div className="flex w-full flex-col items-start justify-start gap-1 gap-2">
+        <div className="flex w-full flex-col items-start justify-start gap-2">
           <p className="text-lg md:text-xl">Ask a Question</p>
           <p className="text-sm md:text-base">
             If you have a new question that is not answered here, feel free to

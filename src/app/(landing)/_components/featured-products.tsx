@@ -10,13 +10,13 @@ import React from "react";
 import { FreeMode, Keyboard, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-export default function RelativeProduct() {
+export default function FeaturedProducts() {
   return (
-    <div className="h-full w-full px-3 md:px-20">
+    <div className="main-container h-full w-full">
       <div className="flex h-full w-full flex-col gap-3  rounded-lg border bg-blue-200 p-3">
         {/* Title */}
         <h3 className="text-xl font-semibold text-blue-900">
-          Relative Product
+          Featured Products
         </h3>
         <div className="w-full">
           <Swiper
