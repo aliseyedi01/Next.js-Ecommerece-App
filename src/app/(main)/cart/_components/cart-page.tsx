@@ -5,10 +5,11 @@ import TableCart from "./table-cart";
 
 export default function CartPage() {
   return (
-    <div className="flex h-full w-full items-center justify-center  md:h-[calc(100vh-54px)] md:px-40">
-      <div className="grid h-[90%] w-full  grid-cols-6 overflow-hidden rounded-xl border border-blue-500  ">
-        <div className="col-span-4 bg-white">
-          <div className="flex w-full flex-col gap-8 p-8">
+    <div className="main-container flex h-full w-full items-center justify-center  max-md:py-8 md:h-[calc(100vh-54px)]">
+      <div className="grid h-full w-full grid-cols-1 overflow-hidden  rounded-xl border border-blue-500 md:h-[90%] md:grid-cols-6  ">
+        {/* Title & Table */}
+        <div className="bg-white md:col-span-4">
+          <div className="flex w-full flex-col gap-8 p-6 md:p-8">
             {/* Title */}
             <div className="flex items-center justify-between border-b-2 border-gray-300 pb-2 text-black">
               <p className="text-center font-exo text-2xl font-semibold">
@@ -23,7 +24,7 @@ export default function CartPage() {
           </div>
         </div>
         {/* Checkout */}
-        <div className="col-span-2 bg-gray-300 text-black">
+        <div className="bg-gray-300 text-black md:col-span-2">
           <div className="flex h-full w-full flex-col  items-center justify-between  p-5">
             <div className="flex w-full  flex-col gap-6">
               {/* Title */}
@@ -59,7 +60,7 @@ export default function CartPage() {
               </div>
             </div>
             {/* Final */}
-            <div className="flex  w-full flex-col gap-4">
+            <div className="flex  w-full flex-col gap-4 max-md:pt-3">
               <Separator className="bg-gray-400" />
               <div className="flex w-full items-center justify-between px-1 font-kanit text-xl font-medium">
                 <p className="tracking-wider">Final Price</p>

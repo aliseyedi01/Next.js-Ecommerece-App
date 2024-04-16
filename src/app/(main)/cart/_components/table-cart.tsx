@@ -75,18 +75,18 @@ export default function TableCart() {
                   alt="Product"
                   width={100}
                   height={100}
-                  className="size-10 rounded-md md:size-20"
+                  className="size-14 rounded-md md:size-20"
                   placeholder="empty"
                 />
-                <div className="flex flex-col  space-y-2">
+                <div className="md: flex flex-col  space-y-1 space-y-2">
                   <p>{product.name}</p>
                   <p className="opacity-65">{product.category}</p>
                   <Button
                     variant="ghost"
                     className="h-auto w-auto bg-transparent p-0 text-red-500 hover:text-red-600"
                   >
-                    <Trash2 className="mr-2 w-4" />
-                    Remove
+                    <Trash2 className="mr-2 w-3  md:w-4" />
+                    <p className="text-xs md:text-base">Remove</p>
                   </Button>
                 </div>
               </div>
