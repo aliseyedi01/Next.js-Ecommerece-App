@@ -11,11 +11,13 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div className="flex h-full w-full  flex-col items-center justify-center gap-3  py-7  md:px-3 xl:px-20">
-      <BreadcrumbProduct />
-      <div className="flex h-full w-full flex-col  gap-3 md:h-[calc(100vh-54px)]  md:flex-row">
-        <PreviewProduct />
-        <InformationProduct />
+    <div className="flex h-full w-full  flex-col items-center justify-center gap-7  pb-7  md:px-3 xl:px-20">
+      <div className="flex h-full w-full flex-col  md:h-[calc(100vh-54px)]">
+        <BreadcrumbProduct />
+        <div className="flex h-full w-full flex-col md:flex-row">
+          <PreviewProduct />
+          <InformationProduct />
+        </div>
       </div>
       <DescriptionProduct />
     </div>

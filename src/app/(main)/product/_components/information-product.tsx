@@ -25,11 +25,11 @@ export default function InformationProduct() {
       {/* Price  */}
       <div className="flex items-center gap-2 md:flex-col md:items-start">
         <h4>Price</h4>
-        <div className="flex gap-2 pl-2 font-ubuntu text-lg">
-          <p className="flex items-center text-sm md:text-base">
+        <div className="flex items-end gap-2 pl-2 font-ubuntu text-lg">
+          <p className="flex items-center text-sm md:text-2xl">
             <DollarSign className="size-3 md:size-4" /> 35.39
           </p>
-          <p className="flex items-center text-sm text-gray-500 line-through  md:text-base">
+          <p className="flex -translate-y-1 items-center text-sm text-gray-500  line-through md:text-sm">
             <DollarSign className="size-3 md:size-4" /> 35.39
           </p>
         </div>

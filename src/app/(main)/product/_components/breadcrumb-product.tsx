@@ -21,7 +21,7 @@ export default function BreadcrumbProduct() {
     router.back();
   };
   return (
-    <div className="flex h-full w-full items-center justify-start gap-3  px-3  md:px-32">
+    <div className="flex h-9 w-full items-center justify-start gap-3  px-3  md:px-32">
       <Button variant="ghost" size="icon" onClick={backRoute}>
         <CircleArrowLeft className=" size-6  text-blue-900 dark:text-blue-400 md:size-8" />
       </Button>
