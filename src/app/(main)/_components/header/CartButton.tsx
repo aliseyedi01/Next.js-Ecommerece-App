@@ -1,9 +1,8 @@
 "use client";
 
-import { Button } from "@components/ui/button";
-import { Input } from "@components/ui/input";
-import { Label } from "@components/ui/label";
 import {
+  Button,
+  Separator,
   Sheet,
   SheetClose,
   SheetContent,
@@ -12,12 +11,12 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@components/ui/sheet";
+} from "@components/ui";
 import { ShoppingCartIcon, Trash2 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+
 import QuantitySelector from "./QuantitySelector";
-import { Separator } from "../../../../components/ui/separator";
-import { CommandSeparator } from "../../../../components/ui/command";
 
 const image1 =
   "https://img.freepik.com/free-vector/paper-bag-mockup-isolated-vector_53876-61350.jpg?w=740";
@@ -108,12 +107,11 @@ export function CartButton() {
         </div>
         <SheetFooter>
           <div className="absolute bottom-0 left-0 flex  w-full flex-col p-3">
-            <Button className="w-full">Checkout</Button>
-            {/* <SheetClose asChild className="mt-3">
-              <p className="mx-auto w-fit cursor-pointer text-blue-900 hover:text-blue-600">
-                Continue Shopping
-              </p>
-            </SheetClose> */}
+            <SheetClose asChild>
+              <Link href="/cart">
+                <Button className="w-full">Finish Your Order</Button>
+              </Link>
+            </SheetClose>
           </div>
         </SheetFooter>
       </SheetContent>

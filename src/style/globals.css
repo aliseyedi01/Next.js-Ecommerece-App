@@ -140,7 +140,7 @@
     @apply rounded-md !text-lg  font-semibold text-blue-950 hover:!no-underline dark:text-blue-500;
   }
   .main-container {
-    @apply px-3 md:px-20;
+    @apply px-3 md:px-40;
   }
 }
 
