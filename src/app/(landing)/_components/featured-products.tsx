@@ -5,7 +5,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 
 import ProductSingle from "@app/(main)/products/_components/product-single";
-import Container from "@components/utility/container";
+import Container from "@components/utility/Container";
 import Link from "next/link";
 import React from "react";
 import { FreeMode, Keyboard, Navigation } from "swiper/modules";

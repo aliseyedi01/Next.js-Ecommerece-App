@@ -1,5 +1,5 @@
 import { Button, Separator } from "@components/ui";
-import Container from "@components/utility/container";
+import Container from "@components/utility/Container";
 import React from "react";
 
 import TableCart from "./table-cart";

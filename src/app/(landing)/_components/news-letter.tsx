@@ -1,5 +1,5 @@
 import { Button, Input } from "@components/ui";
-import Container from "@components/utility/container";
+import Container from "@components/utility/Container";
 import Image from "next/image";
 import React from "react";
 
