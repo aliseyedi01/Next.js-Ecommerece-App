@@ -7,13 +7,10 @@ export { default as nikeBrand } from '@public/images/brands/nike.png';
 export { default as versaceBrand } from '@public/images/brands/versace.png';
 
 // banner
-export { default as booksBanner } from '@public/images/banners/books.svg';
-export { default as fashionBanner } from '@public/images/banners/fashion.svg';
-export { default as foodBanner } from '@public/images/banners/food.svg';
-export { default as furnishingBanner } from '@public/images/banners/furnishing.svg';
-export { default as gadgetBanner } from '@public/images/banners/gadget.svg';
-export { default as healthBanner } from '@public/images/banners/health.svg';
-export { default as sportsBanner } from '@public/images/banners/sports.svg';
+export { default as bannerCloth1 } from '@public/images/banners/cloth1.svg';
+export { default as bannerCloth2 } from '@public/images/banners/cloth2.svg';
+export { default as bannerCloth3 } from '@public/images/banners/cloth3.svg';
+export { default as bannerCloth4 } from '@public/images/banners/cloth4.svg';
 
 
 // categories

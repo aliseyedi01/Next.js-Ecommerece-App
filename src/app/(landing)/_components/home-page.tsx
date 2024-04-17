@@ -1,5 +1,5 @@
 import BannerCarousel from "./banner-carousel";
-import Brands from "./brands";
+import Brands from "./Brands";
 import Categories from "./categories";
 import FaqList from "./faq-list";
 import FeaturedProducts from "./featured-products";
