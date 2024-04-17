@@ -3,7 +3,6 @@ import { Button } from "@components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
@@ -12,6 +11,7 @@ import {
 } from "@components/ui/dropdown-menu";
 import { CircleUserIcon, Settings, User } from "lucide-react";
 import Link from "next/link";
+
 import { LogoutForm } from "./logout-form";
 
 const ProfileButton = () => {

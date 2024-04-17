@@ -1,5 +1,5 @@
 "use client";
-import QuantitySelector from "@app/(main)/_components/header/QuantitySelector";
+import QuantitySelector from "@app/(main)/_components/header/quantity-selector";
 import {
   Button,
   Table,

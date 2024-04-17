@@ -1,25 +1,6 @@
 "use client";
 
-import { cn } from "src/libs/utils";
-
-import { FC, useCallback, useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
-import {
-  Settings,
-  Search,
-  User,
-  SunIcon,
-  MoonIcon,
-  LaptopIcon,
-  LogOut,
-  LogInIcon,
-  SmilePlus,
-  PackageOpen,
-  Tv2,
-  Handshake,
-  PersonStanding,
-  SquareSlash,
-} from "lucide-react";
+import { Button } from "@components/ui";
 import {
   CommandDialog,
   CommandEmpty,
@@ -30,9 +11,28 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from "@components/ui/command";
-import { useTheme } from "next-themes";
-import { Button } from "@components/ui";
 import { CommandRegistry } from "@type/common";
+import {
+  Handshake,
+  LaptopIcon,
+  LogInIcon,
+  LogOut,
+  MoonIcon,
+  PackageOpen,
+  PersonStanding,
+  Search,
+  Settings,
+  SmilePlus,
+  SquareSlash,
+  SunIcon,
+  Tv2,
+  User,
+} from "lucide-react";
+import { useRouter } from "next/navigation";
+import { useTheme } from "next-themes";
+import { FC, useCallback, useEffect, useState } from "react";
+import { cn } from "src/libs/utils";
+
 import { LogoutForm } from "./logout-form";
 
 type CommandProps = {
@@ -172,10 +172,11 @@ const CommandButton: FC<CommandProps> = ({
 
   return (
     <>
+      {/* Command Button */}
       <Button
         variant="ghost"
         className={cn(
-          "flex  w-fit flex-row justify-between  border-primary  px-2 text-sm font-normal shadow-none hover:bg-primary/30  hover:text-card-foreground md:mr-8 md:h-9 md:w-64 md:border",
+          "flex w-fit flex-row  justify-between border-primary   px-2 text-sm font-normal shadow-none hover:bg-primary/30  hover:text-card-foreground md:mr-8 md:h-9 md:w-32 md:border",
           place === "page" ? "w-full border md:w-96" : "",
           className,
         )}
@@ -185,22 +186,18 @@ const CommandButton: FC<CommandProps> = ({
         {place === "page" ? (
           <div className="flex w-full text-input">
             <Search className="size-5 md:flex" />
-            <span className="ml-2 md:inline-flex">Search Commands</span>
+            <span className="ml-2 md:inline-flex">Commands</span>
           </div>
         ) : (
-          <div className="flex w-full text-input">
-            <Search className="hidden size-5 text-blue-500 md:flex" />
+          <div className="flex w-full items-center text-input">
+            <SquareSlash className=" size-6 text-blue-500 md:flex" />
             <span className="hidden text-blue-500 md:ml-2 md:inline-flex">
-              Search Commands
+              Commands
             </span>
           </div>
         )}
-
-        <span className="select-none text-destructive-foreground/75">
-          <SquareSlash className=" hidden size-7 text-blue-500 md:flex" />
-          <Search className="flex size-6 text-blue-500 md:hidden" />
-        </span>
       </Button>
+      {/* Command Dialog */}
       <CommandDialog
         open={open}
         onOpenChange={setOpen}

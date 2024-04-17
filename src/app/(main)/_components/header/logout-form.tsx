@@ -1,12 +1,12 @@
 import {
+  Button,
   Dialog,
+  DialogClose,
   DialogContent,
   DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-  Button,
-  DialogClose,
 } from "@components/ui";
 import { cn } from "@lib/utils";
 import { LogOut } from "lucide-react";

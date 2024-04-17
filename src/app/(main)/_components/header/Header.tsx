@@ -1,24 +1,23 @@
 "use client";
 
 // style
+import { ModeToggle } from "@components/theme/ModeToggle";
+import { useScrollPercentage } from "@hooks/use-scroll-percentage";
 import {
+  ChatBubbleIcon,
   HomeIcon,
   InfoCircledIcon,
-  ChatBubbleIcon,
   LaptopIcon,
 } from "@radix-ui/react-icons";
 // next
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+
+import { CartButton } from "./cart-button";
 // component
-import SearchButton from "./command-button";
-import ProfileButton from "./profile-button";
-import { CartButton } from "./CartButton";
-import { NavbarButton } from "./navbar-mobile";
-import { useScrollPercentage } from "@hooks/use-scroll-percentage";
-import { ModeToggle } from "@components/theme/ModeToggle";
 import CommandButton from "./command-button";
+import ProfileButton from "./profile-button";
 
 const ItemsData = [
   {
