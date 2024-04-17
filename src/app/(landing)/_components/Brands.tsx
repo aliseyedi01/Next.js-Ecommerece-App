@@ -1,4 +1,4 @@
-import Container from "@components/utility/Container";
+import Container from "@components/utility/container";
 import { BrandsData } from "@data/brands-data";
 import Image from "next/image";
 
@@ -15,7 +15,7 @@ const Brands = () => {
                 alt={brand.label}
                 width={100}
                 height={100}
-                className="size-16 object-contain md:size-28"
+                className="size-16 object-contain md:size-24"
               />
             </div>
           ))}

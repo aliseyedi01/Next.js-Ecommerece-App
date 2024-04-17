@@ -1,4 +1,4 @@
-import Container from "@components/utility/Container";
+import Container from "@components/utility/container";
 import { CategoriesList } from "@data/categories-data";
 import Image from "next/image";
 

@@ -1,4 +1,4 @@
-import Container from "@components/utility/Container";
+import Container from "@components/utility/container";
 import { FeaturesData } from "@data/features-data";
 import Image from "next/image";
 

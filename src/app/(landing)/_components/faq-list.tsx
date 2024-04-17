@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@components/ui/accordion";
+import Container from "@components/utility/container";
 import { FaqsData } from "@data/faqs-data";
 import Image from "next/image";
 import React from "react";
@@ -11,7 +12,7 @@ import React from "react";
 const FaqList = () => {
   return (
     <section className="w-full py-10 md:py-14">
-      <div className="mx-auto max-w-7xl px-5 sm:px-6">
+      <Container>
         <div className="grid w-full grid-cols-1 place-items-center  md:grid-cols-2">
           <div className="min-h-[27rem] w-full md:min-h-[30rem] ">
             <h2 className="section-heading">Popular Question</h2>
@@ -46,7 +47,7 @@ const FaqList = () => {
             />
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
