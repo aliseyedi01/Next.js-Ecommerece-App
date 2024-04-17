@@ -10,7 +10,7 @@ import SidebarFilterProduct from "./_components/sidebar-filter-products";
 import SortProducts from "./_components/sort-products";
 
 export const metadata: Metadata = {
-  title: "Products | Online Shop",
+  title: "Products",
 };
 
 export default function About() {

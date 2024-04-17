@@ -7,7 +7,7 @@ import PreviewProduct from "./_components/preview-product";
 import RelativeProduct from "./_components/relative-product";
 
 export const metadata: Metadata = {
-  title: "Product 1 | Online Shop",
+  title: "Product 1",
 };
 
 export default function About() {

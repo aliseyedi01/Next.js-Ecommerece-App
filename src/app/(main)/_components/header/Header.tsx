@@ -63,7 +63,7 @@ const Header = () => {
         {/* <NavbarButton /> */}
         <Link href="/">
           <h1 className="pl-2 font-grenze text-2xl font-bold text-primary md:text-3xl">
-            Online Shop
+            Garb Shop
           </h1>
         </Link>
         <nav className="hidden gap-9 lg:flex ">

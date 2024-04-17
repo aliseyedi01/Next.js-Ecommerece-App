@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+
 import SignInForm from "./_components/SignInForm";
 
 export const metadata: Metadata = {
-  title: "Log In| Online Shop",
+  title: "Log In|",
 };
 
 export default function LogIn() {

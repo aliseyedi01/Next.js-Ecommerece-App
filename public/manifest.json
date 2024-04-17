@@ -1,8 +1,8 @@
 
 {
-  "name": "Online Shop",
+  "name": "Garb Shop",
   "short_name": "Shop",
-  "description": "a online shop for sell products",
+  "description": "a Garb shop for sell products",
   "icons": [
     {
       "src": "windows11/SmallTile.scale-100.png",

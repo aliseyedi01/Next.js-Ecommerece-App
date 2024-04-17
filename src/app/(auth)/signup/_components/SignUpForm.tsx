@@ -1,7 +1,6 @@
 "use client";
 
 import { Button, Input, Separator, toast } from "@components/ui";
-import React, { useState } from "react";
 import {
   Form,
   FormControl,
@@ -10,11 +9,12 @@ import {
   FormMessage,
 } from "@components/ui/form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { KeyRound, Mail, NotebookPen, UserRound } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import { KeyRound, Mail, NotebookPen, UserRound } from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
 
 const FormSchema = z.object({
   username: z
@@ -87,7 +87,7 @@ export default function SignUpForm() {
   return (
     <div className="h-fit w-[90%] space-y-6  text-foreground md:w-[25rem]">
       <h2 className="text-left text-xl font-bold text-foreground">
-        Welcome To Online Shop
+        Welcome To Garb Shop
       </h2>
       <Form {...form}>
         <form

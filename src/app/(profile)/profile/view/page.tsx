@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Profile | Online Shop",
+  title: "Profile",
 };
 
 const InformationList = [

@@ -30,17 +30,17 @@ export default function AboutPage() {
         {/* Text Section */}
         <div className="w-full space-y-4 max-md:pb-4 md:w-1/2">
           <h2 className="mb-4 text-center text-3xl font-medium md:text-left">
-            About Online Shop
+            About Garb Shop
           </h2>
           <p className="text-justify text-lg leading-relaxed">
-            Online Shop is your one-stop shop for curated, high-quality products
+            Garb Shop is your one-stop shop for curated, high-quality products
             that elevate your everyday life. We offer a seamless and enjoyable
             shopping experience across a wide range of categories. Exceptional
             value, trusted suppliers, and top-notch service are at the core of
             everything we do.
           </p>
           <p className="text-justify text-lg leading-relaxed">
-            Explore our diverse offerings today and discover how Online Shop can
+            Explore our diverse offerings today and discover how Garb Shop can
             enhance your lifestyle!
           </p>
           <Link href="/products">

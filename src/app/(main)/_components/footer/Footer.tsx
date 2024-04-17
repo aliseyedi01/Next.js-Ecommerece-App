@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="flex flex-col  bg-primary/15 font-ubuntu text-accent-foreground shadow-xl ">
       <div className="mx-auto flex w-full max-w-7xl flex-col justify-between p-5 max-md:gap-3 md:flex-row md:p-9">
         <div className="space-y-2">
-          <h3 className="text-lg font-bold">Online Shop</h3>
+          <h3 className="text-lg font-bold">Garb Shop</h3>
           <p className="w-80 text-wrap md:w-96">
             Explore our carefully curated selection of high-quality products
             designed to enhance your lifestyle
@@ -34,7 +34,7 @@ const Footer = () => {
 
       <div className="text- mb-2 text-sm md:text-left">
         <p className="text-center opacity-75">
-          Copyright &copy; {new Date().getFullYear()} Online Shop
+          Copyright &copy; {new Date().getFullYear()} Garb Shop
         </p>
       </div>
     </footer>

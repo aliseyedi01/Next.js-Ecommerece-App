@@ -22,7 +22,7 @@ export default function SidebarProfileDesktop() {
           className="size-8"
         />
         <Link href="/">
-          <h2 className="text-xl tracking-wide text-primary">Online Shop</h2>
+          <h2 className="text-xl tracking-wide text-primary">Garb Shop</h2>
         </Link>
       </div>
 
