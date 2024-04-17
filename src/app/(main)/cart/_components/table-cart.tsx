@@ -78,7 +78,7 @@ export default function TableCart() {
                   className="size-14 rounded-md md:size-20"
                   placeholder="empty"
                 />
-                <div className="md: flex flex-col  space-y-1 space-y-2">
+                <div className="md: flex flex-col space-y-2">
                   <p>{product.name}</p>
                   <p className="opacity-65">{product.category}</p>
                   <Button

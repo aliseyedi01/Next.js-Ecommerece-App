@@ -1,15 +1,13 @@
 "use client";
 
-import React from "react";
 import BlurringImage from "@components/utility/BluringImage";
-import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 export default function AboutPage() {
   return (
     <section className="py-4">
-      <div className="container mx-auto flex h-full flex-col items-center gap-8 md:h-[85vh] md:flex-row">
+      <div className="container mx-auto flex h-full flex-col items-center gap-8 md:h-[calc(100vh-54px)] md:flex-row">
         {/* Image Section */}
         <div className=" w-full md:w-1/2">
           {/* <Image
