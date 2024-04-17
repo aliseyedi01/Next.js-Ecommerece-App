@@ -48,11 +48,7 @@ const Header = () => {
   const [blurPercentage, setBlurPercentage] = useState(80);
 
   useEffect(() => {
-    if (pathname === "/") {
-      setBlurPercentage(90);
-    } else {
-      setBlurPercentage(80);
-    }
+    setBlurPercentage(98);
   }, [pathname]);
 
   const shadowHeader = Number(scrollPercentage) <= blurPercentage;
