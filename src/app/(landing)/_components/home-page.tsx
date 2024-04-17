@@ -1,9 +1,9 @@
 import BannerCarousel from "./banner-carousel";
-import Brands from "./Brands";
-import Categories from "./categories";
+import Brands from "./brands-products";
+import Categories from "./categories-products";
 import FaqList from "./faq-list";
 import FeaturedProducts from "./featured-products";
-import Features from "./features";
+import Features from "./features-shop";
 import Newsletter from "./news-letter";
 
 const HomePage = () => {
