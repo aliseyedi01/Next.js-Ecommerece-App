@@ -196,12 +196,18 @@ devDependencies:
   eslint-config-next:
     specifier: 14.1.3
     version: 14.1.3(eslint@8.57.0)(typescript@5.4.2)
+  eslint-plugin-jest-dom:
+    specifier: ^5.2.0
+    version: 5.2.0(@testing-library/dom@9.3.4)(eslint@8.57.0)
   eslint-plugin-simple-import-sort:
     specifier: ^12.0.0
     version: 12.0.0(eslint@8.57.0)
   eslint-plugin-storybook:
     specifier: ^0.8.0
     version: 0.8.0(eslint@8.57.0)(typescript@5.4.2)
+  eslint-plugin-testing-library:
+    specifier: ^6.2.2
+    version: 6.2.2(eslint@8.57.0)(typescript@5.4.2)
   eslint-plugin-unused-imports:
     specifier: ^3.1.0
     version: 3.1.0(eslint@8.57.0)
@@ -7226,6 +7232,22 @@ packages:
       - supports-color
     dev: true
 
+  /eslint-plugin-jest-dom@5.2.0(@testing-library/dom@9.3.4)(eslint@8.57.0):
+    resolution: {integrity: sha512-ctnCP0MsLmUvbCyhnOQ+/1OmsZj+e7V6kFunazIx5728Yq7TQnuKI8HOsgPTStB+9iYEpiEa+VfKB09Lq7/3fA==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0, npm: '>=6', yarn: '>=1'}
+    peerDependencies:
+      '@testing-library/dom': ^8.0.0 || ^9.0.0
+      eslint: ^6.8.0 || ^7.0.0 || ^8.0.0
+    peerDependenciesMeta:
+      '@testing-library/dom':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.24.0
+      '@testing-library/dom': 9.3.4
+      eslint: 8.57.0
+      requireindex: 1.2.0
+    dev: true
+
   /eslint-plugin-jsx-a11y@6.8.0(eslint@8.57.0):
     resolution: {integrity: sha512-Hdh937BS3KdwwbBaKd5+PLCOmYY6U4f2h9Z2ktwtNKvIdIEu137rjYbcb9ApSbVJfWxANNuiKTD/9tOKjK9qOA==}
     engines: {node: '>=4.0'}
@@ -7306,6 +7328,19 @@ packages:
       eslint: 8.57.0
       requireindex: 1.2.0
       ts-dedent: 2.2.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+    dev: true
+
+  /eslint-plugin-testing-library@6.2.2(eslint@8.57.0)(typescript@5.4.2):
+    resolution: {integrity: sha512-1E94YOTUDnOjSLyvOwmbVDzQi/WkKm3WVrMXu6SmBr6DN95xTGZmI6HJ/eOkSXh/DlheRsxaPsJvZByDBhWLVQ==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0, npm: '>=6'}
+    peerDependencies:
+      eslint: ^7.5.0 || ^8.0.0
+    dependencies:
+      '@typescript-eslint/utils': 5.62.0(eslint@8.57.0)(typescript@5.4.2)
+      eslint: 8.57.0
     transitivePeerDependencies:
       - supports-color
       - typescript

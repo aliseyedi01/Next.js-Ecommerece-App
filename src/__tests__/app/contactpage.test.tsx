@@ -7,9 +7,6 @@ describe("Page", () => {
   it("renders a contact page", () => {
     render(<ContactPage />);
 
-    // const heading = screen.getByRole("heading", { level: 1 });
-    // expect(heading).toBeInTheDocument();
-
     expect(screen.getByText("Get In Touch")).toBeInTheDocument();
   });
 });
