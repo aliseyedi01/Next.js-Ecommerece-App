@@ -1,6 +1,5 @@
+import { cn } from "@lib/utils";
 import * as React from "react";
-
-import { cn } from "src/libs/utils";
 
 const Card = React.forwardRef<
   HTMLDivElement,
@@ -75,9 +74,9 @@ CardFooter.displayName = "CardFooter";
 
 export {
   Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
-  CardDescription,
   CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
 };

@@ -5,11 +5,11 @@ import { ThemeProvider } from "@components/theme/ThemeProvider";
 import { Toaster } from "@components/ui/toaster";
 import ProgressProvider from "@components/utility/ProgressProvider";
 import PWADialog from "@components/utility/PWADialog";
+import { cn } from "@lib/utils";
 import { RootLayoutProps } from "@type/layout-props";
 import type { Metadata, Viewport } from "next";
 import { FC } from "react";
 import { exo, grenze, kanit, ubuntu } from "src/libs/font";
-import { cn } from "src/libs/utils";
 
 export const metadata: Metadata = {
   title: "Garb Shop",

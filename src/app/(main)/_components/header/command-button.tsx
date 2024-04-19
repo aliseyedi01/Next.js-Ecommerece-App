@@ -11,6 +11,7 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from "@components/ui/command";
+import { cn } from "@lib/utils";
 import { CommandRegistry } from "@type/common";
 import {
   Handshake,
@@ -31,7 +32,6 @@ import {
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import { FC, useCallback, useEffect, useState } from "react";
-import { cn } from "src/libs/utils";
 
 import { LogoutForm } from "./logout-form";
 
