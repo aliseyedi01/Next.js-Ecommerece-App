@@ -11,7 +11,7 @@ describe("Page", () => {
   });
 
   // test for button send
-  it("should have get in touch text", () => {
+  it("should have get in send button", () => {
     render(<ContactPage />);
     expect(screen.getByRole("button", { name: "Send" })).toBeInTheDocument();
   });
@@ -19,7 +19,6 @@ describe("Page", () => {
   // test for username input
   it("should render username input field", () => {
     render(<ContactPage />);
-    const usernameInput = screen.getByPlaceholderText("Username");
-    expect(usernameInput).toBeInTheDocument();
+    expect(screen.getByPlaceholderText("Username")).toBeInTheDocument();
   });
 });
