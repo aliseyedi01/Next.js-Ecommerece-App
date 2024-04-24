@@ -29,9 +29,9 @@ export default function AboutPage() {
 
         {/* Text Section */}
         <div className="w-full space-y-4 max-md:pb-4 md:w-1/2">
-          <h2 className="mb-4 text-center text-3xl font-medium md:text-left">
+          <h1 className="mb-4 text-center text-3xl font-medium md:text-left">
             About Garb Shop
-          </h2>
+          </h1>
           <p className="text-justify text-lg leading-relaxed">
             Garb Shop is your one-stop shop for curated, high-quality products
             that elevate your everyday life. We offer a seamless and enjoyable
